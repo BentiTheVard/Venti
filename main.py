@@ -30,6 +30,8 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
+		if "v!help" in content:
+			await message.channel.send(random_message)
 #💎GIVE COMMAND (Food)
 		elif "v!give" in content:
 			if "apple" in content:
@@ -1272,7 +1274,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif "grape" in content":
+		elif "grape" in content:
 			answers = [
 				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
 				"Whoa! This orchard smells wonderful! The apples must be super big and juicy! And these bunches of grapes weighing down the dense vines... *sigh* They'll become delicious wine one day… Why don't we... sample some of these future wines? Hehe, it can't hurt to enjoy them a little. Come on, open wide~"
