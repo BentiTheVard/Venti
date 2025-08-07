@@ -458,7 +458,7 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["Mavuika", "Xbalanque", "Harborym", "God", "Archon"]) and any(keyword in content for keyword in ["Fire", "Pyro", "Natlan", "War", "Mavuika", "Xbalanque", "Harborym"]):
 			answers = [
 				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
-				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with "her," I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?"
+				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
