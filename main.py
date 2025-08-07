@@ -30,8 +30,8 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		if "v!help" in content:
-			await message.channel.send(random_message)
+		elif "v!help" in content:
+			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line)")
 #💎GIVE COMMAND (Food)
 		elif "v!give" in content:
 			if "apple" in content:
