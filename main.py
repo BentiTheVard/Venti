@@ -18,7 +18,7 @@ async def on_message(message):
 	content = message.content.lower()
 	if message.author == client.user:
 		return
-	elif any(keyword in content for keyword in ["v!", "<@1402784150301184020>", "hey venti", "hi venti", "hello venti", "@venti", "!venti"]):
+	elif any(keyword in content for keyword in ["v!", "<@1402784150301184020>", "hey venti", "hi venti", "hello venti", "@venti", "!venti", "venti,", "!v"]):
 		if "!sleep" in content and message.mentions:
 			sleepee = message.mentions[0]
 			answers = [
@@ -313,7 +313,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["you are", "your", "ur", "you’re", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s"]) and any(keyword in content for keyword in ["lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken"]):
+		elif any(keyword in content for keyword in ["you are", "your", "ur", "you’re", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
