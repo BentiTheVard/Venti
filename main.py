@@ -1214,8 +1214,8 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["Drink", "Wine", "Alcohol", "Inebriat", "Drunk", "Beer", "Beverage", "Brew", "Barrel", "Mix"]):
 			answers = [
-				f"I like to drink! And I like the wind! If only there were such a thing as wind-brewed cider…
-				f"What a find! I wonder how many bottles this'll be worth…
+				f"I like to drink! And I like the wind! If only there were such a thing as wind-brewed cider…",
+				f"What a find! I wonder how many bottles this'll be worth…",
 				f"Yahoo~ Look up, I'm here!\nIt's been a long time, my warrior, ready to tell me your new story?\nHaha, you want to know if it's for my verses? Oh, don't make that face. I just want to hear about your adventures, isn't that reason enough?\nI want to know more about what you saw on your travels or the lives of others. The most important thing for me is to hear you talk about your own experiences and what you think about them.\nCome on, come sit next to me. This bottle of aged cider will be enough for us to chat from first dawn of the morning light until the stars cover the sky.",
 				f"Whoa! This orchard smells wonderful! The apples must be super big and juicy! And these bunches of grapes weighing down the dense vines... *sigh* They'll become delicious wine one day… Why don't we... sample some of these future wines? Hehe, it can't hurt to enjoy them a little. Come on, open wide~",
 				f"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!",
