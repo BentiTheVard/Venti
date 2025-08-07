@@ -19,7 +19,6 @@ async def on_message(message):
 	if message.author == client.user:
 		return
 	elif any(keyword in content for keyword in ["v!", "<@1402784150301184020>", "hey venti", "hi venti", "hello venti", "@venti", "!venti"]):
-		await message.channel.send(f"Received: {message.content} from {message.author}")
 		if "v!sleep" in content and message.mentions:
 			sleepee = message.mentions[0]
 			answers = [
