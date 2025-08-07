@@ -521,7 +521,7 @@ async def on_message(message):
 			await message.channel.send("*sigh*... If only the seven nations had banded together against the Abyss Order in the first place. The Fatui possess the strongest military among the seven nations. Yet they've used it to steal the Holy Lyre, covet the power of gods, and use Dvalin as a bargaining chip against the Knights…")
 		elif any(keyword in content for keyword in ["vennessa", "windrise", "oak"]):
 			await message.channel.send("I'm thinking about turning these adventures into songs after we're done… Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.")
-		elif any(keyword in content for keyword in ["Stanley/Hans/Archibald"]):
+		elif any(keyword in content for keyword in ["Stanley", "Hans", "Archibald"]):
 			answers = [
 				"Even in his memory, the real Stanley isn't the living, breathing friend he knew at all. Instead, he's become fixed on the image of him as that battle-scarred warrior... and that image has held him captive his entire life.",
 				"...Stanley really did make it to the Mare Jivari. And the tragedy he encountered there was real, too. But the real adventurer, the real Stanley — that was his partner. Not him."
@@ -530,7 +530,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif "Jack" in content:
 			await message.channel.send("Jack… Stanley's really fond of that kid, don't you think?")
-		elif any(keyword in content for keyword in ["Venti/You/Nameless Bard/Nameless"]) and any(keyword in content for keyword in ["Grie/Loss/Death/Sad/Alcoholic/Pain/Cry/Died/Nameless Bard/Nameless"]):
+		elif any(keyword in content for keyword in ["Venti", "You", "Nameless Bard", "Nameless"]) and any(keyword in content for keyword in ["Grie", "Loss", "Death", "Sad", "Alcoholic", "Pain", "Cry", "Died", "Nameless Bard", "Nameless"]):
 			answers = [
 				f"My current form is not so different from the situation with fake Stanley... I took the form of a friend…",
 				f"Say, {user}, do you wish to hear the next part of the story…?",
@@ -540,7 +540,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Wind spirit/Wind sprite/Form"]):
+		elif any(keyword in content for keyword in ["Wind spirit", "Wind sprite", "Form"]):
 			answers = [
 				"Ah, this takes me back. The first time I saw this view, I hadn't even taken on this form yet.",
 				"Back then, I was but a wisp among the thousand winds. I wasn't a god of anything — I didn't even have a human form... I was just a tiny elemental being who lived in the wind, a gentle breeze bringing subtle changes for the better, or tiny seeds of hope.",
@@ -548,7 +548,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Stormterror’s Lair/Old Mondstadt/Ruins/Ancient/Decarabian"]):
+		elif any(keyword in content for keyword in ["Stormterror’s Lair", "Old Mondstadt", "Ruins", "Ancient", "Decarabian"]):
 			answers = [
 				"Stormterror’s Lair was once part of an ancient city. The ruins even predate the existence of The Four Winds. Mondstadt is a city without a ruler. However, before, it was ruled over by a tyrant.",
 				"The word 'Windblume' dates from the age of Old Mondstadt. It was a code word that the people used to stay in contact and mount resistance in secret. At that time, people often said that the stronger the wind blows, the firmer the roots of the Windblume grow, and the brighter the flower that bursts into bloom.",
@@ -557,7 +557,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Stormterror/Dvalin"]):
+		elif any(keyword in content for keyword in ["Stormterror", "Dvalin"]):
 			answers = [
 				"The story I want to tell starts at... the sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
 				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
@@ -566,7 +566,7 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
 #PLAYABLE CHARACTERS 💜
-		elif any(keyword in content for keyword in ["Diluc/Dawn Winery"]):
+		elif any(keyword in content for keyword in ["Diluc", "Dawn Winery"]):
 			answers = [
 				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
 				"My tummy is rumbling, but I can't get caught pilfering food from the Dawn Winery again... Oh, it's you! Where are you heading? May I join?",
@@ -575,34 +575,34 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Kaeya/Cavalry Captain/Cavalry"]):
+		elif any(keyword in content for keyword in ["Kaeya", "Cavalry Captain", "Cavalry"]):
 			await message.channel.send("Kaeya! Ah, he was one of the finest students ever to emerge from my fast-track love poetry class... I always did admire his enthusiasm and kindness.")
-		elif any(keyword in content for keyword in ["Jean/Acting Grand Master"]):
+		elif any(keyword in content for keyword in ["Jean", "Acting Grand Master"]):
 			await message.channel.send("Acting Grand Master Jean... Well, what do you think of her? Yes, I couldn't agree more: conscientious, courageous... kind and considerate too. Reminds me of another good friend…")
-		elif any(keyword in content for keyword in ["Dodocomm/Device"]):
+		elif any(keyword in content for keyword in ["Dodocomm", "Device"]):
 			answers = [
 				"This invention, with a little help from a trick of mine, will allow us to keep in touch. Minus the fuse — so don't worry, it's not going to explode. Come on, take it. This way, we can talk to each other just like this even when we're apart!",
 				"It's called a 'Dodocommunication Device,' and it allows people to stay in touch over vast distances. However, you can't just use it anytime you want, and there's also a limit on the number of times you can use it. That's why it's currently only available to a certain select few."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Klee/Dodo"]):
+		elif any(keyword in content for keyword in ["Klee", "Dodo"]):
 			answers = [
 				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there.",
 				"Speaking of Klee, guess which two people I ran into on my way to the tavern today? A mother and daughter, both with long elf ears and the most amazingly adorable personalities!"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Barbara/Deaconess/Idol"]):
+		elif any(keyword in content for keyword in ["Barbara", "Deaconess", "Idol"]):
 			await message.channel.send("The darling Deaconess with the sweet singing voice — do you know her? You do? Idol, huh? Meet and greets? Concerts? Wow... That's the power of music for you…")
-		elif any(keyword in content for keyword in ["Dahlia/Deacon"]):
+		elif any(keyword in content for keyword in ["Dahlia", "Deacon"]):
 			answers = [
 				"O, Traveler, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
 				"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Varka/Grand Master"]):
+		elif any(keyword in content for keyword in ["Varka", "Grand Master"]):
 			await message.channel.send("Varka… I still remember when he approached me about 'asking the lovely ladies of the Hexenzirkel for a small favor'... The chumminess caught me off guard. If I hadn't known any different, I'd have thought he was talking about his older sisters or something.")
 		elif "alice" in content:
 			answers = [
@@ -612,7 +612,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Hexenzirkel/Barbeloth/Ivanovna/Andersdotter/Nicole/Octavia/Scarlet"]):
+		elif any(keyword in content for keyword in ["Hexenzirkel", "Barbeloth", "Ivanovna", "Andersdotter", "Nicole", "Octavia", "Scarlet"]):
 			answers = [
 				"Speaking of the Hexenzirkel, guess which two people I ran into on my way to the tavern today? A mother and daughter, both with long elf ears and the most amazingly adorable personalities!",
 				"Varka… I still remember when he approached me about 'asking the lovely ladies of the Hexenzirkel for a small favor'... The chumminess caught me off guard. If I hadn't known any different, I'd have thought he was talking about his older sisters or something.",
@@ -621,13 +621,13 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Eula/Lawrence/Clan"]):
+		elif any(keyword in content for keyword in ["Eula", "Lawrence", "Clan"]):
 			await message.channel.send("Eula has good taste when it comes to beverages of the alcoholic variety. Come summer or winter, she always likes them ice-cold. That's rare among Mondstadters these days! She and I would make great drinking buddies. Huh? My songs about the Lawrence Clan... She's heard them already? Eh, no harm done. Maybe she and I can do a duet sometime!")
-		elif any(keyword in content for keyword in ["Diona/Cat’s Tail"]):
+		elif any(keyword in content for keyword in ["Diona", "Cat’s Tail"]):
 			await message.channel.send("There's a special drink known far and wide at Cat's Tail. But it ah... ahh... ACHOO! *sniffs* How about you go and fetch one for me? I'll be truly thankful, I promise.")
-		elif any(keyword in content for keyword in ["Mona/Megistus"]):
+		elif any(keyword in content for keyword in ["Mona", "Megistus"]):
 			await message.channel.send("Oh, that astrologer? How should I put it? Fortune telling and my singing are the same. Both lead to you being so poor you can't even cough up the money for a drink! ...You think that astrology is a cultural tradition, so at least still has some value? Hmph, so rude. In that case, so too is singing, so it still has its value too!")
-		elif any(keyword in content for keyword in ["Razor/Wolf/Wolv"]):
+		elif any(keyword in content for keyword in ["Razor", "Wolf", "Wolv"]):
 			answers = [
 				"Razor? He's grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI see a kind, gentle soul, with a healthy dose of romance and freedom, too... In other words, a true Mondstadter, who grew up drinking the water of Cider Lake. You, on the other hand... Don't worry, you're the gentlest soul I've ever met.",
 				"Ah yes, the white-haired fellow from Wolvendom? Raised by wolves? Really? ... No wonder his scent is so familiar…"
@@ -636,7 +636,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif "beidou" in content:
 			await message.channel.send("I once happened upon a cargo ship bound for Inazuma transporting Dandelion Wine, so, naturally, I decided to set sail with them. Once aboard, I found the captain to be a kindred spirit, and I was treated to an abundance of fine liquor along the way. Uh, I must have fallen asleep in the cargo crate while carefully comparing the tastes of Dandelion Wine and Inazuman sake…")
-		elif any(keyword in content for keyword in ["Rhinedottir/Gold/Naberius/Kreideprinz"]):
+		elif any(keyword in content for keyword in ["Rhinedottir", "Gold", "Naberius", "Kreideprinz"]):
 			answers = [
 				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
 				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
@@ -644,7 +644,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Albedo/Alchemy/Life/Synthe/Durin"]):
+		elif any(keyword in content for keyword in ["Albedo", "Alchemy", "Life", "Synthe", "Durin"]):
 			answers = [
 				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
 				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
@@ -662,7 +662,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Paralogism/Archon Quest/Story Quest/AQ/SQ"]):
+		elif any(keyword in content for keyword in ["Paralogism", "Archon Quest", "Story Quest", "AQ", "SQ"]):
 			answers = [
 				f"Hmm~ Whew, the weather today's just perfect for relaxing atop a tree.\nCompared to the terribly exciting life I've been leading lately, this kind of leisurely routine just suits me better.\nThanks to you, Mondstadt was able to pull through its time of crisis and return to a time of peace. That means I get to return to being an easy-going bard again!\nMayhaps I shall grace you with a song written in your honor, as an expression of my thanks? Hear ye, hear ye, my gratitude already rustles like a melody through the leaves!",
 				f"I'm thinking about turning these adventures into songs after we're done… Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.",
@@ -673,21 +673,21 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
 #SPECIFIC 🪽
-		elif any(keyword in content for keyword in ["Who/What"]) and any(keyword in content for keyword in ["You/This/Name"]):
+		elif any(keyword in content for keyword in ["Who", "What"]) and any(keyword in content for keyword in ["You", "This", "Name"]):
 			answers = [
 				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
 				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Scar/Fear/Afraid/Lost/What to do/Life"]):
+		elif any(keyword in content for keyword in ["Scar", "Fear", "Afraid", "Lost", "What to do", "Life"]):
 			answers = [
 				"Hmm… Many people may feel lost at times. After all, it's impossible for everything to happen according to your own wishes. At a time like this, ask yourself what the most important thing is!\nEven if life's all in a jumble, you can sort it out as long as there's a whisper of the wind.\n...Don't be afraid, I'm here.",
 				"However, winds change their course. Someday, they will blow towards a brighter future. :green_heart:"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Can/May/Let/Something/Have"]) and any(keyword in content for keyword in ["Talk/Chat/Tell/Speak/Mind/Question"]):
+		elif any(keyword in content for keyword in ["Can", "May", "Let", "Something", "Have"]) and any(keyword in content for keyword in ["Talk", "Chat", "Tell", "Speak", "Mind", "Question"]):
 			answers = [
 				"Okay! Ahem... My dearest companion, is there something you wish to tell me?",
 				"If you want to chat, now's the time — a bard stays not always in a single clime.",
@@ -697,11 +697,11 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Soul/Spirit/Ghost"]):
+		elif any(keyword in content for keyword in ["Soul", "Spirit", "Ghost"]):
 			await message.channel.send("The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.")
-		elif any(keyword in content for keyword in ["Time Loop/Loop/Yawn"]):
+		elif any(keyword in content for keyword in ["Time Loop", "Loop", "Yawn"]):
 			await message.channel.send("*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!")
-		elif any(keyword in content for keyword in ["Time/Istaroth/Mom/Mother/Mama/Watch/Clock/Hourglass"]):
+		elif any(keyword in content for keyword in ["Time", "Istaroth", "Mom", "Mother", "Mama", "Watch", "Clock", "Hourglass"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
@@ -710,7 +710,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Memor/Moment/Stor"]):
+		elif any(keyword in content for keyword in ["Memor", "Moment", "Stor"]):
 			answers = [
 				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
 				f"{user}, as you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
@@ -718,7 +718,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Sus/Intuit/Abilit/Conceal/Hid/Power/Trust/Intent/Secret/Myster"]):
+		elif any(keyword in content for keyword in ["Sus", "Intuit", "Abilit", "Conceal", "Hid", "Power", "Trust", "Intent", "Secret", "Myster"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				"Practice? Me? There's no need - I already know every song in Teyvat!",
@@ -735,7 +735,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Danger/Help/Spook"]):
+		elif any(keyword in content for keyword in ["Danger", "Help", "Spook"]):
 			answers = [
 				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
 				"Let me try!",
@@ -747,7 +747,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Flirt/Seduc/Pick-Up/Pickup/Wink wink"]):
+		elif any(keyword in content for keyword in ["Flirt", "Seduc", "Pick-Up", "Pickup", "Wink wink"]):
 			answers = [
 				"Hahaha, that one doesn't work on a bard.",
 				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
@@ -759,7 +759,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Summer/Swim/Isle/Golden Apple/Archipelago/Island/Waves/Sun"]):
+		elif any(keyword in content for keyword in ["Summer", "Swim", "Isle", "Golden Apple", "Archipelago", "Island", "Waves", "Sun"]):
 			answers = [
 				"Summer is the season of love. It is the time for freedom and fun. So everyone, please sing, dance, and enjoy yourselves here.",
 				"*gasp* Let's hold a summer feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
@@ -769,7 +769,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Boat/Ship/Sail/Cargo/Harbor"]):
+		elif any(keyword in content for keyword in ["Boat", "Ship", "Sail", "Cargo", "Harbor"]):
 			answers = [
 				"I once happened upon a cargo ship bound for Inazuma transporting Dandelion Wine, so, naturally, I decided to set sail with them. Once aboard, I found the captain to be a kindred spirit, and I was treated to an abundance of fine liquor along the way. Uh, I must have fallen asleep in the cargo crate while carefully comparing the tastes of Dandelion Wine and Inazuman sake…",
 				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there.",
@@ -777,7 +777,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Party/Feast/Celebrat/Gathering/Reunion/Festiv/Holiday/Christmas/Confetti"]):
+		elif any(keyword in content for keyword in ["Party", "Feast", "Celebrat", "Gathering", "Reunion", "Festiv", "Holiday", "Christmas", "Confetti"]):
 			answers = [
 				"*gasp* Let's hold a feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
 				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!"
@@ -786,7 +786,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif "theme" in content:
 			await message.channel.send("Uh, we need a theme? Then hold on, lemme think of one.\nUh... 'Cheers!' Eh... 'Pop!' No... I got it! 'Wishes for Happiness'? How's that?")
-		elif any(keyword in content for keyword in ["Battl/Team"]):
+		elif any(keyword in content for keyword in ["Battl", "Team"]):
 			answers = [
 				"Haha, once the ‍hero in the song has actually rescued their kin, I will ensure this song spreads to every corner of the continent!",
 				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
@@ -807,7 +807,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Love/Romance/Romanti"]):
+		elif any(keyword in content for keyword in ["Love", "Romance", "Romanti"]):
 			answers = [
 				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
 				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
@@ -816,7 +816,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Friend/Companion"]):
+		elif any(keyword in content for keyword in ["Friend", "Companion"]):
 			answers = [
 				f"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too.",
 				f"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
@@ -853,7 +853,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Fallen/Kill/Murder"]):
+		elif any(keyword in content for keyword in ["Fallen", "Kill", "Murder"]):
 			answers = [
 				"Let me sleep a while…",
 				"Oh no, my lyre is broken…",
@@ -862,7 +862,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Cat/Sneeze/Meow/Mew/Purr/Kitt/Hiss/Allerg"]):
+		elif any(keyword in content for keyword in ["Cat", "Sneeze", "Meow", "Mew", "Purr", "Kitt", "Hiss", "Allerg"]):
 			answers = [
 				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
 				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
@@ -913,14 +913,14 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["The Seven/Archons/Gods"]):
+		elif any(keyword in content for keyword in ["The Seven", "Archons", "Gods"]):
 			answers = [
 				"'The Seven' as people now know them, were once known as 'The Seven Archons.' Each archon presides over their own part of Teyvat. That is the role the archons play. Only in performing this duty can we attain power, but I don't like the idea of 'ruling' Mondstadt — and I don't feel Mondstadt would really like it either.",
 				"I haven't been back to Mondstadt for an extended period of time. Without a doubt, I am now the weakest archon among The Seven!"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Disciple/Apostle/Devotee/Worship/Pray/Offer/Archon/God/Barbatos"]):
+		elif any(keyword in content for keyword in ["Disciple", "Apostle", "Devotee", "Worship", "Pray", "Offer", "Archon", "God", "Barbatos"]):
 			answers = [
 				"An evening breeze really sets the mood for becoming my disciple, don't you think? We can do it right now, you just need to make me a small offering…",
 				"Thank Barbatos! Wait a minute…",
@@ -954,7 +954,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Cecilia/Flower/Bouquet/Rose/Bloom/Blossom/White"]):
+		elif any(keyword in content for keyword in ["Cecilia", "Flower", "Bouquet", "Rose", "Bloom", "Blossom", "White"]):
 			answers = [
 				f"{user}, have you ever seen a cecilia? It's a magnificent white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the most beautiful flower in all of Teyvat.",
 				"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~",
@@ -964,7 +964,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Journey/Meaning/Profound/Inspir/Experienc"]):
+		elif any(keyword in content for keyword in ["Journey", "Meaning", "Profound", "Inspir", "Experienc"]):
 			answers = [
 				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
 				f"My dear, courageous {user}, if you will allow this humble bard to join you on your journey, it would be my honor to compose an epic poem to remember your deeds. I'm willing to bet a whole glass of Apple Cider that your story will be one for the ages!",
@@ -981,7 +981,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Bard/Perform/Theater/Act/Circus/Ticket/Juggl/Ballet/Danc/Art/Clapper/Video/Movie/Projector/Film/DVD/VHS/Camera"]):
+		elif any(keyword in content for keyword in ["Bard", "Perform", "Theater", "Act", "Circus", "Ticket", "Juggl", "Ballet", "Danc", "Art", "Clapper", "Video", "Movie", "Projector", "Film", "DVD", "VHS", "Camera"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
@@ -1029,7 +1029,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Sing/Opera/Chorus/Choral/Hymn/Voic/Microphone"]):
+		elif any(keyword in content for keyword in ["Sing", "Opera", "Chorus", "Choral", "Hymn", "Voic", "Microphone"]):
 			answers = [
 				f"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
 				f"Haha, once the ‍hero in the song has actually rescued their kin, I will ensure this song spreads to every corner of the continent!",
@@ -1058,7 +1058,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Tune/Lyre/Song/Play/Capriccio/Serenade/Music/Record/Ballad/Concert/HeadphoneScore/Keyboard/Piano/Maraca/Drum/Sax/Trumpet/Accordion/Guitar/Banjo/Violin/Flute/Disk/Radio/Level_Slider/Horn"]):
+		elif any(keyword in content for keyword in ["Tune", "Lyre", "Song", "Play", "Capriccio", "Serenade", "Music", "Record", "Ballad", "Concert", "HeadphoneScore", "Keyboard", "Piano", "Maraca", "Drum", "Sax", "Trumpet", "Accordion", "Guitar", "Banjo", "Violin", "Flute", "Disk", "Radio", "Level_Slider", "Horn"]):
 			answers = [
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
 				f"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
@@ -1086,7 +1086,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Practice/Rehears/Every song"]):
+		elif any(keyword in content for keyword in ["Practice", "Rehears", "Every song"]):
 			answers = [
 				"Practice? Me? There's no need - I already know every song in Teyvat!"
 				"Ready for a rehearsal?",
@@ -1095,7 +1095,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Poe/Verse/Inspir"]):
+		elif any(keyword in content for keyword in ["Poe", "Verse", "Inspir"]):
 			answers = [
 				f"Come, sit with me. I've written a new poem. I call it 'Wind of {user}.'",
 				f"You've come at long last, {user}! While I was waiting for you, I nearly finished penning quite a few poems.",
@@ -1116,7 +1116,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Story/Storie/Book/Writ/Tale/Yore/Record/Legend/Fable/Myth/Saga/Chapter/Quest/Library/Page"]):
+		elif any(keyword in content for keyword in ["Story", "Storie", "Book", "Writ", "Tale", "Yore", "Record", "Legend", "Fable", "Myth", "Saga", "Chapter", "Quest", "Library", "Page"]):
 			answers = [
 				f"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
 				f"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
@@ -1136,7 +1136,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Adventure/Hero/Rescu/Travel/Protagonist/Epic/Eleventh hour"]):
+		elif any(keyword in content for keyword in ["Adventure", "Hero", "Rescu", "Travel", "Protagonist", "Epic", "Eleventh hour"]):
 			answers = [
 				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
 				f"Haha, once the ‍hero in the song has actually rescued their kin, I will ensure this song spreads to every corner of the continent!",
@@ -1158,7 +1158,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Free/Future/Bright"]):
+		elif any(keyword in content for keyword in ["Free", "Future", "Bright"]):
 			answers = [
 				f"Freedom, if demanded of you by an archon, is really no freedom at all.",
 				f"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
@@ -1172,7 +1172,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Happy/Happiness/Joy"]):
+		elif any(keyword in content for keyword in ["Happy", "Happiness", "Joy"]):
 			answers = [
 				"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
 				"I want to record all these beautiful memories, and turn them into ballads!",
@@ -1181,16 +1181,16 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Rain/Precipitation/Sprinkle/Drizzle/Mizzle/Shower/Pour"]):
+		elif any(keyword in content for keyword in ["Rain", "Precipitation", "Sprinkle", "Drizzle", "Mizzle", "Shower", "Pour"]):
 			answers = [
 				"Let's go jumping in puddles and see who can make the biggest splash!",
 				"It's stopped raining already? A shame, I wanted to play some more."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Snow/Blizzard/Sleet/Hail/Hale"]):
+		elif any(keyword in content for keyword in ["Snow", "Blizzard", "Sleet", "Hail", "Hale"]):
 			await message.channel.send("Let's wait till the snow gets heavier and have a snowball fight!")
-		elif any(keyword in content for keyword in ["Wind/Storm/Glid/Breeze/Gale/Hurricane/Draft/Blow/Zephyr/Anemo/Fly/Wing/Blow"]):
+		elif any(keyword in content for keyword in ["Wind", "Storm", "Glid", "Breeze", "Gale", "Hurricane", "Draft", "Blow", "Zephyr", "Anemo", "Fly", "Wing", "Blow"]):
 			answers = [
 				"The wind has returned! Quick, let's go gliding!",
 				"An evening breeze really sets the mood for becoming my disciple, don't you think? We can do it right now, you just need to make me a small offering…",
@@ -1212,7 +1212,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Drink/Wine/Alcohol/Inebriat/Drunk/Beer/Beverage/Brew/Barrel/Mix"]):
+		elif any(keyword in content for keyword in ["Drink", "Wine", "Alcohol", "Inebriat", "Drunk", "Beer", "Beverage", "Brew", "Barrel", "Mix"]):
 			answers = [
 				f"I like to drink! And I like the wind! If only there were such a thing as wind-brewed cider…
 				f"What a find! I wonder how many bottles this'll be worth…
@@ -1245,9 +1245,9 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Clap/Applaus/That was"]) and any(keyword in content for keyword in ["Clap/Applaus/Amazing/perfect/great/beautiful/fantastic/good/wonderful"]):
+		elif any(keyword in content for keyword in ["Clap", "Applaus", "That was"]) and any(keyword in content for keyword in ["Clap", "Applaus", "Amazing", "perfect", "great", "beautiful", "fantastic", "good", "wonderful"]):
 			await message.channel.send("How was it? Not bad, right?")
-		elif any(keyword in content for keyword in ["Cider/Juice"]):
+		elif any(keyword in content for keyword in ["Cider", "Juice"]):
 			answers = [
 				"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*",
 				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
@@ -1259,7 +1259,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Apple/Fruit/Orchard"]):
+		elif any(keyword in content for keyword in ["Apple", "Fruit", "Orchard"]):
 			answers = [
 				"Sure, I'll play you another tune, but it'll cost you an apple.",
 				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
@@ -1279,9 +1279,9 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Cheese/Slim/Smell/Stick/Disgust/Mess"]):
+		elif any(keyword in content for keyword in ["Cheese", "Slim", "Smell", "Stick", "Disgust", "Mess"]):
 			await message.channel.send("What's that tasty morsel you've got there... Eew! A melted cheese pancake! A smelly, sticky, slimy disgusting mess!")
-		elif any(keyword in content for keyword in ["Sit/Rest/Watch/Meadow/Tree/Mountain/Cliff/Windrise/Park/Relax/Scen/Bench/Chair/Nice day/Sun/Ocean/Sea"]):
+		elif any(keyword in content for keyword in ["Sit", "Rest", "Watch", "Meadow", "Tree", "Mountain", "Cliff", "Windrise", "Park", "Relax", "Scen", "Bench", "Chair", "Nice day", "Sun", "Ocean", "Sea"]):
 			answers = [
 				f"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*",
 				f"{user}, have you ever seen a cecilia? It's a magnificent white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the most beautiful flower in all of Teyvat.",
@@ -1297,7 +1297,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Work/Job/Employ/W*rk/J*b/Empl*y"]):
+		elif any(keyword in content for keyword in ["Work", "Job", "Employ", "W*rk", "J*b", "Empl*y"]):
 			answers = [
 				"Good work. Shall we repose for a moment, with a tune? Shall it be a capriccio, or a serenade?",
 				"So, a short rest after the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
@@ -1307,7 +1307,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Morn/Dawn/Sunrise"]):
+		elif any(keyword in content for keyword in ["Morn", "Dawn", "Sunrise"]):
 			answers = [
 				"Morning! What's in store for today?",
 				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?",
@@ -1316,7 +1316,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Night/Evening/Dusk/Twilight/Sleep"]):
+		elif any(keyword in content for keyword in ["Night", "Evening", "Dusk", "Twilight", "Sleep"]):
 			answers = [
 				"I'm still not sleepy, fancy an evening stroll?",
 				"Off to the land of nod? Haha, Farewell my friend!",
@@ -1325,7 +1325,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Hungry/Food/Eat/Munch/Chew/Crunch/Lunch/Breakfast/Dinner/Brunch/Full/Stomach/Tummy/Appetite"]):
+		elif any(keyword in content for keyword in ["Hungry", "Food", "Eat", "Munch", "Chew", "Crunch", "Lunch", "Breakfast", "Dinner", "Brunch", "Full", "Stomach", "Tummy", "Appetite"]):
 			answers = [
 				"My tummy is rumbling, but I can't get caught pilfering food from the Dawn Winery again... Oh, it's you! Where are you heading? May I join?",
 				"There's never a dull moment traveling with you! The only minor inconvenience is that pesky little pixie thing that follows you everywhere... she never stops eating, I can't begin to imagine how much you spend on food!",
@@ -1341,7 +1341,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Let’s Go/Lets Go/less go/les go"]):
+		elif any(keyword in content for keyword in ["Let’s Go", "Lets Go", "less go", "les go"]):
 			answers = [
 				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
 				"Let's go jumping in puddles and see who can make the biggest splash!",
@@ -1353,7 +1353,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Olah/Hili/Hilli/Churl"]):
+		elif any(keyword in content for keyword in ["Olah", "Hili", "Hilli", "Churl"]):
 			answers = [
 				"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition... That said, I haven't actually written any songs in Hilichurlian so far...",
 				"Eh, olah! Mosi mita!",
@@ -1362,16 +1362,16 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Cape/Cloth/Fashion/Outfit/Wearing/Design/Aesthetic/Pocket"]):
+		elif any(keyword in content for keyword in ["Cape", "Cloth", "Fashion", "Outfit", "Wearing", "Design", "Aesthetic", "Pocket"]):
 			await message.channel.send("People often claim that capes and the like serve no real purpose other than aesthetics. I suppose a cape with pockets would really turn the tables on that crowd!")
-		elif any(keyword in content for keyword in ["Bye/Farewell/Cya/See you/Leaving/logging off/log off"]):
+		elif any(keyword in content for keyword in ["Bye", "Farewell", "Cya", "See you", "Leaving", "logging off", "log off"]):
 			answers = [
 				"See you around. Remember, there's no rush. Take your time, and you'll find all the answers that you're looking for.",
 				"Then go, my friend. The stories that unfolded here shall be remembered by the wind in the form of verse."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Hello/Hi/Hey/Herro/Konnichiwa/Hola/Greet"]):
+		elif any(keyword in content for keyword in ["Hello", "Hi", "Hey", "Herro", "Konnichiwa", "Hola", "Greet"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition... That said, I haven't actually written any songs in Hilichurlian so far…",
@@ -1394,7 +1394,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Treasure/Chest/Mora/Money"]):
+		elif any(keyword in content for keyword in ["Treasure", "Chest", "Mora", "Money"]):
 			answers = [
 				"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
 				"There's never a dull moment traveling with you! The only minor inconvenience is that pesky little pixie thing that follows you everywhere... she never stops eating, I can't begin to imagine how much you spend on food!",
@@ -1404,7 +1404,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["Investigat/Conclus/Fact/Objectiv/Subjectiv"]):
+		elif any(keyword in content for keyword in ["Investigat", "Conclus", "Fact", "Objectiv", "Subjectiv"]):
 			await message.channel.send("A fair investigation means coming to a conclusion presented by the facts. Remaining objective has its own value.")
 		elif "Natlan" in content:
 			await message.channel.send("This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?")
