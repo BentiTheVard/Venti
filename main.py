@@ -393,15 +393,10 @@ async def on_message(message):
 				"Hahaha, that one doesn't work on a bard.",
 				"<:VentiUwU:1394123911284920341>"
 			]
-		elif any(keyword in content for keyword in ["venti", "barbatos", "you", "u are", "ur", "you have", "u have"]) and any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay"]):
+		elif any(keyword in content for keyword in ["venti", "barbatos", "you", "u are", "ur", "you have", "u have"]) and any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay", "i like", "i want"]):
 			answers = [
 				f"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
-				f"Oh, is this apple for me? Haha, that won't do, come share this apple with me.\nSplit it open like this...and you will feel the breeze from the apple core.\nIn some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
-				f"Yahoo~ Look up, I'm here!\nIt's been a long time, my warrior, ready to tell me your new story?\nHaha, you want to know if it's for my verses? Oh, don't make that face. I just want to hear about your adventures, isn't that reason enough?\nI want to know more about what you saw on your travels or the lives of others. The most important thing for me is to hear you talk about your own experiences and what you think about them.\nCome on, come sit next to me. This bottle of aged cider will be enough for us to chat from first dawn of the morning light until the stars cover the sky.",
-				f"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~",
-				f"The breeze combing through your hair today feels a little different, don't you think?\nIt smells faintly of flowers and also carries a refreshing scent of spring water…\nIf you are sensitive to smells, I wouldn't be surprised if you can pick a hint of sweetness in today's wind. That's because I just ate an apple, haha!\nCome on now, let's go for a walk outside!\nWe can pick berries for a picnic and rest at a roadside tavern. With me, the best bard there is by your side, the journey will be great wherever we go.\nOops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
-				f"When you receive this letter, hold it in your hands and stand by the window. Do you feel it? That gentle breeze nudging at your back? Hehe, why not follow the little leaf it carries — just big enough to rest in your palm — and let it guide you here, to me?",
-				f"Don't get distracted by the scent of hash browns along the way, you hear? If you stuff yourself silly, the feast I've prepared might end up feeling a little... neglected.\nKeep walking, just a little further — go on and leave Mondstadt's lively bustle behind for now. Can you hear it? That melody is growing clearer by the moment.\nThe sunshine is beautiful today, and the picnic mat is as cool and airy as the breeze dancing across the lake. You'll spot it from far away, but of course, take your time~\nI'll be right here, waiting for you and strumming a tune.",
+				"Oops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
 				"Your companionship is like a breeze that lingers in the air, warm and familiar.",
 				"No matter what comes, you have the wind on your side.",
 				"Thanks, friend. May the Anemo Archon protect you.",
@@ -432,21 +427,6 @@ async def on_message(message):
 				"I guess I'm a cat now! ...Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing.",
 				"<:VentiUwU:1394123911284920341>",
 				"For a moment I thought that was a gentle breeze in my hair!"
-			]
-			random_message = random.choice(answers)
-			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["do you", "what", "here"]) and any(keyword in content for keyword in ["like", "love", "good", "think", "thoughts", "opinion", "song", "music", "piece", "compos"]):
-			answers = [
-				"It's great, of course. I know that every detail is the result of your hard work. I hold immense gratitude for all you've done.",
-				"I love it! Oh, I'm flattered that you asked for my thoughts. But you should be more confident in your own tastes! Here, you're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
-				"Well, it sounds like you've already mastered music theory and your instrument. I don't think you need my input on either of those!"
-			]
-			random_message = random.choice(answers)
-			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["do you", "what", "here"]) and any(keyword in content for keyword in ["like", "love", "good", "think", "thoughts", "opinion", "art", "made", "for you", "about you", "draw", "paint"]):
-			answers = [
-				"It's great, of course. I know that every detail is the result of your hard work. I hold immense gratitude for all you've done.",
-				"I love it! Oh, I'm flattered that you asked for my thoughts. But you should be more confident in your own tastes! Here, you're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
@@ -1410,6 +1390,21 @@ async def on_message(message):
 				"See you around. Remember, there's no rush. Take your time, and you'll find all the answers that you're looking for.",
 				"Then go, my friend. The stories that unfolded here shall be remembered by the wind in the form of verse."
 			]
+		elif any(keyword in content for keyword in ["do you", "what", "here"]) and any(keyword in content for keyword in ["like", "love", "good", "think", "thoughts", "opinion", "song", "music", "piece", "compos"]):
+			answers = [
+				"It's great, of course. I know that every detail is the result of your hard work. I hold immense gratitude for all you've done.",
+				"I love it! Oh, I'm flattered that you asked for my thoughts. But you should be more confident in your own tastes! Here, you're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
+				"Well, it sounds like you've already mastered music theory and your instrument. I don't think you need my input on either of those!"
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
+		elif any(keyword in content for keyword in ["do you", "what", "here"]) and any(keyword in content for keyword in ["like", "love", "good", "think", "thoughts", "opinion", "art", "made", "for you", "about you", "draw", "paint"]):
+			answers = [
+				"It's great, of course. I know that every detail is the result of your hard work. I hold immense gratitude for all you've done.",
+				"I love it! Oh, I'm flattered that you asked for my thoughts. But you should be more confident in your own tastes! Here, you're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!"
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["hello", "hi", "hey", "herro", "konnichiwa", "hola", "greet"]):
