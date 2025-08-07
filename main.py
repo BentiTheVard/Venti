@@ -489,7 +489,7 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
 #CHARACTERS ❤️
-elif "paimon" in content:
+		elif "paimon" in content:
 			answers = [
 				"There's never a dull moment traveling with you! The only minor inconvenience is that pesky little pixie thing that follows you everywhere... she never stops eating, I can't begin to imagine how much you spend on food!",
 				"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too."
