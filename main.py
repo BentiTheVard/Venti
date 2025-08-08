@@ -190,7 +190,7 @@ async def on_message(message):
 				]
 				random_message = random.choice(answers)
 				await message.channel.send(random_message)
-			elif any(keyword in content for keyword in ["cat", "kitten"]):
+			elif any(keyword in content for keyword in ["cat", "kitt"]):
 				answers = [
 					"Oof, my nose is starting to itch again…",
 					"ACHOO! *cough* Haha... Apologies. At this distance, my cat allergy seems to be rearing its head…",
@@ -360,7 +360,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["rodent", "scurry", "rat", "pest", "vermin"]):
 			await message.channel.send("Resident rodent... beats invasive vermin.")
-		elif any(keyword in content for keyword in ["attack", "fight", "shoot", "skill", "burst", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash"]):
+		elif any(keyword in content for keyword in ["attack", "fight", "shoot", "skill", "burst", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash", "bonk"]):
 			answers = [
 				"Woah! What was that?",
 				"Ugh, I'm not in the mood for this!",
@@ -449,6 +449,24 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
+		elif any(keyword in content for keyword in ["hug", "embrace", "cuddl", "snuggl"]):
+			answers = [
+				"<:ventilove:1394738768774434878>",
+				"<a:ventipat:1394159658503241828>",
+				"My dearest companion, is there something you wish to tell me?",
+				"Here, come sit with me and enjoy the scent of Cecilias!",
+				"Whenever you need me, I'll always be by your side.",
+				"No matter what comes, you have the wind on your side.",
+				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you!",
+				"Oops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
+				"🫂",
+				"*hug*",
+				"Aww, I'd be happy to. *hug*",
+				f"*hugs {user}",
+				"*hug!*"
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 		elif "birthday" in content:
 			answers = [
 				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
@@ -469,9 +487,9 @@ async def on_message(message):
 			await message.channel.send("Let’s make a detour then. Heading up!")
 		elif "walk in" in content and "flies in" in content:
 			await message.channel.send("He doesn’t *walk* in, he *flies* in.")
-		elif any(keyword in content for keyword in ["Ding", "Answer", "Correct"]):
+		elif any(keyword in content for keyword in ["ding", "answer", "correct"]):
 			await message.channel.send("Ding-ding-ding! Correct answer!")
-		elif "fembo" in content:
+		elif any(keyword in content for keyword in ["fembo", "twink", "mpreg"]):
 			answers = [
 				"So that’s the word people use. Hm…",
 				"<:VentiWink:1394244370697289790>",
