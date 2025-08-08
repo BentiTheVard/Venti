@@ -18,7 +18,7 @@ async def on_message(message):
 	content = message.content.lower()
 	if message.author == client.user:
 		return
-	elif any(keyword in content for keyword in ["v!", "<@1402784150301184020>", "hey venti", "hi venti", "hello venti", "@venti", "!venti", "venti,", "!v"]):
+	elif any(keyword in content for keyword in ["v!", "hey venti", "hi venti", "hello venti", "@venti", "!venti", "venti,", "!v"]) or client.user in message.mentions:
 		if "!sleep" in content and message.mentions:
 			sleepee = message.mentions[0]
 			answers = [
@@ -33,7 +33,7 @@ async def on_message(message):
 		elif "!help" in content:
 			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line)")
 #💎GIVE COMMAND (Food)
-		elif "!give" in content:
+		elif any(keyword in content for keyword in ["!giv", "!gib", "!give", "!gift"])
 			if "apple" in content:
 				answers = [
 					"Oh, is this apple for me? Haha, that won't do, come share this apple with me.\nSplit it open like this...and you will feel the breeze from the apple core.\nIn some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
@@ -892,7 +892,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["flirt", "seduc", "pick-up", "pickup", "wink wink"]):
+		elif any(keyword in content for keyword in ["flirt", "seduc", "pick-up", "pickup", "wink wink", "rizz", "gyat", "get on your knees", "get on ur knees"]):
 			answers = [
 				"Hahaha, that one doesn't work on a bard.",
 				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
