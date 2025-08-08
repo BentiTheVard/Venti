@@ -33,7 +33,7 @@ async def on_message(message):
 		elif "!help" in content:
 			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line)")
 #💎GIVE COMMAND (Food)
-		elif any(keyword in content for keyword in ["!giv", "!gib", "!give", "!gift"])
+		elif any(keyword in content for keyword in ["!giv", "!gib", "!give", "!gift"]):
 			if "apple" in content:
 				answers = [
 					"Oh, is this apple for me? Haha, that won't do, come share this apple with me.\nSplit it open like this...and you will feel the breeze from the apple core.\nIn some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
