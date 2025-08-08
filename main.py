@@ -1450,7 +1450,8 @@ async def on_message(message):
 				"Ehe~",
 				"<a:Ventigif:1394739625544777769>",
 				"<a:ventidance_hen:1394160371249578157>",
-				"The gayness was within you all along... you just had to listen to the wind to hear it"
+				"The gayness was within you all along... you just had to listen to the wind to hear it.",
+				"*And Barbatos floated down from the heavens, wings shining white against the clouds, and replied, 'Yes.'*"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
