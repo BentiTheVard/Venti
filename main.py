@@ -731,7 +731,7 @@ async def on_message(message):
 			await message.channel.send("To turn back time and resurrect life... the Adepti really are quite powerful, aren't they? A reflection of someone else's power, I suppose...")
 		elif "xiangling" in content:
 			await message.channel.send("I've heard whispers in the wind speaking of Xiangling's culinary experimentation. I, too, have a propensity for experimentation! ...Wine counts, right?")
-		elif any(keyword in content for keyword in ["hu", "tao"]):
+		elif any(keyword in content for keyword in ["tao"]):
 			await message.channel.send("Hu Tao is a good friend of mine! We've engaged in poetic endeavors together on many occasions. Perhaps that poetry event should have an encore.")
 		elif "rosaria" in content:
 			await message.channel.send("Rosaria and I are drinking buddies. Sometimes we even drink together while she's supposed to be at the Favonius Cathedral. A bit ironic, isn't it? Hehe.")
