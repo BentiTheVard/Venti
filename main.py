@@ -404,7 +404,7 @@ async def on_message(message):
 				"*blush*",
 				"Aww, really? You mean it?",
 				"You, on the other hand... you're the gentlest soul I've ever met.",
-				f"I could say the same about you, {user}!"
+				f"I could say the same about you, {user}!",
 				"Hehe, you flatter me..."
 			]
 			random_message = random.choice(answers)
@@ -1444,11 +1444,13 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "straight", "rainbow", "represent"]):
 			answers = [
-				"Good work. Shall we repose for a moment, with a tune? Shall it be a capriccio, or a serenade?",
-				"So, a short rest after the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
-				"I wonder how many bottles this'll be worth…",
-				"Caught you~!\nThe farther your journey takes you, the less time we have to spend together in Mondstadt.\nBut... I knew I'd run into you today.\nQuick, just sit down, right here! It's a rare chance, so allow me to croon you a dulcet tune, accompanied by the melody of the water's revelry.",
-				"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!"
+				"<:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"Ehe~",
+				"<a:Ventigif:1394739625544777769>",
+				"<a:ventidance_hen:1394160371249578157>",
+				"The gayness was within you all along... you just had to listen to the wind to hear it"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
