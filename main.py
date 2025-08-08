@@ -793,9 +793,9 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif "escoff" in content:
 			await message.channel.send("I've heard Escoffier has some excellent dishes utilizing fruit! Alas, my wallet may be a bit too humble to try them myself...")
-		elif any(keyword in content for keyword in ["skirk", "void"])
+		elif any(keyword in content for keyword in ["skirk", "void"]):
 			await message.channel.send("I taught Skirk the art of music once as she explored Mondstadt. I'm sure you're well aware, but... I don't believe she's from Teyvat. And her alcohol tolerance only supports that theory, hehe.")
-		elif any(keyword in content for keyword in ["inef", "robot", "automat"])
+		elif any(keyword in content for keyword in ["inef", "robot", "automat"]):
 			await message.channel.send("There's a robot in Nod Krai? Oh, and she works as a maid? Hm, how fascinating... I wonder if she and Noelle would get along. Then again, Noelle gets along with almost anybody.")
 #OTHER MENTIONS🔥
 		elif "holy lyre" in content:
@@ -1541,7 +1541,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["hello", "hi", "hey", "herro", "konnichiwa", "hola", "greet"]):
+		elif any(keyword in content for keyword in ["hello", "hi", "hey", "herro", "konnichiwa", "hola", "greet", "yo", "what's up", "wassup", "whats up", "whatsup", "hru", "how are you"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition... That said, I haven't actually written any songs in Hilichurlian so far…",
