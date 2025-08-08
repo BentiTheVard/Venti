@@ -412,6 +412,8 @@ async def on_message(message):
 				"Hahaha, that one doesn't work on a bard.",
 				"<:VentiUwU:1394123911284920341>"
 			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["venti", "barbatos", "you", "u are", "ur", "you have", "u have"]) and any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay", "i like", "i want"]):
 			answers = [
 				f"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
