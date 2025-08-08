@@ -31,8 +31,25 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
 		elif "!help" in content:
-			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line)")
+			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line), \nv!ask Ask the wind, and the wind shall answer.")
 #💎GIVE COMMAND (Food)
+		elif any(keyword in content for keyword in ["!ask"]):
+			answers = [
+				"Ding-ding-ding! Correct answer!",
+				"Ehe.",
+				"Ehe~",
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know the answer?",
+				"I can hear it whispered in the wind... the answer is 'yes'!",
+				"My intuition says it's not the case.",
+				"I doubt it.",
+				f"I believe that to be the case, {user}...",
+				"Indeed, it is so.",
+				"Nope!",
+				"Unfortunately, that can never be the case.",
+				"Yes, always!"
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["!giv", "!gib", "!give", "!gift"]):
 			if "apple" in content:
 				answers = [
@@ -286,7 +303,7 @@ async def on_message(message):
 				]
 				random_message = random.choice(answers)
 				await message.channel.send(random_message)
-			elif any(keyword in content for keyword in ["coffin", "headstone", "urn", "amphora", "hole", "dna", "plunger", "roll_of_paper", "toilet", "tooth", "tongue", "ear", "nose", "foot", "eye", "anatomical", "lungs", "clown", "goblin", "briefs", "bikini", "swimsuit", "lip", "poo", "shit", "ogre"]):
+			elif any(keyword in content for keyword in ["coffin", "headstone", "urn", "amphora", "hole", "dna", "plunger", "roll_of_paper", "toilet", "tooth", "tongue", "ear", "nose", "foot", "eye", "anatomical", "lungs", "clown", "goblin", "briefs", "bikini", "swimsuit", "lip", "poo", "shit", "ogre", "trash"]):
 				answers = [
 					"Hehe, very funny. <:VentiScared:1394163440490254427>",
 					"Aww, for me? How… *generous*. <:VentiRefuse:1394238074707251271>",
@@ -305,6 +322,8 @@ async def on_message(message):
 				]
 				random_message = random.choice(answers)
 				await message.channel.send(random_message)
+			else:
+				return
 #PRIORITY ⭐
 		elif any(keyword in content for keyword in ["sad", "cry", "sick", "hard", "hurt", "tear", "pain", "depress", "tir", "energy", "suic", "upset", "help me", "sniffle", "weep", "bad day"]):
 			answers = [
@@ -326,7 +345,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["i hate", "i dislike"]) and "u" in content:
+		elif any(keyword in content for keyword in ["i hate", "i dislike", "fuck", "shut up", "shut it"]) and any(keyword in content for keyword in ["u", "shut up", "shut it"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
@@ -487,7 +506,9 @@ async def on_message(message):
 			answers = [
 				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
 				"Have you seen that gentleman around? Huh? He's just a normal man by the name of Zhongli now? That must be quite the change for that old block-head. Come with me to see him, will you? I have a vintage I dug up from Windrise that I can take as a condolence gift. Oh, ahh... did he still seem strong when you saw him? How strong? Am I likely to get blown away?",
-				"I've actually heard a few things about Mr. Zhongli before. The guests in the tavern talked about this refined and courteous man who, instead of having wine at Mondstadt's finest tavern, ordered a cup of hot tea with the most complex name."
+				"I've actually heard a few things about Mr. Zhongli before. The guests in the tavern talked about this refined and courteous man who, instead of having wine at Mondstadt's finest tavern, ordered a cup of hot tea with the most complex name.",
+				"Morax? Ah, we're old friends... He's a stubborn fellow. Very, very stubborn indeed. Don't tell him I said that.",
+				"Zhongli... I don't dislike him, despite his obstinate ways. On the contrary, I still regard him as a dear friend of mine. I miss drinking wine with him and hearing about what was happening in Liyue."
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
@@ -612,6 +633,13 @@ async def on_message(message):
 			answers = [
 				"This invention, with a little help from a trick of mine, will allow us to keep in touch. Minus the fuse — so don't worry, it's not going to explode. Come on, take it. This way, we can talk to each other just like this even when we're apart!",
 				"It's called a 'Dodocommunication Device,' and it allows people to stay in touch over vast distances. However, you can't just use it anytime you want, and there's also a limit on the number of times you can use it. That's why it's currently only available to a certain select few."
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
+		elif any(keyword in content for keyword in ["xiao", "yaksha"]):
+			answers = [
+				"Ah, Xiao... I remember that night, when he was lost, but found his way back to the light. I hope he's doing better now.",
+				"Xiao is not fond of public spaces, so sometimes we go out in nature together and sit and talk for a while. He's surprisingly wise when he's comfortable enough to speak freely!"
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
