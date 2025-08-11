@@ -439,7 +439,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with"]):
+		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
@@ -452,7 +452,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["i hate", "i dislike", "fuck", "shut up", "shut it"]) and any(keyword in content for keyword in ["u", "shut up", "shut it"]):
+		elif any(keyword in content for keyword in ["i hate", "i dislike", "fuck", "shut"]) and any(keyword in content for keyword in ["u", "shut", "venti", "barbatos"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
@@ -521,7 +521,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["venti", "barbatos", "you", "u are", "ur", "you have", "u have"]) and any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay", "i like", "i want"]):
+		elif any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay"]):
 			answers = [
 				f"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
 				"Oops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
@@ -2030,20 +2030,11 @@ async def on_message(message):
 				f"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
 				f"My disciples, rejoice! Behold, **the God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
 				f"Heroes supporting each other and setting out on a journey together... How exciting!",
-				f"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
 				f"Give it a go! If you don't try, you'll never know.",
 				f"I'm thinking about turning these adventures into songs. Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.",
-				f"Freedom, if demanded of you by an archon, is really no freedom at all.",
-				f"Now, spread your wings of freedom and go with my blessing.",
-				f"However, winds change their course. Someday, they will blow towards a brighter future.",
 				f"My vision? Eh-he. It's just a glowing glass ball I carry around to avoid suspicion.",
 				f"The wind amongst the branches is good, I love the way it smells…",
-				f"The word 'Windblume' dates from the age of Old Mondstadt. It was a code word that the people used to stay in contact and mount resistance in secret. At that time, people often said that the stronger the wind blows, the firmer the roots of the Windblume grow, and the brighter the flower that bursts into bloom.",
-				f"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
 				f"It is people's shared will that brings them onto the same page. And surely, it is the wind of freedom that brought us together.",
-				f"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
-				f"I once happened upon a cargo ship bound for Inazuma transporting Dandelion Wine, so, naturally, I decided to set sail with them. Once aboard, I found the captain to be a kindred spirit, and I was treated to an abundance of fine liquor along the way. Uh, I must have fallen asleep in the cargo crate while carefully comparing the tastes of Dandelion Wine and Inazuman sake…",
-				f"People often claim that capes and the like serve no real purpose other than aesthetics. I suppose a cape with pockets would really turn the tables on that crowd!",
 				f"Ding-ding-ding! Correct answer!",
 				f"Adventuring is what you do best. It's only natural to encounter a few surprises when you head somewhere new, but just remember, not all unexpected encounters are dangerous.",
 				f"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
