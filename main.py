@@ -20,15 +20,15 @@ async def on_message(message):
 		return
 	elif any(keyword in content for keyword in ["v!", "hey venti", "hi venti", "hello venti", "@venti", "!venti", "!v"]) or client.user in message.mentions:
 		if "!bam" in content:
+			return
+		if "has been bammed!" in content:
 			answers = [
 				"Ow-! Dvalin, that hurt!",
 				"That was uncalled for.",
 				"Oh no, my lyre is broken... not again!",
 				"Dvalin! What was that for?",
 				"Hehe, maybe Barbatos should !bam you back!",
-				f"!bam {user}",
-				f"{user}! And Dvalin, too! Why must you bam me so? <:VentiSigh:1394238143263277076>",
-				f"!bam {user} <:VentiEhe:1394237963923226737>",
+				"Dvalin! Why must you bam me so? <:VentiSigh:1394238143263277076>",
 				f"!bam <@1394575189278461982> <:ventihugdvalin:1394123943794970657>"
 			]
 			random_message = random.choice(answers)
