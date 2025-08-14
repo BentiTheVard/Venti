@@ -594,7 +594,7 @@ async def on_message(message):
 				"🫂",
 				"*hug*",
 				"Aww, I'd be happy to. *hug*",
-				f"*hugs {user}",
+				f"*hugs {user}*",
 				"*hug!*"
 			]
 			random_message = random.choice(answers)
