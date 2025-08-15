@@ -16,7 +16,7 @@ client = discord.Client(intents=intents)
 async def on_message(message):
 	user = message.author.display_name
 	content = message.content.lower()
-	if message.author == client.user or message.channel.name == "🪽barbatos-statue":
+	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat":
 		return
 	elif any(keyword in content for keyword in ["v!", "hey venti", "hi venti", "hello venti", "@venti", "!venti", "!v"]) or client.user in message.mentions:
 		if "!bam" in content:
