@@ -560,8 +560,6 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-			random_message = random.choice(answers)
-			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["pet", "pat", "ruffle", "stroke"]):
 			answers = [
 				"<:ventilove:1394738768774434878>",
