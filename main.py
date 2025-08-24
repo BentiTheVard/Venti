@@ -481,7 +481,7 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["rodent", "scurry", "rat", "pest", "vermin"]):
 			await message.channel.send("Resident rodent... beats invasive vermin.")
-		elif any(keyword in content for keyword in ["spit", "attack", "fight", "shoot", "skill", "burst", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash", "bonk", "boom", "collision", "💥", "nom"]):
+		elif any(keyword in content for keyword in ["spit", "attack", "fight", "shoot", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash", "bonk", "boom", "collision", "💥", "nom"]):
 			answers = [
 				"Woah! What was that?",
 				"Ugh, I'm not in the mood for this!",
