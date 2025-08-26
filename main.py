@@ -46,12 +46,19 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		if "!jail" in content and message.mentions:
 			criminal = message.mentions[0]
+			gifs = [
+				"Think you can go to jail.gif",
+				"Will you go to jail.gif"
+			]
+			image_name = random.choice(gifs)
+			file = discord.File(image_name)
+            await message.channel.send(file=file)
 			answers = [
+				file = discord.File(image_name)
+                await message.channel.send(file=file)
 				f"{criminal.mention} off to https://discord.com/channels/1394107293297152040/1394172531207831572 you go! <:VentiEhe:1394237963923226737>",
 				f"*A leaf floats from afar and leads {criminal.mention} in the direction of ⁠https://discord.com/channels/1394107293297152040/1394172531207831572.*",
-				f"{criminal.mention} https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnY5a3lsdmloeGVxZTlreWhyZDhuNHdxNGxkdHFna3kxZmxxemVydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Hd5uzVr4ukTyJiU91b/giphy.gif",
-				f"# <:VentiHandOver:1395204241928360079>\nWill you go to https://discord.com/channels/1394107293297152040/1394172531207831572?",
-				f"{criminal.mention} https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNqN28wMzEwazl4enlvdm00bnNvbzc5NDFkZ3BvMGFyejhzajZpcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hOXt3FlRawhkeW8s9l/giphy.gif",
+				file=file,
 				f"{criminal.mention} Well, you know what happens to convicts... https://discord.com/channels/1394107293297152040/1394172531207831572",
 				f"{criminal.mention} According to the judgement of the Oratrice Mecanique d'Analyse Cardinale, https://discord.com/channels/1394107293297152040/1394172531207831572!",
 				f"Ah, has {criminal.mention} committed forgery, too? Well, there's [only one place](https://discord.com/channels/1394107293297152040/1394172531207831572) for them to go...\n<:VentiShock:1394123854518948041> Hold on! I'm excluded from this rule, aren't I?",
