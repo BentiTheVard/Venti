@@ -46,28 +46,28 @@ async def on_message(message):
 			await message.channel.send(random_message)
 		if "!jail" in content and message.mentions:
 			criminal = message.mentions[0]
-			gifs = [
-				"Think you can go to jail.gif",
-				"Will you go to jail.gif"
-			]
-			image_name = random.choice(gifs)
-			file = discord.File(image_name)
-            await message.channel.send(file=file)
-			answers = [
+			isGif = random.randint(1, 8)
+			if isGif < 3:
+				gifs = [
+					"Think you can go to jail.gif",
+					"Will you go to jail.gif"
+				]
+				image_name = random.choice(gifs)
 				file = discord.File(image_name)
-                await message.channel.send(file=file)
-				f"{criminal.mention} off to https://discord.com/channels/1394107293297152040/1394172531207831572 you go! <:VentiEhe:1394237963923226737>",
-				f"*A leaf floats from afar and leads {criminal.mention} in the direction of ⁠https://discord.com/channels/1394107293297152040/1394172531207831572.*",
-				file=file,
-				f"{criminal.mention} Well, you know what happens to convicts... https://discord.com/channels/1394107293297152040/1394172531207831572",
-				f"{criminal.mention} According to the judgement of the Oratrice Mecanique d'Analyse Cardinale, https://discord.com/channels/1394107293297152040/1394172531207831572!",
-				f"Ah, has {criminal.mention} committed forgery, too? Well, there's [only one place](https://discord.com/channels/1394107293297152040/1394172531207831572) for them to go...\n<:VentiShock:1394123854518948041> Hold on! I'm excluded from this rule, aren't I?",
-				f"Alas, my poor disciple, {criminal.mention}, has found themselves at the mercy of https://discord.com/channels/1394107293297152040/1394172531207831572! <:VentiSigh:1394238143263277076> *Cruel is said fate, cruel it may be, were it not for a hero who could set us all free...*",
-				f"ACHOO! <:VentiSneeze:1394239013254201444> Oh... oh no. I have a fever, and its only cure is {criminal.mention} going to https://discord.com/channels/1394107293297152040/1394172531207831572!",
-				f"Say, {criminal.mention}, have you ever heard of a fabled place named https://discord.com/channels/1394107293297152040/1394172531207831572?\nWell, you see, that's your home now!"
-			]
-			random_message = random.choice(answers)
-			await message.channel.send(random_message)
+				await message.channel.send(file=file)
+			else:
+				answers = [
+					f"{criminal.mention} off to https://discord.com/channels/1394107293297152040/1394172531207831572 you go! <:VentiEhe:1394237963923226737>",
+					f"*A leaf floats from afar and leads {criminal.mention} in the direction of ⁠https://discord.com/channels/1394107293297152040/1394172531207831572.*",
+					f"{criminal.mention} Well, you know what happens to convicts... https://discord.com/channels/1394107293297152040/1394172531207831572",
+					f"{criminal.mention} According to the judgement of the Oratrice Mecanique d'Analyse Cardinale...\nhttps://discord.com/channels/1394107293297152040/1394172531207831572.",
+					f"Ah, has {criminal.mention} committed forgery, too? Well, there's [only one place](https://discord.com/channels/1394107293297152040/1394172531207831572) for them to go...\n<:VentiShock:1394123854518948041> Hold on! I'm excluded from this rule, aren't I?",
+					f"Alas, my poor disciple, {criminal.mention}, has found themselves at the mercy of https://discord.com/channels/1394107293297152040/1394172531207831572! <:VentiSigh:1394238143263277076> *Cruel is said fate, cruel it may be, were it not for a hero who could set us all free...*",
+					f"ACHOO! <:VentiSneeze:1394239013254201444> Oh... oh no. I have a fever, and its only cure is {criminal.mention} going to https://discord.com/channels/1394107293297152040/1394172531207831572!",
+					f"Say, {criminal.mention}, have you ever heard of a fabled place named https://discord.com/channels/1394107293297152040/1394172531207831572?\nWell, you see, that's your home now!"
+				]
+				random_message = random.choice(answers)
+				await message.channel.send(random_message)
 		elif "!help" in content:
 			await message.channel.send("v!sleep [user] (tells the mentioned user to sleep\nv!give [object] (gives Venti a gift)\nv!random (says a random voice line), \nv!ask Ask the wind, and the wind shall answer.")
 		elif any(keyword in content for keyword in ["!ask"]):
