@@ -54,7 +54,7 @@ async def on_message(message):
 				]
 				image_name = random.choice(gifs)
 				file = discord.File(image_name)
-				await message.channel.send(file=file)
+				await message.channel.send(content=f"{criminal.mention}", file=file)
 			else:
 				answers = [
 					f"{criminal.mention} off to https://discord.com/channels/1394107293297152040/1394172531207831572 you go! <:VentiEhe:1394237963923226737>",
