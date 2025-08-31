@@ -18,6 +18,501 @@ async def on_message(message):
 	content = message.content.lower()
 	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat":
 		return
+	#elif message.author.id == 437808476106784770 and message.mentions and any(keyword in content for keyword in ["Earned role: **I Splitting Gales**<:VentiBarbatos:1394242700315725876>", "Earned role: **II Breeze of Reminiscence**<:VentiBarbatos:1394242700315725876>", "Earned role: **III Ode to Thousand Winds**<:VentiBarbatos:1394242700315725876>"]):
+		#if "Splitting Gales" in content
+#🍃 VOICELINES
+	elif "!ally" in content:
+		if "j!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("ally low hp/ボクに任せて～.ogg")
+				await message.channel.send("Leave it to me~", file=file)
+			else:
+				file = discord.File("ally low hp/まだ諦めちゃダメだよ。.ogg")
+				await message.channel.send("Don’t give up yet!", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("ally low hp/交给我吧。.ogg")
+				await message.channel.send("Leave it to me.", file=file)
+			else:
+				file = discord.File("ally low hp/还不能放弃哦。.ogg")
+				await message.channel.send("Don’t give up yet, okay?", file=file)
+		else:
+			lines = [
+				"Don't give up!",
+				"Let me try!"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"ally low hp/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!burst", "!elemental burst"]):
+		if "j!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("burst/逃げようなんて思わないでよね？.ogg")
+				await message.channel.send("Don’t think about running away, okay?", file=file)
+			else:
+				file = discord.File("burst/風だ～.ogg")
+				await message.channel.send("It's the wind~", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("burst/别想逃开喔？.ogg")
+				await message.channel.send("Don’t think about running away, okay?", file=file)
+			else:
+				file = discord.File("burst/起风咯~.ogg")
+				await message.channel.send("The wind's rising~", file=file)
+		else:
+			lines = [
+				"Think you can get away？",
+				"Time for takeoff!"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"burst/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!fallen", "!death"]):
+		if "j!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("fallen/ありゃ、弦が切れちゃった….ogg")
+				await message.channel.send("Oh no, I snapped a string...", file=file)
+			elif line = 2:
+				file = discord.File("fallen/バタンキュ～.ogg")
+				await message.channel.send("Thud... zzz~", file=file)
+			else:
+				file = discord.File("fallen/少し寝よう….ogg")
+				await message.channel.send("Time for a little nap...", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("fallen/扑通。.ogg")
+				await message.channel.send("Thump.", file=file)
+			elif line = 2:
+				file = discord.File("fallen/啊呀，弦断了….ogg")
+				await message.channel.send("Oh no, a string is broken...", file=file)
+			else:
+				file = discord.File("fallen/稍微睡一下吧….ogg")
+				await message.channel.send("Time for a little nap...", file=file)
+		else:
+			lines = [
+				"Ah... Ugh...",
+				"Let me sleep a while...",
+				"Oh no, my lyre is broken...",
+				"Womp womp..."
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"fallen/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!hit", "!light hit", "!heavy hit"]):
+		if "j!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("hit/アチャ～.ogg")
+				await message.channel.send("Ouch~", file=file)
+			else:
+				file = discord.File("hit/乱暴だな。.ogg")
+				await message.channel.send("So rough.", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 2)
+			if line = 1:
+				file = discord.File("hit/哎呀….ogg")
+				await message.channel.send("Oww...", file=file)
+			else:
+				file = discord.File("hit/好粗鲁哦。.ogg")
+				await message.channel.send("How rude.", file=file)
+		else:
+			lines = [
+				"Ah!",
+				"How rude!",
+				"What!？"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"hit/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!windglider", "!wind glider", "!yaho", "!yahho", "!ヤッホ", "!呀嘿", "!yahei", "!ya-hei"]):
+		if "j!" in content:
+			file = discord.File("glider/ヤッホ～.ogg")
+			await message.channel.send("Yahho~", file=file)
+		elif "c!" in content:
+			file = discord.File("glider/呀嘿~.ogg")
+			await message.channel.send("Ya-hei~", file=file)
+		else:
+			file = discord.File("glider/Yahoo!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!join", "!party"]):
+		if "j!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("join/ウォーミングアップしよっか。.ogg")
+				await message.channel.send("Shall we warm up?", file=file)
+			elif line = 2:
+				file = discord.File("join/待たせちゃった？.ogg")
+				await message.channel.send("Did I keep you waiting?", file=file)
+			else:
+				file = discord.File("join/音階調整お～わり！")
+				await message.channel.send("Scale tuning~ all done!", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("join/是要做热身运动吗。.ogg")
+				await message.channel.send("Is it time for warm-ups?", file=file)
+			elif line = 2:
+				file = discord.File("join/让你久等了哦？.ogg")
+				await message.channel.send("Kept you waiting, huh?", file=file)
+			else:
+				file = discord.File("join/调音完成。.ogg")
+				await message.channel.send("Tuning complete.", file=file)
+		else:
+			lines = [
+				"Didn't keep you waiting, did I？",
+				"Give me a moment to compose myself.",
+				"Ready for a rehearsal？"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"join/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif "!low" in content:
+		if "j!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("low hp/うわぁ、ボクばかり攻撃しないでよ！.ogg")
+				await message.channel.send("Wah, don't just attack me!", file=file)
+			elif line = 2:
+				file = discord.File("low hp/ひどいよ！.ogg")
+				await message.channel.send("How cruel!", file=file)
+			else:
+				file = discord.File("low hp/待って、これじゃ面白くないよ！.ogg")
+				await message.channel.send("Wait, this is no fun!", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("low hp/哎呀，别盯着我打呀。.ogg")
+				await message.channel.send("Hey, don't just target me!", file=file)
+			elif line = 2:
+				file = discord.File("low hp/好过分呐。.ogg")
+				await message.channel.send("That's so mean!", file=file)
+			else:
+				file = discord.File("low hp/等等，这可不好玩！.ogg")
+				await message.channel.send("Wait, this is no fun!", file=file)
+		else:
+			lines = [
+				"...Oh dear.",
+				"That was uncalled for.",
+				"Ugh, I'm not in the mood for this!"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"low hp/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!skill", "!elemental skill"]):
+		if "j!" in content:
+			line = random.randint(1, 4)
+			if line = 1:
+				file = discord.File("skill/ここだよ！.ogg")
+				await message.channel.send("Over here!", file=file)
+			elif line = 2:
+				file = discord.File("skill/ふぅ～.ogg")
+				await message.channel.send("Phew~", file=file)
+			elif line = 3:
+				file = discord.File("skill/一緒に遊ぼうよ～.ogg")
+				await message.channel.send("Let's play together~", file=file)
+			else:
+				file = discord.File("skill/足下に気をつけて～.ogg")
+				await message.channel.send("Watch your step~", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 4)
+			if line = 1:
+				file = discord.File("skill/一起来玩吧。.ogg")
+				await message.channel.send("Let's play together!", file=file)
+			elif line = 2:
+				file = discord.File("skill/哟呼——.ogg")
+				await message.channel.send("Yoohoo~", file=file)
+			elif line = 3:
+				file = discord.File("skill/在这哟。.ogg")
+				await message.channel.send("Over here!", file=file)
+			else:
+				file = discord.File("skill/留意脚下。.ogg")
+				await message.channel.send("Watch your step!", file=file)
+		else:
+			lines = [
+				"Brace yourselves!",
+				"Here we go!",
+				"Let's play!",
+				"Ya-hoo!"
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"skill/{file_name}.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!glid", "!wouldnt gliding be", "!wouldn't gliding be", "!走るより飛ぶほうが", "!比跑快吧", "!飞，比跑快吧", "!飞比跑快吧"]):
+		if "j!" in content:
+			file = discord.File("glider/走るより飛ぶほうが速いよ？.ogg")
+			await message.channel.send("Flying’s faster than running, you know?", file=file)
+		elif "c!" in content:
+			file = discord.File("glider/飞，比跑快吧？.ogg")
+			await message.channel.send("Flying’s faster than running, don’t you think?", file=file)
+		else:
+			file = discord.File("Wouldn't gliding be faster？.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!treasure", "!open", "!chest"]):
+		if "j!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("treasure/お酒が何本も買えるね～.ogg")
+				await message.channel.send("That’s enough for quite a few bottles of wine~", file=file)
+			elif line = 2:
+				file = discord.File("treasure/コホンッ、ここで一曲、「宝箱の歌」！.ogg")
+				await message.channel.send("Ahem! Presenting—'The Treasure Chest Song'!", file=file)
+			else:
+				file = discord.File("treasure/てへっ、「風神のご加護」ってやつ？.ogg")
+				await message.channel.send("Hehe, guess this is what they call the 'Anemo Archon’s blessing'?", file=file)
+		elif "c!" in content:
+			line = random.randint(1, 3)
+			if line = 1:
+				file = discord.File("treasure/咳咳，请听一首，「宝箱之歌」！.ogg")
+				await message.channel.send("Ahem! Please enjoy this song—'The Treasure Chest Ballad'!", file=file)
+			elif line = 2:
+				file = discord.File("treasure/嘿嘿，要不要感谢「风神的眷顾」呀？.ogg")
+				await message.channel.send("Hehe, maybe you should thank the 'blessing of the Anemo Archon'?", file=file)
+			else:
+				file = discord.File("treasure/收获不少，可以拿去换几瓶好酒啦。.ogg")
+				await message.channel.send("Quite a haul—Enough to trade for a few fine bottles of wine.", file=file)
+		else:
+			lines = [
+				"Have you heard The Ballad of the Treasure Chest？",
+				"Thank Barbatos! Wait a minute...",
+				"What a find! I wonder how many bottles this'll be worth..."
+			]
+			file_name = random.choice(lines)
+			file = discord.File(f"treasure/{file_name}.ogg")
+			await message.channel.send(file=file)
+#🍀 SPECIFIC VOICELINES
+	elif any(keyword in content for keyword in ["!dont give up", "!don't give up", "!まだ諦めちゃダメだよ", "!还不能放弃哦"]):
+		if "j!" in content:
+			file = discord.File("glider/まだ諦めちゃダメだよ。.ogg")
+			await message.channel.send("Don’t give up yet!", file=file)
+		elif "c!" in content:
+			file = discord.File("ally low hp/还不能放弃哦。.ogg")
+			await message.channel.send("Don’t give up yet, okay?", file=file)
+		else:
+			file = discord.File("Don't give up!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!let me try", "!ボクに任せて", "!交给我吧"]):
+		if "j!" in content:
+			file = discord.File("ally low hp/ボクに任せて～.ogg")
+			await message.channel.send("Leave it to me~", file=file)
+		elif "c!" in content:
+			file = discord.File("ally low hp/交给我吧。.ogg")
+			await message.channel.send("Leave it to me.", file=file)
+		else:
+			file = discord.File("Let me try!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!think you can get away", "!逃げようなんて思わないでよね", "!别想逃开喔"]):
+		if "j!" in content:
+			file = discord.File("burst/逃げようなんて思わないでよね？.ogg")
+			await message.channel.send("Don’t think about running away, okay?", file=file)
+		elif "c!" in content:
+			file = discord.File("burst/别想逃开喔？.ogg")
+			await message.channel.send("Don’t think about running away, okay?", file=file)
+		else:
+			file = discord.File("Think you can get away？.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!time for take", "!kaze da", "!風だ", "!起风咯"]):
+		if "j!" in content:
+			file = discord.File("burst/風だ～.ogg")
+			await message.channel.send("It's the wind~", file=file)
+		elif "c!" in content:
+			file = discord.File("burst/起风咯~.ogg")
+			await message.channel.send("The wind's rising~", file=file)
+		else:
+			file = discord.File("Time for takeoff!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!let me sleep a", "!少し寝よ", "!稍微睡一下吧"]):
+		if "j!" in content:
+			file = discord.File("fallen/少し寝よう….ogg")
+			await message.channel.send("Time for a little nap...", file=file)
+		elif "c!" in content:
+			file = discord.File("fallen/稍微睡一下吧….ogg")
+			await message.channel.send("Time for a little nap...", file=file)
+		else:
+			file = discord.File("Let me sleep a while....ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!oh no my lyre", "!oh no, my lyre", "!my lyre is", "!ありゃ、弦が切れちゃった", "!ありゃ弦が切れちゃった", "!弦が切れちゃった", "!啊呀，弦断了", "!啊呀弦断了", "!弦断了"]):
+		if "j!" in content:
+			file = discord.File("fallen/ありゃ、弦が切れちゃった….ogg")
+			await message.channel.send("Oh no, I snapped a string...", file=file)
+		elif "c!" in content:
+			file = discord.File("fallen/啊呀，弦断了….ogg")
+			await message.channel.send("Oh no, a string is broken...", file=file)
+		else:
+			file = discord.File("Oh no, my lyre is broken....ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!womp", "!バタンキュ", "!扑通"]):
+		if "j!" in content:
+			file = discord.File("fallen/バタンキュ～.ogg")
+			await message.channel.send("Thud... zzz~", file=file)
+		elif "c!" in content:
+			file = discord.File("fallen/扑通。.ogg")
+			await message.channel.send("Thump.", file=file)
+		else:
+			file = discord.File("Womp womp....ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!ah... ugh", "!ah ugh"]):
+		file = discord.File("Womp womp....ogg")
+		await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!how rude", "!乱暴だな", "!好粗鲁哦"]):
+		if "j!" in content:
+			file = discord.File("hit/乱暴だな。.ogg")
+			await message.channel.send("So rough.", file=file)
+		elif "c!" in content:
+			file = discord.File("hit/好粗鲁哦。.ogg")
+			await message.channel.send("How rude.", file=file)
+		else:
+			file = discord.File("How rude!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!ah!", "!ow", "!ouch", "!アチャ", "!哎呀"]):
+		if "j!" in content:
+			file = discord.File("hit/アチャ～.ogg")
+			await message.channel.send("Ouch~", file=file)
+		elif "c!" in content:
+			file = discord.File("hit/哎呀….ogg")
+			await message.channel.send("Oww...", file=file)
+		else:
+			file = discord.File("Ah!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!what?", "!what!", "!what？"]):
+		file = discord.File("What!？.ogg")
+		await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!didn't keep you waiting", "!didnt keep you waiting", "!待たせちゃった", "!让你久等了哦"]):
+		if "j!" in content:
+			file = discord.File("join/待たせちゃった？.ogg")
+			await message.channel.send("Did I keep you waiting?", file=file)
+		elif "c!" in content:
+			file = discord.File("join/让你久等了哦？.ogg")
+			await message.channel.send("Kept you waiting, huh?", file=file)
+		else:
+			file = discord.File("Didn't keep you waiting, did I？.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!give me a moment to compose", "!音階調整お", "!调音完成"]):
+		if "j!" in content:
+			file = discord.File("join/音階調整お～わり！")
+			await message.channel.send("Scale tuning~ all done!", file=file)
+		elif "c!" in content:
+			file = discord.File("join/调音完成。.ogg")
+			await message.channel.send("Tuning complete.", file=file)
+		else:
+			file = discord.File("Give me a moment to compose myself..ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!ready for a reh", "!待たせちゃった", "!让你久等了哦"]):
+		if "j!" in content:
+			file = discord.File("join/ウォーミングアップしよっか。.ogg")
+			await message.channel.send("Shall we warm up?", file=file)
+		elif "c!" in content:
+			file = discord.File("join/是要做热身运动吗。.ogg")
+			await message.channel.send("Is it time for warm-ups?", file=file)
+		else:
+			file = discord.File("Ready for a rehearsal？.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!that was un", "!ひどいよ", "!好过分呐"]):
+		if "j!" in content:
+			file = discord.File("low hp/ひどいよ！.ogg")
+			await message.channel.send("How cruel!", file=file)
+		elif "c!" in content:
+			file = discord.File("low hp/好过分呐。.ogg")
+			await message.channel.send("That's so mean!", file=file)
+		else:
+			file = discord.File("That was uncalled for..ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!ugh, i'm not in the", "!ugh, im not in the", "!ugh i'm not in the", "!ugh im not in the", "!i'm not in the", "im not in the", "!待って、これじゃ面白くないよ", "!待ってこれじゃ面白くないよ", "!これじゃ面白くないよ", "!等等，这可不好玩", "!等等这可不好玩", "!这可不好玩"]):
+		if "j!" in content:
+			file = discord.File("low hp/待って、これじゃ面白くないよ！.ogg")
+			await message.channel.send("Wait, this is no fun!", file=file)
+		elif "c!" in content:
+			file = discord.File("low hp/等等，这可不好玩！.ogg")
+			await message.channel.send("Wait, this is no fun!", file=file)
+		else:
+			file = discord.File("Ugh, I'm not in the mood for this!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!...oh dear", "!oh dear", "!うわぁ、ボクばかり攻撃しないでよ", "!うわぁボクばかり攻撃しないでよ", "!ボクばかり攻撃しないでよ", "!哎呀，别盯着我打呀", "!哎呀别盯着我打呀", "!别盯着我打呀"]):
+		if "j!" in content:
+			file = discord.File("low hp/うわぁ、ボクばかり攻撃しないでよ！.ogg")
+			await message.channel.send("Wah, don't just attack me!", file=file)
+		elif "c!" in content:
+			file = discord.File("low hp/哎呀，别盯着我打呀。.ogg")
+			await message.channel.send("Hey, don't just target me!", file=file)
+		else:
+			file = discord.File("...Oh dear..ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!brace your", "!brace ur", "!足下に気をつけて", "!留意脚下"]):
+		if "j!" in content:
+			file = discord.File("skill/足下に気をつけて～.ogg")
+			await message.channel.send("Watch your step~", file=file)
+		elif "c!" in content:
+			file = discord.File("skill/留意脚下。.ogg")
+			await message.channel.send("Watch your step!", file=file)
+		else:
+			file = discord.File("Brace yourselves!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!here we go", "!koko da", "kokoda", "!ここだよ", "!在这哟"]):
+		if "j!" in content:
+			file = discord.File("skill/ここだよ！.ogg")
+			await message.channel.send("Over here!", file=file)
+		elif "c!" in content:
+			file = discord.File("skill/在这哟。.ogg")
+			await message.channel.send("Over here!", file=file)
+		else:
+			file = discord.File("Here we go!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!let's play", "!lets play", "!一緒に遊ぼうよ", "!一起来玩吧"]):
+		if "j!" in content:
+			file = discord.File("skill/一緒に遊ぼうよ～.ogg")
+			await message.channel.send("Let's play together~", file=file)
+		elif "c!" in content:
+			file = discord.File("skill/一起来玩吧。.ogg")
+			await message.channel.send("Let's play together!", file=file)
+		else:
+			file = discord.File("Let's play!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!ya hoo", "!ya-hoo", "!yoo-hoo", "!lets play", "!ふぅ", "!哟呼——"]):
+		if "j!" in content:
+			file = discord.File("skill/ふぅ～.ogg")
+			await message.channel.send("Phew~", file=file)
+		elif "c!" in content:
+			file = discord.File("skill/哟呼——.ogg")
+			await message.channel.send("Yoohoo~", file=file)
+		else:
+			file = discord.File("Ya-hoo!.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!have you heard", "!ballad of the", "!the ballad of the", "!コホンッ、ここで一曲", "!コホンッここで一曲", "!ここで一曲", "!咳咳，请听一首", "!咳咳请听一首", "!请听一首"]):
+		if "j!" in content:
+			file = discord.File("treasure/コホンッ、ここで一曲、「宝箱の歌」！.ogg")
+			await message.channel.send("Ahem! Presenting—'The Treasure Chest Song'!", file=file)
+		elif "c!" in content:
+			file = discord.File("treasure/咳咳，请听一首，「宝箱之歌」！.ogg")
+			await message.channel.send("Ahem! Please enjoy this song—'The Treasure Chest Ballad'!", file=file)
+		else:
+			file = discord.File("Have you heard The Ballad of the Treasure Chest？.ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!thank barbatos", "!wait a minute", "!てへっ、「風神のご加護」", "!てへっ「風神のご加護」", "!てへっ風神のご加護", "!「風神のご加護」", "!風神のご加護", "!「风神的眷顾」", "!风神的眷顾", "!嘿嘿，要不要感谢", "!嘿嘿要不要感谢", "!要不要感谢"]):
+		if "j!" in content:
+			file = discord.File("treasure/てへっ、「風神のご加護」ってやつ？.ogg")
+			await message.channel.send("Hehe, guess this is what they call the 'Anemo Archon’s blessing'?", file=file)
+		elif "c!" in content:
+			file = discord.File("treasure/嘿嘿，要不要感谢「风神的眷顾」呀？.ogg")
+			await message.channel.send("Hehe, maybe you should thank the 'blessing of the Anemo Archon'?", file=file)
+		else:
+			file = discord.File("Thank Barbatos! Wait a minute....ogg")
+			await message.channel.send(file=file)
+	elif any(keyword in content for keyword in ["!what a find", "!i wonder how many", "!收获不少", "!可以拿去换几瓶好酒啦", "!お酒が何本も買えるね"]):
+		if "j!" in content:
+			file = discord.File("treasure/お酒が何本も買えるね～.ogg")
+			await message.channel.send("That’s enough for quite a few bottles of wine~", file=file)
+		elif "c!" in content:
+			file = discord.File("treasure/收获不少，可以拿去换几瓶好酒啦。.ogg")
+			await message.channel.send("Quite a haul—Enough to trade for a few fine bottles of wine.", file=file)
+		else:
+			file = discord.File("What a find! I wonder how many bottles this'll be worth....ogg")
+			await message.channel.send(file=file)
+#✨RESPONSES
 	elif any(keyword in content for keyword in ["v!", "hey venti", "@venti", "!venti", "!v"]) or client.user in message.mentions:
 		if "!bam" in content:
 			return
@@ -493,7 +988,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky"]):
+		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["idiot", "dumbass", "lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
