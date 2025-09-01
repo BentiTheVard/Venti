@@ -251,7 +251,7 @@ async def on_message(message):
 			file = discord.File("glider/飞，比跑快吧？.mp3")
 			await message.channel.send("Flying’s faster than running, don’t you think?", file=file)
 		else:
-			file = discord.File("Wouldn't gliding be faster？.mp3")
+			file = discord.File("glider/Wouldn't gliding be faster？.mp3")
 			await message.channel.send(file=file)
 	elif any(keyword in content for keyword in ["!treasure", "!open", "!chest"]):
 		if "j!" in content:
