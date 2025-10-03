@@ -545,25 +545,25 @@ async def on_message(message):
 			file = discord.File("treasure/What a find! I wonder how many bottles this'll be worth....mp3")
 			await message.channel.send(file=file)
 #✨RESPONSES
-	elif "!sleep" in content and message.mentions:
-		sleepee = message.mentions[0]
-		answers = [
-			f"{sleepee.mention}, get a good night's sleep tonight. Wait for the whisper of the gentle breeze to rouse you tomorrow morning, then come and enjoy a performance by the greatest bard to ever grace the streets of Mondstadt.",
-			f"{sleepee.mention} Go to sleep! Anemo Archon’s orders~ <:VentiEhe:1394237963923226737>",
-			f"{sleepee.mention} Rock-a-bye baby, on the tree top… when the wind blows the cradle will rock♫",
-			f"{sleepee.mention} Off to the land of nod? Haha, Farewell my friend!",
-			f"<:VentiSleep:1394238176410730669> ← (This is you, {sleepee.mention})"
-		]
-		random_message = random.choice(answers)
-		await message.channel.send(random_message)
 	elif any(keyword in content for keyword in ["v!", "hey venti", "@venti", "!venti", "!v"]) or client.user in message.mentions:
-		if "ping" in content:
+		if "!sleep" in content and message.mentions:
+			sleepee = message.mentions[0]
+			answers = [
+				f"{sleepee.mention}, get a good night's sleep tonight. Wait for the whisper of the gentle breeze to rouse you tomorrow morning, then come and enjoy a performance by the greatest bard to ever grace the streets of Mondstadt.",
+				f"{sleepee.mention} Go to sleep! Anemo Archon’s orders~ <:VentiEhe:1394237963923226737>",
+				f"{sleepee.mention} Rock-a-bye baby, on the tree top… when the wind blows the cradle will rock♫",
+				f"{sleepee.mention} Off to the land of nod? Haha, Farewell my friend!",
+				f"<:VentiSleep:1394238176410730669> ← (This is you, {sleepee.mention})"
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
+		elif "ping" in content:
 			await message.channel.send("pong")
-		if "!wake" in content and "up" in content:
+		elif "!wake" in content and "up" in content:
 			await message.channel.send("<:VentiQiqi:1394523238964531304>")
-		if "!bam" in content:
+		elif "!bam" in content:
 			return
-		if "has been bammed!" in content:
+		elif "has been bammed!" in content:
 			answers = [
 				"Ow-! Dvalin, that hurt!",
 				"That was uncalled for.",
@@ -575,7 +575,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		if "v!jail" in content and message.mentions:
+		elif "v!jail" in content and message.mentions:
 			if client.user in message.mentions:
 				answers = [
 					f"Nice try, {user}. <:VentiEhe:1394237963923226737>",
