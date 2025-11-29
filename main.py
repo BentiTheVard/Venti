@@ -46,7 +46,7 @@ async def on_message(message):
 			]
 			file_name = random.choice(lines)
 			file = discord.File(f"ally low hp/{file_name}.mp3")
-			await message.channel.send(file=file)
+			await message.reply(file=file)
 	elif any(keyword in content for keyword in ["!burst", "!elemental burst"]):
 		lang = random.randint(1, 3)
 		if "j!" in content or ("r!" in content and lang == 1):
@@ -610,7 +610,7 @@ async def on_message(message):
 						f"{criminal.mention} According to the judgement of the Oratrice Mecanique d'Analyse Cardinale...\nhttps://discord.com/channels/1394107293297152040/1394172531207831572.",
 						f"Ah, has {criminal.mention} committed forgery, too? Well, there's [only one place](https://discord.com/channels/1394107293297152040/1394172531207831572) for them to go...\n<:VentiShock:1394123854518948041> Hold on! I'm excluded from this rule, aren't I?",
 						f"Alas, my poor disciple, {criminal.mention}, has found themselves at the mercy of https://discord.com/channels/1394107293297152040/1394172531207831572! <:VentiSigh:1394238143263277076> *Cruel is said fate, cruel it may be, were it not for a hero who could set us all free...*",
-						f"ACHOO! <:VentiSneeze:1394239013254201444> Oh... oh no. I have a fever, and its only cure is {criminal.mention} going to https://discord.com/channels/1394107293297152040/1394172531207831572!",
+						f"ACHOO! <:VentiSneeze:1416910019613425704> Oh... oh no. I have a fever, and its only cure is {criminal.mention} going to https://discord.com/channels/1394107293297152040/1394172531207831572!",
 						f"Say, {criminal.mention}, have you ever heard of a fabled place named https://discord.com/channels/1394107293297152040/1394172531207831572?\nWell, you see, that's your home now!"
 					]
 					random_message = random.choice(answers)
@@ -1334,6 +1334,13 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
+		elif "albert" in content:
+			answers = [
+				"Albert? ...Ugh, I need a drink.",
+				"That Albert... I'm glad the Church of Favonius tries to keep him in check. What a "
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 #PLAYABLE CHARACTERS 💜
 		elif any(keyword in content for keyword in ["diluc", "dawn winery"]):
 			answers = [
@@ -1378,6 +1385,8 @@ async def on_message(message):
 				"O, Traveler, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
 				"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia."
 			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 		elif "alice" in content:
 			answers = [
 				"Speaking of Alice, guess which two people I ran into on my way to the tavern today? A mother and daughter, both with long elf ears and the most amazingly adorable personalities!",
@@ -1629,6 +1638,14 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
+		elif any(keyword in content for keyword in ["parent", "adopt", "children", "family"]):
+			answers = [
+				f"My children deserve the joy of songs and dance, and the right to overthrow vile tyrants.",
+				f"I consider all of Mondstadt my children!",
+
+			]
+			random_message = random.choice(answers)
+			await message.channel.send(random_message)
 		elif any(keyword in content for keyword in ["danger", "help", "spook"]):
 			answers = [
 				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
@@ -1641,7 +1658,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.channel.send(random_message)
-		elif any(keyword in content for keyword in ["flirt", "seduc", "pick-up", "pickup", "wink wink", "rizz", "gyat", "get on your knees", "get on ur knees"]):
+		elif any(keyword in content for keyword in ["flirt", "seduc", "pick-up", "pickup", "wink wink", "rizz", "gyat", "get on your knees", "get on ur knees", "girlfirend", "boyfriend", "waifu", "husbando"]):
 			answers = [
 				"Hahaha, that one doesn't work on a bard.",
 				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
