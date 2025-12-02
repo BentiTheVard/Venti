@@ -739,7 +739,7 @@ async def on_message(message):
 					"ACHOO! *cough* Haha... Apologies. At this distance, my cat allergy seems to be rearing its head…",
 					"Aha, it must be my second avid reader! Let's go ask it about its thoughts on my... my... achoo!",
 					"Whoa, not so close... Achoo! No more peeking! I haven't finished writing my poem yet!",
-					"Ah, hello! I didn't see you there. I’m Barbatos, the Anemo Archon, and– ACHOO!<:VentiSneeze:1394239013254201444>"
+					"Ah, hello! I didn't see you there. I’m Barbatos, the Anemo Archon, and– ACHOO!<:VentiSneeze:1416910019613425704>"
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
@@ -1024,7 +1024,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["idiot", "dumbass", "lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky"]):
+		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["idiot", "dumbass", "lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky", "i hate mondstat", "i hate mondstadt"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
@@ -1097,6 +1097,18 @@ async def on_message(message):
 				f"Of course I do, {user}. Always!",
 				"Your companionship is like a breeze that lingers in the air, warm and familiar.",
 				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["u kiss", "you kiss"]):
+			answers = [
+				"Barbatos? Kissed?",
+				"Ah, well... let's... not talk about that.",
+				"Blasphemy!",
+				"<:VentiShock:1394123854518948041>",
+				"Anyway...",
+				"<:VentiWinking:1443495767758344294>",
+				"Ah, did I kiss someone? Whoops..."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1259,6 +1271,22 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif "dottore" in content:
+			answers = [
+				"Dottore... I have a thing or two to say to him.",
+				"<:VentiSus:1406960201311064175>",
+				"Dottore? I can't say I'm a fan...",
+				"I wonder if Dottore knows of the word 'karma'. Do you think we should teach him?"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif "capitano" in content:
+			answers = [
+				"*sigh*... If only the seven nations had banded together against the Abyss Order in the first place. The Fatui possess the strongest military among the seven nations. Yet they've used it to steal the Holy Lyre, covet the power of gods, and use Dvalin as a bargaining chip against the Knights…",
+				"Immortality may seem desirable at first, but even the largest oak trees get worn down by time."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["signora", "rosalyne"]):
 			await message.reply("Signora was No. 8 of the harbingers. She and the rest of the harbingers have been given god-like executive authority by the Tsaritsa of Snezhnaya, and with it, strength surpassing that of other mortals.")
 		elif "celestia" in content:
@@ -1278,7 +1306,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["fatui", "fatuus", "arle"]):
+		elif any(keyword in content for keyword in ["fatui", "fatuus", "arle", "harbinger", "pulcinella", "sandrone", "pantalone"]):
 			await message.reply("*sigh*... If only the seven nations had banded together against the Abyss Order in the first place. The Fatui possess the strongest military among the seven nations. Yet they've used it to steal the Holy Lyre, covet the power of gods, and use Dvalin as a bargaining chip against the Knights…")
 		elif any(keyword in content for keyword in ["vennessa", "windrise", "oak"]):
 			await message.reply("I'm thinking about turning these adventures into songs after we're done… Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.")
@@ -1412,7 +1440,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["albedo", "alchemy", "life", "synthe", "durin"]):
+		elif any(keyword in content for keyword in ["albedo", "alchemy", "synthe", "durin"]):
 			answers = [
 				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
 				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
@@ -1555,6 +1583,29 @@ async def on_message(message):
 			await message.reply("I taught Skirk the art of music once as she explored Mondstadt. I'm sure you're well aware, but... I don't believe she's from Teyvat. And her alcohol tolerance only supports that theory, hehe.")
 		elif any(keyword in content for keyword in ["inef", "robot", "automat"]):
 			await message.reply("There's a robot in Nod Krai? Oh, and she works as a maid? Hm, how fascinating... I wonder if she and Noelle would get along. Then again, Noelle gets along with almost anybody.")
+#SHIPPING💘
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
+			answers = [
+				"Morax? Ah, we're old friends... He's a stubborn fellow. Very, very stubborn indeed. Don't tell him I said that.",
+				"Zhongli... I don't dislike him, despite his obstinate ways. On the contrary, I still regard him as a dear friend of mine. I miss drinking wine with him and hearing about what was happening in Liyue.",
+				"Eh? Oh dear...",
+				"Well, I... we're old friends.",
+				"<:VentiShock:1394123854518948041>",
+				"Zhongli and I? Romantically acquainted? In reality, we're sworn enemies! ...Ehe, just kidding. We're friends.",
+				"Well, I suppose it _would_ make sense, would it not?",
+				"We do have a lot of history. It's been many years, after all!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]) and any(keyword in content for keyword in ["diluc", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]):
+			answers = [
+				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
+				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
+				"Diluc? Well, it would be nice to have the wine for free.",
+				"Hmm, really? That's possible? And here I thought Diluc believed I was a wine leech!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 #OTHER MENTIONS🔥
 		elif "holy lyre" in content:
 			await message.reply("The pattern of flowing wind carved on the rosewood... and the strings still feel cool to the touch too. Oh, the memories...")
@@ -1646,7 +1697,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["danger", "help", "spook"]):
+		elif any(keyword in content for keyword in ["danger", "help", "spook", "save", "rescue"]):
 			answers = [
 				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
 				"Let me try!",
@@ -1654,6 +1705,7 @@ async def on_message(message):
 				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
 				"Adventuring is what you do best. It's only natural to encounter a few surprises when you head somewhere new, but just remember, not all unexpected encounters are dangerous.",
 				"I've got things covered here.",
+				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
 				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh…<:VentiScared:1394163440490254427>"
 			]
 			random_message = random.choice(answers)
@@ -1740,6 +1792,16 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["we're", "we are", "are we"]) and any(keyword in content for keyword in ["marri", "wife", "husband"]):
+			answers = [
+				"Ah, marriage... the subject of poems for millennia.",
+				"Married...! <:VentiShock:1394123854518948041>",
+				"Well, I... ehe...",
+				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
+				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["love", "romance", "romanti", "wife", "wive", "husband", "married", "marriage", "marry", "spouse"]):
 			answers = [
 				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
@@ -1749,7 +1811,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["friend", "companion"]):
+		elif any(keyword in content for keyword in ["friend", "companion", "homie"]):
 			answers = [
 				f"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too.",
 				f"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
@@ -1809,7 +1871,7 @@ async def on_message(message):
 				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
 				"Achoo! Ugh... Guess I shouldn't get too close to the cats after all... I'll just stay on the roof.",
 				"Oof, my nose is starting to itch again…",
-				"There's a special drink known far and wide at Cat's Tail. But it ah... ahh... ACHOO! <:VentiSneeze:1394239013254201444>*sniffs* How about you go and fetch one for me? I'll be truly thankful, I promise.",
+				"There's a special drink known far and wide at Cat's Tail. But it ah... ahh... ACHOO! <:VentiSneeze:1416910019613425704>*sniffs* How about you go and fetch one for me? I'll be truly thankful, I promise.",
 				"ACHOO! *cough* Haha... Apologies. At this distance, my cat allergy seems to be rearing its head…"
 			]
 			random_message = random.choice(answers)
@@ -2132,6 +2194,20 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["wish", "bless me", "luck", "pull"]) and any(keyword in content for keyword in ["grant", "bless me", "luck", "pull"]):
+			answers = [
+				"*clears throat* Have you heard The Ballad of the Treasure Chest?",
+				f"Haha, {user}! You came just in time. Here, lucky apple juice made just for you. Try it~",
+				"Now, spread your wings of freedom and go with my blessing.",
+				"Now, spread your wings of freedom and go with my blessing.",
+				"If you are a chaser of freedom, the Anemo Archon will bless you. So why not let those feelings out, and sing with everyone?",
+				"The winds of Mondstadt will guide every lost ship back to safe harbor.",
+				"<:LuckWispVenti:1444056414204067870>",
+				"<:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870>",
+				"<:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870>"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif "wish" in content:
 			answers = [
 				f"Perfect timing, {user}! I was about to ask you — what is your greatest wish?",
@@ -2225,7 +2301,19 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "straight", "rainbow", "represent"]):
+		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "straight", "rainbow", "represent", "mlm", "wlw", "yaoi", "yuri", "love men", "love boy", "kiss boy", "date boy"]) and any(keyword in content for keyword in ["you are", "are you", "is venti", "are u", "u are", "venti is", "venti's", "ventis", "do u", "do you"]):
+			answers = [
+				"<:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"Ehe~",
+				"<a:Ventigif:1394739625544777769>",
+				"<a:ventidance_hen:1394160371249578157>",
+				"*And Barbatos floated down from the heavens, wings shining white against the clouds, and replied, 'Yes.'*"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "sexual", "lgbt", "straight", "rainbow", "represent", "mlm", "wlw", "yaoi", "yuri", "kiss a man", "kiss men", "kiss a boy", "kiss boys", "kiss a woman", "kiss women", "kiss a girl", "kiss girls"]):
 			answers = [
 				"<:VentiRainbow:1394520285260288138>",
 				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
@@ -2406,6 +2494,84 @@ async def on_message(message):
 			answers = [
 				"The deserts of Sumeru are torrid, indeed, but at least the sands are touched by wind.",
 				"The first thing you think of when you hear 'Dendro Archon' is her power over dreams. Her dreams are akin to my ballads: full of emotion and imagination. It goes without saying that we get along really well."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["ehe", "lmao", "lol"]):
+			answers = [
+				"EHE~",
+				"Ehe~",
+				"Ehe.",
+				"Ehe!",
+				"-# ehe"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["yaho", "yahho"]):
+			answers = [
+				"Yahoo~",
+				"Yoohoo~",
+				"Yahho~",
+				"Ehe~"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif "life" in content:
+			answers = [
+				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
+				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
+				"The Kreideprinz, a perfect specimen of synthetic life... We should be grateful Albedo's true identity remains hidden. If it gets out that he's one of Rhinedottir's creations... there'd be no separating him from her past."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif "wake up" in content:
+			answers = [
+				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
+				"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~",
+				"Let me sleep a while…",
+				"My disciples, rejoice! Behold, **the God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
+				"Sure, the sound of your voice is always a pleasure to hear.",
+				f"Hehe. Looking for me, {user}?",
+				"Morning! What's in store for today?",
+				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif "morning" in content:
+			answers = [
+				"Morning! What's in store for today?",
+				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?",
+				"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["grandpa", "gramps", "grandfather", "granddad", "grand father"]):
+			answers = [
+				f"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI see a kind, gentle soul, with a healthy dose of romance and freedom, too... In other words, a true Mondstadter, who grew up drinking the water of Cider Lake. You, on the other hand... Don't worry, you're the gentlest soul I've ever met.",
+				"Grandpa, you say? Ehe, I should mention that to Zhongli.",
+				"Hey, now. A two thousand six hundred year old flower is still a mere blossom!",
+				"Are you sure you didn't mistkae me for Zhongli?"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif "blush" in content:
+			answers = [
+				"*blush*",
+				"Ehe.",
+				"<:VentiUwU:1394123911284920341>"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["uncomfort", "discomfort"]):
+			answers = [
+				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
+				"You know the best cure for discomfort? Wine, of course!",
+				"<a:drinktoforget:1394722475828318299>",
+				"<:VentiWispThump:1423737691547107458>",
+				"<:catsummoning:1395204599207559249>"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
