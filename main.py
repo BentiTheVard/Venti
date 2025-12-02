@@ -1369,6 +1369,29 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+#SHIPPING💘
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
+			answers = [
+				"Morax? Ah, we're old friends... He's a stubborn fellow. Very, very stubborn indeed. Don't tell him I said that.",
+				"Zhongli... I don't dislike him, despite his obstinate ways. On the contrary, I still regard him as a dear friend of mine. I miss drinking wine with him and hearing about what was happening in Liyue.",
+				"Eh? Oh dear...",
+				"Well, I... we're old friends.",
+				"<:VentiShock:1394123854518948041>",
+				"Zhongli and I? Romantically acquainted? In reality, we're sworn enemies! ...Ehe, just kidding. We're friends.",
+				"Well, I suppose it _would_ make sense, would it not?",
+				"We do have a lot of history. It's been many years, after all!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]) and any(keyword in content for keyword in ["diluc", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]):
+			answers = [
+				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
+				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
+				"Diluc? Well, it would be nice to have the wine for free.",
+				"Hmm, really? That's possible? And here I thought Diluc believed I was a wine leech!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 #PLAYABLE CHARACTERS 💜
 		elif any(keyword in content for keyword in ["diluc", "dawn winery"]):
 			answers = [
@@ -1583,29 +1606,6 @@ async def on_message(message):
 			await message.reply("I taught Skirk the art of music once as she explored Mondstadt. I'm sure you're well aware, but... I don't believe she's from Teyvat. And her alcohol tolerance only supports that theory, hehe.")
 		elif any(keyword in content for keyword in ["inef", "robot", "automat"]):
 			await message.reply("There's a robot in Nod Krai? Oh, and she works as a maid? Hm, how fascinating... I wonder if she and Noelle would get along. Then again, Noelle gets along with almost anybody.")
-#SHIPPING💘
-		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
-			answers = [
-				"Morax? Ah, we're old friends... He's a stubborn fellow. Very, very stubborn indeed. Don't tell him I said that.",
-				"Zhongli... I don't dislike him, despite his obstinate ways. On the contrary, I still regard him as a dear friend of mine. I miss drinking wine with him and hearing about what was happening in Liyue.",
-				"Eh? Oh dear...",
-				"Well, I... we're old friends.",
-				"<:VentiShock:1394123854518948041>",
-				"Zhongli and I? Romantically acquainted? In reality, we're sworn enemies! ...Ehe, just kidding. We're friends.",
-				"Well, I suppose it _would_ make sense, would it not?",
-				"We do have a lot of history. It's been many years, after all!"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]) and any(keyword in content for keyword in ["diluc", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]):
-			answers = [
-				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
-				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
-				"Diluc? Well, it would be nice to have the wine for free.",
-				"Hmm, really? That's possible? And here I thought Diluc believed I was a wine leech!"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 #OTHER MENTIONS🔥
 		elif "holy lyre" in content:
 			await message.reply("The pattern of flowing wind carved on the rosewood... and the strings still feel cool to the touch too. Oh, the memories...")
