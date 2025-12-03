@@ -1219,7 +1219,7 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 #SHIPPING💘
-		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
 			answers = [
 				"Morax? Ah, we're old friends... He's a stubborn fellow. Very, very stubborn indeed. Don't tell him I said that.",
 				"Zhongli... I don't dislike him, despite his obstinate ways. On the contrary, I still regard him as a dear friend of mine. I miss drinking wine with him and hearing about what was happening in Liyue.",
@@ -1232,12 +1232,78 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]) and any(keyword in content for keyword in ["diluc", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]):
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]) and any(keyword in content for keyword in ["diluc", "diluven", "venluc", "ventluc", "ventiluc", "vennvindr"]):
 			answers = [
 				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
 				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
 				"Diluc? Well, it would be nice to have the wine for free.",
 				"Hmm, really? That's possible? And here I thought Diluc believed I was a wine leech!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", "venxiao", "xiaoven", "xiaoti", "xiaoventi", "ventiao", " x venti", "venti x "]) and any(keyword in content for keyword in ["xiao", "venxiao", "xiaoven", "xiaoti", "xiaoventi", "ventiao"]):
+			answers = [
+				"Ah, Xiao... I remember that night, when he was lost, but found his way back to the light. I hope he's doing better now.",
+				"Xiao is not fond of public spaces, so sometimes we go out in nature together and sit and talk for a while. He's surprisingly wise when he's comfortable enough to speak freely!",
+				"Xiao? I do care deeply about him.",
+				"Ah, the Conquerer of Demons... A dear friend of mine.",
+				"Xiao is dear to me.",
+				"I would say Xiao and I are close.",
+				"If Xiao ever needed it, I would play him a song again.",
+				"Xiao and I can truly understand each other. That's quite rare."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "venther", "aeventi", "aeven", "aeti", "venae", "vether", "venaether"]) and any(keyword in content for keyword in ["traveler", "aether", "venther", "aeventi", "aeven", "aeti", "venae", "vether", "venaether"]):
+			answers = [
+				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
+				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
+				"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
+				"Aether? He's... a dear friend of mine.",
+				"My wish is to explore the world by the Traveler's side!",
+				"The Traveler? He's my dearest companion.",
+				"I wouldn't be opposed to it..."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "venlia", "dahliven", "vendahlia"]) and any(keyword in content for keyword in ["dahlia", "venlia", "dahliven", "vendahlia"]):
+			answers = [
+				f"O, {user}, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
+				"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia.",
+				"Dahlia and I drink together often! I suppose you could say we're drinking buddies.",
+				"Hm, well, I've noticed Dahlia's behavior is occasionally... strange.",
+				"Did Dahlia ask you to say that?",
+				"Ehe... oh dear... well...",
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "albeven", "venbedo"]) and any(keyword in content for keyword in ["albedo", "albeven", "venbedo"]):
+			answers = [
+				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
+				"Now that Albedo knows my true identity, we've conversed on occasion. He knows a great deal about the arts, and I've enjoyed showing him my compositions!",
+				"Someday, Albedo may lose control. But until then, he and I are friends.",
+				"Eh? Albedo? <:VentiShock:1394123854518948041>",
+				"We _do_ have a lot in common."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "husband", "wife", "kiss", "dat", "love", "like", " x venti", "venti x ", "venlumi", "lumiven", "ventilumi", "lumiventi", "venlumine", "ventine", "vemine", "lumenti"]) and any(keyword in content for keyword in ["lumine", "venlumi", "lumiven", "ventilumi", "lumiventi", "venlumine", "ventine", "vemine", "lumenti"]):
+			answers = [
+				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
+				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
+				"Lumine? She's... a dear friend of mine.",
+				"My wish is to explore the world by the Traveler's side!",
+				"The Traveler? She's my dearest companion.",
+				"I wouldn't be opposed to it...",
+				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["marri", "husband", "wife", "kiss", "dat", "love", "like", " x venti", "venti x ", "venfuri", "venrina", "focaven", "furiven"]) and any(keyword in content for keyword in ["furina", "venfuri", "venrina", "focaven", "furiven"]):
+			answers = [
+				"A bard must be versed in both music and song, but a stage performer requires far more skills than just these... Hey, don't you think we should invite her over to put on a show at the next Windblume Festival? ...Huh? You want me to talk about how she saved Fontaine? Well, I mean, she's such a talented artiste, it's no wonder. I wouldn't be surprised even if she'd saved the entire world.",
+				"Furina? Ah... maybe we could write and perform a song together.",
+				"Furina has gone so through much. I hope she's at peace now.",
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1433,7 +1499,7 @@ async def on_message(message):
 			await message.reply("The darling Deaconess with the sweet singing voice — do you know her? You do? Idol, huh? Meet and greets? Concerts? Wow... That's the power of music for you…")
 		elif any(keyword in content for keyword in ["dahlia", "deacon"]):
 			answers = [
-				"O, Traveler, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
+				f"O, {user}, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
 				"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia."
 			]
 			random_message = random.choice(answers)
@@ -2572,6 +2638,16 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif "spin" in content:
+			answers = [
+				"<a:VentiSpin:1405269572583559389>",
+				"<a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389>",
+				"<a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389>",
+				"<a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389>",
+				"<a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389><a:VentiSpin:1405269572583559389>"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif "!rand" in content:
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
@@ -2772,7 +2848,7 @@ async def on_message(message):
 				f"The first thing you think of when you hear 'Dendro Archon' is her power over dreams. Her dreams are akin to my ballads: full of emotion and imagination. It goes without saying that we get along really well.",
 				f"A bard must be versed in both music and song, but a stage performer requires far more skills than just these... Hey, don't you think we should invite her over to put on a show at the next Windblume Festival? ...Huh? You want me to talk about how she saved Fontaine? Well, I mean, she's such a talented artiste, it's no wonder. I wouldn't be surprised even if she'd saved the entire world.",
 				f"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?",
-				f"O, Traveler, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
+				f"O, {user}, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
 				f"Ah, {user}. I could hear your arrival upon the wind. Were you looking for me?",
 				f"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia.",
 				f"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
