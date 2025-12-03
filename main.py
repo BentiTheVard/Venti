@@ -1529,7 +1529,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["albedo", "alchemy", "synthe", "durin"]):
+		elif any(keyword in content for keyword in ["albedo", "alchemy", "synthe"]):
 			answers = [
 				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
 				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
@@ -1537,6 +1537,8 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif "durin" in content:
+			await message.reply("Another one of Madame Mage's children here in Mondstadt... What fun! My new little friend looked like he wanted to play with a certain older, bigger friend of mine. So I arranged a little introduction, and voila! It turns out my big friend was the more excited of the two! Why, you should've seen him jumping for joy, patting his belly, and dancing in circles! Hahaha!\n...Oh dear. Did he hear what I just said? Quick, quick, let's take cover behind that tree!")
 		elif any(keyword in content for keyword in ["amber", "outrider", "reporting for duty"]):
 			await message.reply("Amber... She really is a child of freedom! She loves the story about the first birds who spread their wings in flight.")
 		elif any(keyword in content for keyword in ["eula", "lawrence", "clan"]):
