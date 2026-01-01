@@ -16,7 +16,7 @@ client = discord.Client(intents=intents)
 async def on_message(message):
 	user = message.author.display_name
 	content = message.content.lower()
-	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat" or message.channel.name == "🎇wishes-for-this-year":
+	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat":
 		return
 	#elif message.author.id == 437808476106784770 and message.mentions and any(keyword in content for keyword in ["Earned role: **I Splitting Gales**<:VentiBarbatos:1394242700315725876>", "Earned role: **II Breeze of Reminiscence**<:VentiBarbatos:1394242700315725876>", "Earned role: **III Ode to Thousand Winds**<:VentiBarbatos:1394242700315725876>"]):
 		#if "Splitting Gales" in content
@@ -57,6 +57,8 @@ async def on_message(message):
 		]
 		random_message = random.choice(answers)
 		await message.reply(random_message)
+	elif message.channel.name == "🎇wishes-for-this-year":
+		return
 #🍃 VOICELINES
 	elif "!ally" in content:
 		lang = random.randint(1, 3)
