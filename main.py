@@ -56,7 +56,7 @@ async def on_message(message):
 			"The winds of Mondstadt will guide every lost ship back to safe harbor."
 		]
 		random_message = random.choice(answers)
-		await message.reply(random_message)
+		await message.channel.send(f"{user}...\n\n*{random_message}*")
 	elif message.channel.name == "🎇wishes-for-this-year":
 		return
 #🍃 VOICELINES
