@@ -16,10 +16,48 @@ client = discord.Client(intents=intents)
 async def on_message(message):
 	user = message.author.display_name
 	content = message.content.lower()
-	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat":
+	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat" or message.channel.name == "🎇wishes-for-this-year":
 		return
 	#elif message.author.id == 437808476106784770 and message.mentions and any(keyword in content for keyword in ["Earned role: **I Splitting Gales**<:VentiBarbatos:1394242700315725876>", "Earned role: **II Breeze of Reminiscence**<:VentiBarbatos:1394242700315725876>", "Earned role: **III Ode to Thousand Winds**<:VentiBarbatos:1394242700315725876>"]):
 		#if "Splitting Gales" in content
+	elif message.channel.name == "🎇wishes-for-this-year":
+		if any(keyword in message.content.lower() for keyword in ["!pray", ":dahliapray:", ":barbarapray_ikazu401:", "!ask", ":ventipray:", "this year", "2026", "resolution", "going to", "i will", "i want to", "i plan to", "next year"]):
+	        answers = [
+	            "What was lost... shall become found...",
+	            "When the rain ceases, the sunlight will emerge once again...",
+	            "Plant your seeds now, for rain is approaching...",
+	            "The stars hear your prayers, and weave the loom of fate...",
+	            "Still, the winds change direction... Someday, they will blow towards a brighter future...",
+	            "Take my blessings and live leisurely from this day onward.",
+	            "As the four seasons in turn shall say their piece, so the four winds too shall never cease.",
+	            "The destination is not everything... Use the chance to take in the world around you...",
+	            "The wind will always be by your side...", "I am here.",
+	            "Close your eyes, and listen to the lyresong...",
+	            "However far you drift, the wind will guide you home...",
+	            "Feel the breeze of hope... it is unceasing.",
+	            "Find your song... it belongs only to you.",
+	            "The impenetrable gales will scatter like dandelions, and the birds shall fly evermore...",
+	            "He fell in battle for the sake of song, sky, and birds...",
+	            "The wind will guide you...",
+	            "Don't be afraid; a gentle breeze will illuminate your path.",
+	            'The birds with no way to fly asked the Anemo God:\n\n"How can we reach the heavens?"\n\nTo which the Anemo God replied:\n\n"You have yet to find that which is most important."',
+	            "What you lacked was not wind, but courage... It is courage that has allowed you to become the first flying birds of this world.",
+	            "Come spring, the dandelions will bloom once more...",
+	            "Your prayers have been heard.",
+				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
+				"Freedom, if demanded of you by an archon, is really no freedom at all.",
+				"Now, spread your wings of freedom and go with my blessing.",
+				"However, winds change their course. Someday, they will blow towards a brighter future.",
+				f"{user}, as you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
+				"Staying true to their journey and discovering joy and freedom for themselves is what Mondstadters do best.",
+				"The point of traveling is to record any feelings stirred along the way. As long as you had an unforgettable experience, this journey has served its purpose.",
+				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
+				"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
+				"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too.",
+	            "The winds of Mondstadt will guide every lost ship back to safe harbor."
+	        ]
+	        random_message = random.choice(answers)
+	        await message.channel.send(f"{user}...\n\n*{random_message}*")
 #🍃 VOICELINES
 	elif "!ally" in content:
 		lang = random.randint(1, 3)
@@ -1443,7 +1481,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["stormterror", "dvalin"]):
+		elif any(keyword in content for keyword in ["stormterror", "dvalin", "dragon"]):
 			answers = [
 				"The story I want to tell starts at... the sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
 				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
