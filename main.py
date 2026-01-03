@@ -1899,15 +1899,6 @@ async def on_message(message):
 			await message.reply("There's no doubt in my mind that Mika is a future expert cartographer! I wouldn't be surprised if he knows the maps of Mondstadt like the back of his hand.")
 		elif any(keyword in content for keyword in ["baizhu", "pharmac", "bubu", "doctor", "changsheng", "immortal"]):
 			await message.reply("Immortality may seem desirable at first, but even the largest oak trees get worn down by time.")
-		elif any(keyword in content for keyword in ["kirara", "xilonen"]):
-			answers = [
-				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
-				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
-				"Oof, my nose is starting to itch again…",
-				"ACHOO! *cough* Haha... Apologies. At this distance, my cat allergy seems to be rearing its head…"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["lyney", "lynette", "freminet", "magic", "trick"]):
 			await message.reply("I wonder what magic tricks could be created with the wind! Perhaps I could fly into the air so nobody could see me, or enter a pocket dimension... Hehe, well, that one would be cheating, wouldn't it?")
 		elif any(keyword in content for keyword in ["chief justice", "neuvi", "sovereign"]):
@@ -2233,7 +2224,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya", "jahoda", "nefer"]):
+		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya~", "nyan", "nya!", "nya,", "nya.", "kirara", "xilonen", "jahoda", "nefer", "ashru", "beast with fur like that of night", "charcoal", "hachihou", "konbumaru", "ashru", "baobab", "bonnie", "daju", "quijano", "dopey", "dustball", "finnick", "gata", "grobel", "harut", "kaiser", "lale", "little rose", "marut", "meshi", "nargis", "neko", "nelson", "night pilot", "nightsoul spirit", "osse", "ouo", "paisley", "roger", "rozan", "pouncelot", "sisi", "sneku", "sapphire", "garfield", "sylvester", "marie", "felix", "tom and jerry", "tom n jerry", "tom & jerry", "saberhagen", "jonesy", "hobbes", "crookshanks"]):
 			answers = [
 				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
 				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
@@ -2511,6 +2502,48 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["game", "gaming", "play with", "come play", "wanna play", "want to play", "lets play", "let's play", "minecraft", "gta", "grand theft", "sport", "red dead", "rdr", "mario", "nintendo", "terraria", "pubg", "the witcher", "overwatch", "sims", "ts4", "animal crossing", "pokemon", "wii fit", "call of duty", "stardew valley", "hogwarts", "sonic", "smash bros", "super smash", "tetris", "cyberpunk", "pokémon", "elden ring", "borderlands", "elder scrolls", "monster hunter", "duck hunt", "wii play", "black myth", "the last of us", "garrys mod", "garry's mod", "phasmophobia", "hsr", "star rail", "starrail", "zzz", "zenless", "wuwa", "wuthering", "arknights", "endfield", "infinity nikki", "azur promilia", "petit planet", "roblox", "bloxlink", "palworld", "inzoi", "paralives", "witchbrook", "pokopia", "sekai", "proseka", "puroseka", "pjsk", "project diva", "genshin", "hoyo", "blue archive", "nikke", "fate grand", "fgo", "reverse 1999", "reverse: 1999", "deepspace", "valorant", "league of legends", "fortnite", "apex", "splatoon", "deadlock", "bandori", "bang dream", "d4dj", "osu", "taiko", "balatro", "hades", "hollow knight", "silksong", "lethal company", "sky children", "sky: children", "cult of the lamb", "vr chat", "vrchat", "where winds meet", "valorant", "the hundred line", "marvel", "brawlhalla", "cookie run", "uma", "musume", "dune awakening", "light no fire", "chronicles of jp", "floatopia", "csgo", "cs2", "siege", "tarkov", "geometry dash", "dark souls", "bloodborn", "sekiro", "granblue", "limbus", "tower of fantasy", "fire emblem", "nte", "neverness", "amongus", "among us", "amogus", "fall guys", "undertale", "deltarune", "persona", "p5r", "p3r", "final fantasy"]):
+			answers = [
+				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
+				"Let's go jumping in puddles and see who can make the biggest splash!",
+				"It's stopped raining already? A shame, I wanted to play some more.",
+				"Let's wait till the snow gets heavier and have a snowball fight!",
+				"The wind has returned! Quick, let's go gliding!",
+				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
+				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?",
+				"So, a short rest before the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
+				"Wouldn't gliding be faster?",
+				"*clears throat* Have you heard The Ballad of the Treasure Chest?",
+				"Ready for a rehearsal?",
+				"In some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
+				"Yoo-Hoo!",
+				"Here we go!",
+				"Brace yourselves!",
+				"Let's play!",
+				"Time for takeoff!",
+				"Yahoo!",
+				"Don't give up!",
+				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
+				"My disciples, rejoice! Behold, the **God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
+				"Heroes supporting each other and setting out on a journey together... How exciting!",
+				"And so… The epic actions of brave heroes finally leads to this eleventh hour.",
+				"The stage will need to be cleared before I can begin my performance. Generally speaking, such chores are not the concerns of the performer himself…",
+				"Let's make a detour then. Heading up!",
+				"Give it a go! If you don't try, you'll never know.",
+				"I'm thinking about turning these adventures into songs. Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.",
+				"To our precious days of freedom. Cheers!",
+				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh… <:VentiScared:1394163440490254427>",
+				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
+				"I've got things covered here.",
+				"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
+				"How was it? Not bad, right?",
+				"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+				"Ah, so that's how that game works! Wanna see who can do it faster?",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["tune", "lyre", "song", "play", "capriccio", "serenade", "music", "record", "ballad", "concert", "headphonescore", "keyboard", "piano", "maraca", "drum", "sax", "trumpet", "accordion", "guitar", "banjo", "violin", "flute", "disk", "radio", "level_slider", "horn"]):
 			answers = [
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
@@ -2617,48 +2650,6 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["game", "gaming", "play with", "come play", "wanna play", "want to play", "lets play", "let's play", "minecraft", "gta", "grand theft", "sport", "red dead", "rdr", "mario", "nintendo", "terraria", "pubg", "the witcher", "overwatch", "sims", "ts4", "animal crossing", "pokemon", "wii fit", "call of duty", "stardew valley", "hogwarts", "sonic", "smash bros", "super smash", "tetris", "cyberpunk", "pokémon", "elden ring", "borderlands", "elder scrolls", "monster hunter", "duck hunt", "wii play", "black myth", "the last of us", "garrys mod", "garry's mod", "phasmophobia", "hsr", "star rail", "starrail", "zzz", "zenless", "wuwa", "wuthering", "arknights", "endfield", "infinity nikki", "azur promilia", "petit planet", "roblox", "bloxlink", "palworld", "inzoi", "paralives", "witchbrook", "pokopia", "sekai", "proseka", "puroseka", "pjsk", "project diva", "genshin", "hoyo", "blue archive", "nikke", "fate grand", "fgo", "reverse 1999", "reverse: 1999", "deepspace", "valorant", "league of legends", "fortnite", "apex", "splatoon", "deadlock", "bandori", "bang dream", "d4dj", "osu", "taiko", "balatro", "hades", "hollow knight", "silksong", "lethal company", "sky children", "sky: children", "cult of the lamb", "vr chat", "vrchat", "where winds meet", "valorant", "the hundred line", "marvel", "brawlhalla", "cookie run", "uma", "musume", "dune awakening", "light no fire", "chronicles of jp", "floatopia", "csgo", "cs2", "siege", "tarkov", "geometry dash", "dark souls", "bloodborn", "sekiro", "granblue", "limbus", "tower of fantasy", "fire emblem", "nte", "neverness", "amongus", "among us", "amogus", "fall guys", "undertale", "deltarune", "persona", "p5r", "p3r", "final fantasy"]):
-			answers = [
-				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
-				"Let's go jumping in puddles and see who can make the biggest splash!",
-				"It's stopped raining already? A shame, I wanted to play some more.",
-				"Let's wait till the snow gets heavier and have a snowball fight!",
-				"The wind has returned! Quick, let's go gliding!",
-				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
-				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?",
-				"So, a short rest before the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
-				"Wouldn't gliding be faster?",
-				"*clears throat* Have you heard The Ballad of the Treasure Chest?",
-				"Ready for a rehearsal?",
-				"In some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
-				"Yoo-Hoo!",
-				"Here we go!",
-				"Brace yourselves!",
-				"Let's play!",
-				"Time for takeoff!",
-				"Yahoo!",
-				"Don't give up!",
-				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
-				"My disciples, rejoice! Behold, the **God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
-				"Heroes supporting each other and setting out on a journey together... How exciting!",
-				"And so… The epic actions of brave heroes finally leads to this eleventh hour.",
-				"The stage will need to be cleared before I can begin my performance. Generally speaking, such chores are not the concerns of the performer himself…",
-				"Let's make a detour then. Heading up!",
-				"Give it a go! If you don't try, you'll never know.",
-				"I'm thinking about turning these adventures into songs. Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.",
-				"To our precious days of freedom. Cheers!",
-				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh… <:VentiScared:1394163440490254427>",
-				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
-				"I've got things covered here.",
-				"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
-				"How was it? Not bad, right?",
-				"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
-				"Ah, so that's how that game works! Wanna see who can do it faster?",
-				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
-				"Haha, great job! Faster than the wind itself!"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["who", "what", "you're venti", "ur venti", "your venti", "youre venti", "you are venti", "u r venti", "u are venti"]) and any(keyword in content for keyword in ["you", "this", "name", "you're venti", "ur venti", "your venti", "youre venti", "you are venti", "u r venti", "u are venti"]):
 			answers = [
 				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
@@ -2690,14 +2681,14 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["rain", "precipitation", "sprinkle", "drizzle", "mizzle", "shower", "pour"]):
+		elif any(keyword in content for keyword in ["rain", "precipitation", "sprinkle", "drizzle", "mizzle", "shower", "pour", "hydro", "water"]):
 			answers = [
 				"Let's go jumping in puddles and see who can make the biggest splash!",
 				"It's stopped raining already? A shame, I wanted to play some more."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["snow", "blizzard", "sleet", "hail", "hale"]):
+		elif any(keyword in content for keyword in ["snow", "blizzard", "sleet", "hail", "hale", "cryo"]):
 			await message.reply("Let's wait till the snow gets heavier and have a snowball fight!")
 		elif any(keyword in content for keyword in ["wind", "storm", "glid", "breeze", "gale", "hurricane", "draft", "blow", "zephyr", "anemo", "fly", "wing", "blow"]):
 			answers = [
@@ -3075,6 +3066,39 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["number", "numeral", "integer", "one or", "two or", "three or", "four or", "five or", "six or", "seven or", "eight or", "nine or", "ten or", "1 or", "2 or", "3 or", "4 or", "5 or", "6 or", "7 or", "8 or", "9 or", "0 or"]):
+			answers1 = [
+				"You're asking for a random number?",
+				"Hehe, making a difficult choice?",
+				"Ah, I see, you want my input!",
+				"A random number, you say?",
+				"Trying to make a decision using numbers, hm?"
+			]
+			answers2 = [
+				"Well, I'll use my archon intuition...",
+				"I'll listen in the wind...",
+				"Alright, let's see...",
+				"I'll choose it based on how many birds are in the sky!",
+				"To make things easier, I'll come up with two numbers.",
+				"Well, lucky for you, I'm a connisseur of chaos!"
+			]
+			answers3 = [
+				"Here are your numbers:",
+				"Alright, here you go!",
+				"Ready? Here you go:",
+				"Here, take these for your travels!",
+				"May the wind be your guide!",
+				"Ehe, here you go!",
+				"These are the numbers...",
+				"Here's what I chose!",
+				"Here are two numbers from one to ten!"
+			]
+			answer1 = random.choice(answers1)
+			answer2 = random.choice(answers2)
+			answer3 = random.choice(answers3)
+			int1 = random.randint(0, 10)
+			int2 = random.randint(0, 10)
+			await message.reply(f"{answer1} {answer2} {answer3}\n{int1} and {int2} ♪")
 		elif "blush" in content:
 			answers = [
 				"*blush*",
