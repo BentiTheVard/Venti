@@ -1236,7 +1236,7 @@ async def on_message(message):
 			if randNum == 4 and char is not user:
 				await message.reply(f"Here's your prompt...\n\n{random_message}\n\nMy idea for a character is {char}!")
 			else:
-				await message.reply("Here's your prompt...\n\n{random_message}")
+				await message.reply(f"Here's your prompt...\n\n{random_message}")
 		elif any(keyword in content for keyword in ["birthday", "birth day", "bday"]):
 			answers = [
 				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
@@ -1968,14 +1968,6 @@ async def on_message(message):
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 #SPECIFIC 🪽
-		elif any(keyword in content for keyword in ["who", "what"]) and any(keyword in content for keyword in ["you", "this", "name"]):
-			answers = [
-				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
-				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
-				"Hey there, everyone! You can just call me Venti. I like to keep things casual."
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["scar", "fear", "afraid", "lost", "what to do", "life"]):
 			answers = [
 				"Hmm… Many people may feel lost at times. After all, it's impossible for everything to happen according to your own wishes. At a time like this, ask yourself what the most important thing is!\nEven if life's all in a jumble, you can sort it out as long as there's a whisper of the wind.\n...Don't be afraid, I'm here.",
@@ -2387,20 +2379,19 @@ async def on_message(message):
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["!sing", "!song", "!music", "sing", "play me", "sing me", "sing to me", "sing to us", "sing a", "sing some", "please sing", "now sing", "sing right now"]):
 			answers = [
-				"*Oh, a hero so bright, should they stand in the light. Though stand in the shade, and you'll be met by a blade…*",
+				"Oh, a hero so bright, should they stand in the light.\nThough stand in the shade, and you'll be met by a blade ♫",
 				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
 				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
-				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
 				"Fill up the barrels and store them away,\nThen wait, wait for a windier day\nWax the bottles, seal them tight,\nFor the south wind that soothes, for the north wind that bites ♫",
 				"How does this fine wine taste to the tongue?\nAs 'Mondstadt' to the ear: like a sweet dream of freedom.\nAnd what are the fruits that went into the brew?\nAn explorer's courage, a love tender and true ♫",
 				"A defender's will, strong as yesteryear,\nJoining the thousand winds in a song of good cheer,\nTurning sour into sweet, bitter notes fade away,\nAs we wait, wait for a windier day ♫",
 				"Pray tell, what treasure does this barrel hold?\n'Tis wheat's greatest triumph, the true liquid gold.\nAs it flows from the keg, what sound drifts by?\nWind chimes in the boundless, immemorial sky ♫",
 				"We raise up our glasses, and voices in song,\nAs we wait, wait for the wind to sing along.\nWhere do we turn once the thousand winds take flight?\nTo the tales of the lyre, to the sweet dream of tonight ♫",
 				"*Fly, fly away.*\n*Like a bird in the sky.*\n*See the world on my behalf...*\n*To the heavens may you fly...*",
-				"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
-				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
-				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
-				"*You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
+				"When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light ♫",
+				"Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.\nMajestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring ♫",
+				"On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.\nBut ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat ♫",
+				"You and the Mare Jivari\nSo close and yet so far\nOne at the edge of the world, the other in the center of my heart ♫"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2421,7 +2412,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "stage", "circus", "ticket", "juggl", "ballet", "danc", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera", "art", "draw", "paint", "craft", "erika", "harlacher", "ayumu", "murase", "miao", "jiang", "喵酱", "村瀬歩", "정유정", "yoojung", "yoo-jung", "yoo jung"]):
+		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "stage", "circus", "ticket", "juggl", "ballet", "danc", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera", "art", "draw", "paint", "erika", "harlacher", "ayumu", "murase", "miao", "jiang", "喵酱", "村瀬歩", "정유정", "yoojung", "yoo-jung", "yoo jung"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
@@ -2649,6 +2640,14 @@ async def on_message(message):
 				"Ah, so that's how that game works! Wanna see who can do it faster?",
 				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
 				"Haha, great job! Faster than the wind itself!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["who", "what"]) and any(keyword in content for keyword in ["you", "this", "name"]):
+			answers = [
+				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
+				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
+				"Hey there, everyone! You can just call me Venti. I like to keep things casual."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
