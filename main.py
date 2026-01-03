@@ -1028,8 +1028,8 @@ async def on_message(message):
 				return
 #PRIORITY ⭐
 		elif any(keyword in content for keyword in ["prompt", "idea"]):
-			randNum = random.randint(1, 5)
-			if randNum == 4 or randNum == 5:
+			randNum = random.randint(1, 3)
+			if randNum == 3:
 				char = random.choice(characters)
 			else:
 				char = user
@@ -1232,7 +1232,7 @@ async def on_message(message):
 				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
 			]
 			random_message = random.choice(answers)
-			if randNum == 5:
+			if randNum == 3:
 				await message.reply(f"Here's your prompt...\n\n{random_message}\n\nMy idea for a character is {char}!")
 			else:
 				await message.reply(f"Here's your prompt...\n\n{random_message}")
@@ -2215,7 +2215,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg"]):
+		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya"]):
 			answers = [
 				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
 				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
