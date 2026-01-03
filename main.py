@@ -1727,7 +1727,6 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in
 		elif any(keyword in content for keyword in ["jean", "acting grand master"]):
 			await message.reply("Acting Grand Master Jean... Well, what do you think of her? Yes, I couldn't agree more: conscientious, courageous... kind and considerate too. Reminds me of another good friend…")
 		elif any(keyword in content for keyword in ["varka", "grand master", "horse"]):
