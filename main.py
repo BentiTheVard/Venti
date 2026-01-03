@@ -1232,7 +1232,7 @@ async def on_message(message):
 				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
 			]
 			random_message = random.choice(answers)
-			if randNum == 3:
+			if randNum == 3 or "character" in content:
 				await message.reply(f"Here's your prompt...\n\n{random_message}\n\nMy idea for a character is {char}!")
 			else:
 				await message.reply(f"Here's your prompt...\n\n{random_message}")
