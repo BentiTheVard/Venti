@@ -2422,7 +2422,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "stage", "circus", "ticket", "juggl", "ballet", "danc", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera", "art", "draw", "paint", "craft", "erika", "harlacher", "ayumu", "murase", "miao", "jiang", "喵酱", "村瀬歩", "정유정", "yoojung", "yoo-jung", "yoo jung"):
+		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "stage", "circus", "ticket", "juggl", "ballet", "danc", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera", "art", "draw", "paint", "craft", "erika", "harlacher", "ayumu", "murase", "miao", "jiang", "喵酱", "村瀬歩", "정유정", "yoojung", "yoo-jung", "yoo jung"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
