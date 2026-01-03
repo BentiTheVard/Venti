@@ -16,49 +16,13 @@ client = discord.Client(intents=intents)
 async def on_message(message):
 	user = message.author.display_name
 	content = message.content.lower()
-	if message.author == client.user or message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat":
+	characters = ["Zibai", "Illuga", "Columbina", "Durin", "Jahoda", "Nefer", "Flins", "Aino", "Lauma", "Ineffa", "Dahlia", "Skirk", "Escoffier", "Ifa", "Iansan", "Varesa", "Mizuki", "Lan Yan", "Citlali", "Mavuika", "Chasca", "Ororon", "Xilonen", "Kinich", "Kachina", "Mualani", "Emilie", "Sigewinne", "Clorinde", "Sethos", "Arlecchino", "Chiori", "Gaming", "Xianyun", "Chevreuse", "Navia", "Charlotte", "Furina", "Wriothesley", "Neuvillette", "Freminet", "Lynette", "Lyney", "Kirara", "Baizhu", "Kaveh", "Mika", "Dehya", "Alhaitham", "Yaoyao", "Faruzan", "Scaramouche", "Layla", "Nahida", "Nilou", "Candace", "Cyno", "Dori", "Collei", "Tighnari", "Heizou", "Kuki", "Yelan", "Ayato", "Yae Miko", "Shenhe", "Yun Jin", "Itto", "Gorou", "Thoma", "Kokomi", "Kujou Sara", "Ei", "Sayu", "Yoimiya", "Ayaka", "Kazuha", "Eula", "Yanfei", "Rosaria", "Hu Tao", "Xiao", "Ganyu", "Albedo", "Xinyan", "Zhongli", "Diona", "Childe", "Klee", "Amber", "Barbara", "Beidou", "Bennett", "Chongyun", "Diluc", "Fischl", "Jean", "Kaeya", "Keqing", "Lisa", "Mona", "Ningguang", "Noelle", "Qiqi", "Razor", "Sucrose", "Xiangling", "Xingqiu", "Dvalin", "Dainsleif", "Katheryne", "Istaroth", "Ronova", "Naberius", "Asmoday", "Phanes", "Nameless Bard", "Vennessa"]
+	if message.author == client.user:
+		return
+	elif message.guild is not None and (message.channel.name == "🪽barbatos-statue" or message.channel.name == "❤️chat-in-teyvat" or message.channel.name == "♫₊⁺venti-sightings" or message.channel.name == "❤️venti-ng" or message.channel.category_id == 1394139049622634536 or message.channel.category_id == 1394140669072773170):
 		return
 	#elif message.author.id == 437808476106784770 and message.mentions and any(keyword in content for keyword in ["Earned role: **I Splitting Gales**<:VentiBarbatos:1394242700315725876>", "Earned role: **II Breeze of Reminiscence**<:VentiBarbatos:1394242700315725876>", "Earned role: **III Ode to Thousand Winds**<:VentiBarbatos:1394242700315725876>"]):
 		#if "Splitting Gales" in content
-	elif message.channel.name == "🎇wishes-for-this-year" and any(keyword in content for keyword in ["!pray", ":dahliapray:", ":barbarapray_ikazu401:", "!ask", ":ventipray:", "this year", "2026", "resolution", "going to", "i will", "i want to", "i plan to", "next year"]):
-		answers = [
-			"What was lost... shall become found...",
-			"When the rain ceases, the sunlight will emerge once again...",
-			"Plant your seeds now, for rain is approaching...",
-			"The stars hear your prayers, and weave the loom of fate...",
-			"Still, the winds change direction... Someday, they will blow towards a brighter future...",
-			"Take my blessings and live leisurely from this day onward.",
-			"As the four seasons in turn shall say their piece, so the four winds too shall never cease.",
-			"The destination is not everything... Use the chance to take in the world around you...",
-			"The wind will always be by your side...", "I am here.",
-			"Close your eyes, and listen to the lyresong...",
-			"However far you drift, the wind will guide you home...",
-			"Feel the breeze of hope... it is unceasing.",
-			"Find your song... it belongs only to you.",
-			"The impenetrable gales will scatter like dandelions, and the birds shall fly evermore...",
-			"He fell in battle for the sake of song, sky, and birds...",
-			"The wind will guide you...",
-			"Don't be afraid; a gentle breeze will illuminate your path.",
-			'The birds with no way to fly asked the Anemo God:\n\n"How can we reach the heavens?"\n\nTo which the Anemo God replied:\n\n"You have yet to find that which is most important."',
-			"What you lacked was not wind, but courage... It is courage that has allowed you to become the first flying birds of this world.",
-			"Come spring, the dandelions will bloom once more...",
-			"Your prayers have been heard.",
-			"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
-			"Freedom, if demanded of you by an archon, is really no freedom at all.",
-			"Now, spread your wings of freedom and go with my blessing.",
-			"However, winds change their course. Someday, they will blow towards a brighter future.",
-			f"{user}, as you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
-			"Staying true to their journey and discovering joy and freedom for themselves is what Mondstadters do best.",
-			"The point of traveling is to record any feelings stirred along the way. As long as you had an unforgettable experience, this journey has served its purpose.",
-			"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
-			"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
-			"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too.",
-			"The winds of Mondstadt will guide every lost ship back to safe harbor."
-		]
-		random_message = random.choice(answers)
-		await message.channel.send(f"{user}...\n\n*{random_message}*")
-	elif message.channel.name == "🎇wishes-for-this-year":
-		return
 #🍃 VOICELINES
 	elif "!ally" in content:
 		lang = random.randint(1, 3)
@@ -672,7 +636,8 @@ async def on_message(message):
 				"Yes, always!",
 				f"Stand and listen to the wind, {user}. Hear it? That's your answer!",
 				f"What do *you* think the answer is, {user}? Whatever it is, it may be so!",
-				f"'What does Venti think?', you say, but I ask 'What does {user} think?' Perhaps you knew the answer all along!"
+				f"'What does Venti think?', you say, but I ask 'What does {user} think?' Perhaps you knew the answer all along!",
+				"Hmm, wanna take a guess?"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -802,7 +767,7 @@ async def on_message(message):
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
-			elif any(keyword in content for keyword in ["bouquet", "tulip", "rose", "hyacinth", "lotus", "hibiscus", "blossom", "flower", "💐", "🌷", "💐", "🌸", "🏵️", "🌹", "🌺", "🌻", "🌼", "🌷", "🪻", "🪷"]):
+			elif any(keyword in content for keyword in ["bouquet", "tulip", "rose", "hyacinth", "lotus", "hibiscus", "blossom", "flower", "cecilia", "dandelion", "💐", "🌷", "💐", "🌸", "🏵️", "🌹", "🌺", "🌻", "🌼", "🌷", "🪻", "🪷"]):
 				answers = [
 					"*blush* This is for me? <:VentiShock:1394123854518948041>",
 					"If you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
@@ -1025,18 +990,24 @@ async def on_message(message):
 					"**I hereby declare that every son and daughter of the City of the Wind must be compelled to taste this finest of wines... Here's to good wine!**",
 					"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
 					"To our precious days of freedom. Cheers!",
-					"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?"
+					"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+					"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+					"Now's the time to raise a glass in celebration of new friendships!",
+					"Bartender, a few more glasses of that refreshing wine I was just enjoying, if you'd be so kind!"
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
-			elif any(keyword in content for keyword in ["beverage_box", "sake", "beer", "champagne", "cocktail", "tropical", "drink", "alcohol", "tumbler", "🧃", "🍶", "🍺", "🍻", "🍾", "🥂", "🥃", "🍸", "🍹", "🥃"]):
+			elif any(keyword in content for keyword in ["aphimead", "beverage_box", "sake", "beer", "champagne", "cocktail", "tropical", "drink", "alcohol", "tumbler", "🧃", "🍶", "🍺", "🍻", "🍾", "🥂", "🥃", "🍸", "🍹", "🥃"]):
 				answers = [
 					"Ahh, quite delightful! So... could I get the same thing again tomorrow? ...And maybe the day after that?",
 					"A drink? I'll hold you to that, you know! No going back on your word!",
 					"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
 					"With the aid of this drink, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
 					"To our precious days of freedom. Cheers!",
-					"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?"
+					"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+					"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+					"Now's the time to raise a glass in celebration of new friendships!",
+					"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!"
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
@@ -1056,6 +1027,230 @@ async def on_message(message):
 			else:
 				return
 #PRIORITY ⭐
+		elif any(keyword in content for keyword in ["prompt", "idea"]):
+			randNum = random.randint(1, 4)
+			if randNum == 4:
+				char = random.choice(characters)
+			else:
+				char = user
+			answers = [
+				f"*Yawn* That was a refreshing sleep. Ah, {char}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {char}'s tales!",
+				"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*",
+				"Let's go jumping in puddles and see who can make the biggest splash!",
+				"It's stopped raining already? A shame, I wanted to play some more.",
+				"Let's wait till the snow gets heavier and have a snowball fight!",
+				"The wind has returned! Quick, let's go gliding!",
+				"My tummy is rumbling, but I can't get caught pilfering food from the Dawn Winery again...",
+				"Practice? Me? There's no need - I already know every song in Teyvat!",
+				"Once the ‍hero in the song has actually rescued their kin, I will ensure this song spreads to every corner of the continent!",
+				"An evening breeze really sets the mood for becoming my disciple, don't you think? We can do it right now, you just need to make me a small offering…",
+				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
+				"Hmm? You want to know about my Vision? Oh, go on then, take a look for yourself. I can make you a matching one if you like! Hehehe.",
+				"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition.",
+				f"{user}, have you ever seen a cecilia? It's a magnificent white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the most beautiful flower in all of Teyvat.",
+				f"I was about to ask you, {user} — what is your greatest wish?",
+				"There's never a dull moment traveling with you! The only minor inconvenience is that pesky little pixie thing that follows you everywhere... she never stops eating, I can't begin to imagine how much you spend on food!",
+				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
+				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
+				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
+				"I like to drink! And I like the wind! If only there were such a thing as wind-brewed cider…",
+				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
+				"Here, have an apple. I just picked it. Look how ripe and juicy it is... *munching*... Truly the fruit of the gods.",
+				"What's that tasty morsel you've got there... Eew! A melted cheese pancake! A smelly, sticky, slimy disgusting mess!",
+				"Ahh, quite delightful! So... could I get the same thing again tomorrow? ...And maybe the day after that?",
+				"Oof, I'm so full... I'll have to pass on the post-meal fruits this time…",
+				"I can't believe it, but I don't think I can stomach this... Oh boy... What a predicament.",
+				"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
+				f"Your piece of art should be called 'Wind of {char}'!",
+				"Hmm... Though I've long since viewed this scenery a great many times, there is something different about seeing it again with you. Surely you're not still concealing some other wondrous abilities? Hmm, even if you were, it would simply further prove that my intuition is correct.",
+				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
+				"There's a lot of fascinating stories in these books. Don't be put off by the dusty old pages. Give them a chance, and in the blink of an eye, these tales will waft into the air to the sound of the lyre, and blend into the sweetness of the breeze. Pick a story you like! Let's try it out!",
+				"A short rest before the big battle, where some light-hearted music is in order! Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
+				f"Aw, I don't want to sleep yet, {user}. Wanna keep me company a bit longer? Or... I'll keep you company?",
+				"Whoa! This orchard smells wonderful! The apples must be super big and juicy! And these bunches of grapes weighing down the dense vines... *sigh* They'll become delicious wine one day… Why don't we... sample some of these future wines? Hehe, it can't hurt to enjoy them a little. Come on, open wide~",
+				"Ah... the park is one of the most pleasant places in the city. Most people taking a break there are relaxed and in pretty good spirits, so they're always willing to listen to a song or two. Eh-he~ let's work together to make this park even more beautiful!",
+				"Wouldn't gliding be faster?",
+				"The Ballad of the Treasure Chest!",
+				"Thank Barbatos! Wait a minute…",
+				"What a find! I wonder how many bottles this'll be worth…",
+				"Ugh, I'm not in the mood for this!",
+				"...Oh dear.",
+				"Oh no, my lyre is broken…",
+				"Womp womp...",
+				"Oh, is this apple for me? Haha, that won't do, come share this apple with me.\nSplit it open like this...and you will feel the breeze from the apple core.\nIn some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
+				"Yahoo~ Look up, I'm here!\nIt's been a long time, my warrior, ready to tell me your new story?\nHaha, you want to know if it's for my verses? Oh, don't make that face. I just want to hear about your adventures, isn't that reason enough?\nI want to know more about what you saw on your travels or the lives of others. The most important thing for me is to hear you talk about your own experiences and what you think about them.\nCome on, come sit next to me. This bottle of aged cider will be enough for us to chat from first dawn of the morning light until the stars cover the sky.",
+				"Caught you~!\nThe farther your journey takes you, the less time we have to spend together in Mondstadt.\nBut... I knew I'd run into you today.\nQuick, just sit down, right here! It's a rare chance, so allow me to croon you a dulcet tune, accompanied by the melody of the water's revelry.",
+				"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~",
+				"Hmm~ Whew, the weather today's just perfect for relaxing atop a tree.\nCompared to the terribly exciting life I've been leading lately, this kind of leisurely routine just suits me better.\nThanks to you, Mondstadt was able to pull through its time of crisis and return to a time of peace. That means I get to return to being an easy-going bard again!\nMayhaps I shall grace you with a song written in your honor, as an expression of my thanks? Hear ye, hear ye, my gratitude already rustles like a melody through the leaves!",
+				f"Here, special apple juice made just for {char}. Try it~",
+				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
+				"Eh, olah! Mosi mita!",
+				"Apples are truly wonderful. You can eat them, make cider with them... Why, there's no problem that can't be solved by throwing apples at it! Mm-mmm~",
+				"Yoo-Hoo!",
+				"Think you can get away?",
+				"Time for takeoff!",
+				"Yahoo!",
+				"Don't give up!",
+				"Let me sleep a while…",
+				"Womp womp…",
+				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
+				"*gasp* Let's hold a feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
+				"Uh... 'Cheers!' Eh... 'Pop!' No... I got it! 'Wishes for Happiness'? How's that?",
+				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
+				"You... really do have some wonderful abilities… Someone like you is going to end up getting written into a bard's poem.\n*Oh, a hero so bright, should they stand in the light. Though stand in the shade, and you'll be met by a blade…*",
+				"The Abyss Order is an organization comprised of non-human beings. They despise mankind. I don't know where they come from. All I know is that they hold deep hatred towards the human world. Many hilichurls out in the wild take orders from them and act as their weapons.",
+				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
+				"Look me in the eyes. Do you not find me trustworthy?",
+				"Hahaha, that one doesn't work on a bard.",
+				"My disciples, rejoice! Behold, the **God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
+				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
+				"The sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
+				"The pattern of flowing wind carved on the rosewood... and the strings still feel cool to the touch too. Oh, the memories...",
+				"Heroes supporting each other and setting out on a journey together... How exciting!",
+				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
+				"'The Seven' as people now know them, were once known as 'The Seven Archons.' Each archon presides over their own part of Teyvat. That is the role the archons play. Only in performing this duty can we attain power, but I don't like the idea of 'ruling' Mondstadt — and I don't feel Mondstadt would really like it either.",
+				"I haven't been back to Mondstadt for an extended period of time. Without a doubt, I am now the weakest archon among The Seven!",
+				"And so… The epic actions of brave heroes finally leads to this eleventh hour.",
+				"The stage will need to be cleared before I can begin my performance. Generally speaking, such chores are not the concerns of the performer himself…",
+				"Hilichurls usually do not venture into areas with high elemental concentrations. It puts a heavy burden on their bodies.",
+				"It’S sTuCk.",
+				"Let's make a detour then. Heading up!",
+				"Stormterror’s Lair was once part of an ancient city. The ruins even predate the existence of The Four Winds. Mondstadt is a city without a ruler. However, before, it was ruled over by a tyrant.",
+				"Give it a go! If you don't try, you'll never know.",
+				"He doesn't walk in, he flies in.",
+				"Freedom, if demanded of you by an archon, is really no freedom at all.",
+				"Now, spread your wings of freedom and go with my blessing.",
+				"However, winds change their course. Someday, they will blow towards a brighter future.",
+				"As you know, Visions are external magical foci that only a small minority of people possess. They use these Visions to channel elemental power. In truth, every wielder of a Vision is one who can attain godhood and ascend to Celestia. We call such people allogenes. However, archons don't need primitive tools like Visions. Instead, each archon has an internal magical focus that resonates directly with Celestia itself... known as a Gnosis.",
+				"My vision! Which is just a glowing glass ball I carry around to avoid suspicion. Eh-he.",
+				"Signora was No. 8 of the harbingers. She and the rest of the harbingers have been given god-like executive authority by the Tsaritsa of Snezhnaya, and with it, strength surpassing that of other mortals.",
+				"The Tsaritsa is one of the Seven, who reigns from the Zapolyarny Palace, and the one person that the Fatui Harbingers all answer to. The Seven don't always get along well, but still — I never thought that she would plot to steal another archon's Gnosis…",
+				"Five hundred years ago, I knew The Tsaritsa well. But I can't say the same is true now. You see, a certain catastrophe happened five hundred years ago, and after that, she cut off all ties with me.",
+				"As you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
+				"Up till the end, Dvalin remembered his duty as one of the Four Winds. As such, I don't intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin will be able to choose for himself and understand what freedom is. Before I became an archon, I too was taught the meaning of freedom in this way by a friend.",
+				"If only the seven nations had banded together against the Abyss Order in the first place. The Fatui possess the strongest military among the seven nations. Yet they've used it to steal the Holy Lyre, covet the power of gods, and use Dvalin as a bargaining chip against the Knights…",
+				"The Tsaritsa... I haven't seen her in five hundred years. What is she thinking? What's her plan?",
+				"Resident rodent... beats invasive vermin.",
+				"That smirk you wear looks out of place. Did you steal it from your master's face?",
+				"Beauty is a waste... when the beholder has no taste.",
+				"The wind amongst the branches is good, I love the way it smells…",
+				"What are Windblumes, exactly? And what do Windblumes and the Windblume Festival mean to Barbatos, the Anemo Archon? As you've seen, the people of Mondstadt each make their own choice. Out of the millions of flowers there are, some choose the dandelion, others choose the Windwheel Aster. There is no single and answer and no true Windblumes in existence.",
+				"The word 'Windblume' dates from the age of Old Mondstadt. It was a code word that the people used to stay in contact and mount resistance in secret. At that time, people often said that the stronger the wind blows, the firmer the roots of the Windblume grow, and the brighter the flower that bursts into bloom.",
+				"Windblumes don't exist. Yet they are all around us nonetheless. They are the spirit of yearning for freedom, the courage to follow the wind wherever it may lead... All objects are beautiful and worthy of blessing... All can be Windblumes.",
+				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
+				"It is people's shared will that brings them onto the same page. And surely, it is the wind of freedom that brought us together.",
+				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
+				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
+				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
+				"I once happened upon a cargo ship bound for Inazuma transporting Dandelion Wine, so, naturally, I decided to set sail with them. Once aboard, I found the captain to be a kindred spirit, and I was treated to an abundance of fine liquor along the way. Uh, I must have fallen asleep in the cargo crate while carefully comparing the tastes of Dandelion Wine and Inazuman sake…",
+				"People often claim that capes and the like serve no real purpose other than aesthetics. I suppose a cape with pockets would really turn the tables on that crowd!",
+				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there.",
+				"Summer is the season of love. It is the time for freedom and fun. So everyone, please sing, dance, and enjoy yourselves here.",
+				"Guess which two people I ran into on my way to the tavern today? A mother and daughter, both with long elf ears and the most amazingly adorable personalities!",
+				"Ding-ding-ding! Correct answer!",
+				"Adventuring is what you do best. It's only natural to encounter a few surprises when you head somewhere new, but just remember, not all unexpected encounters are dangerous.",
+				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
+				"Achoo! Ugh... Guess I shouldn't get too close to the cats after all... I'll just stay on the roof.",
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything?",
+				"The point of traveling is to record any feelings stirred along the way. As long as you had an unforgettable experience, this journey has served its purpose.",
+				"Fill up the barrels and store them away,\nThen wait, wait for a windier day\nWax the bottles, seal them tight,\nFor the south wind that soothes, for the north wind that bites ♫",
+				"How does this fine wine taste to the tongue?\nAs 'Mondstadt' to the ear: like a sweet dream of freedom.\nAnd what are the fruits that went into the brew?\nAn explorer's courage, a love tender and true ♫",
+				"A defender's will, strong as yesteryear,\nJoining the thousand winds in a song of good cheer,\nTurning sour into sweet, bitter notes fade away,\nAs we wait, wait for a windier day ♫",
+				"Pray tell, what treasure does this barrel hold?\n'Tis wheat's greatest triumph, the true liquid gold.\nAs it flows from the keg, what sound drifts by?\nWind chimes in the boundless, immemorial sky ♫",
+				"We raise up our glasses, and voices in song,\nAs we wait, wait for the wind to sing along.\nWhere do we turn once the thousand winds take flight?\nTo the tales of the lyre, to the sweet dream of tonight ♫",
+				"We've known each other for so long, and you still don't trust my intentions? Oh, the pain…",
+				"Don't worry about wine-making, really. Freedom is the key here. It's not as hard as you might think. As long as you add ingredients to the mix in a spirit of joy and sincerity, I promise you will reap the rewards you wish for.",
+				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!",
+				"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
+				"Staying true to their journey and discovering joy and freedom for themselves is what Mondstadters do best.",
+				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
+				"Get a good night's sleep tonight. Wait for the whisper of the gentle breeze to rouse you tomorrow morning, then come and enjoy a performance by the greatest bard to ever grace the streets of Mondstadt.",
+				"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI see a kind, gentle soul, with a healthy dose of romance and freedom, too... In other words, a true Mondstadter, who grew up drinking the water of Cider Lake. You, on the other hand... Don't worry, you're the gentlest soul I've ever met.",
+				"I've actually heard a few things about Mr. Zhongli before. The guests in the tavern talked about this refined and courteous man who, instead of having wine at Mondstadt's finest tavern, ordered a cup of hot tea with the most complex name.",
+				"Without a friend constantly by your side, a long journey would become dreadfully lonesome. But once you have someone there to brighten up the atmosphere, everything along the way will become lively and vibrant too.",
+				f"Oh, woe is me... {char} sees me as nothing more than a drunken wastrel… There are actually a great many things that we bards are required to do... It just happens that enjoying life is the most important one.",
+				"A secret is like a well-aged brew. The aroma from the bottle is sweetest when revealed in the company of friends.",
+				"*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
+				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many Mondstadters to be the true 'Windblume.'",
+				"To our precious days of freedom. Cheers!",
+				"Ah, this takes me back. The first time I saw this view, I hadn't even taken on this form yet.",
+				"It was about twenty-six hundred years ago, before the world had come under the rule of The Seven. At that time, Old Mondstadt was ruled by a tyrant, who sealed off the city's perimeter with a ferocious hurricane. Even the birds couldn't get in or out.",
+				"Back then, I was but a wisp among the thousand winds. I wasn't a god of anything — I didn't even have a human form... I was just a tiny elemental being who lived in the wind, a gentle breeze bringing subtle changes for the better, or tiny seeds of hope.",
+				"My current form is not so different from the situation with fake Stanley... I took the form of a friend…",
+				"You know, you're so smart it almost makes me uncomfortable sometimes… But then, maybe it's right that true friends can tell what the other is thinking.",
+				"A refreshing drink, a gentle breeze... *sigh* Moments like this always take me back…\nBack to a song that I first heard from him…\n*Fly, fly away.*\n*Like a bird in the sky.*\n*See the world on my behalf...*\n*To the heavens may you fly...*",
+				"Even in his memory, the real Stanley isn't the living, breathing friend he knew at all. Instead, he's become fixed on the image of him as that battle-scarred warrior... and that image has held him captive his entire life.",
+				"...Stanley really did make it to the Mare Jivari. And the tragedy he encountered there was real, too. But the real adventurer, the real Stanley — that was his partner. Not him.",
+				"Acting Grand Master Jean... Well, what do you think of her? Yes, I couldn't agree more: conscientious, courageous... kind and considerate too. Reminds me of another good friend…",
+				"I'm not surprised you want to befriend Master Diluc, just think of all vintage wine he must have stored away... Mwuhahaha... Huh? He doesn't let you sample it? Not even the slightest drop? Huh... Well, I guess you can still appreciate the aroma. That's still better than no wine at all, right? No?",
+				"The darling Deaconess with the sweet singing voice — do you know her? You do? Idol, huh? Meet and greets? Concerts? Wow... That's the power of music for you…",
+				"Ah yes, the white-haired fellow from Wolvendom? Raised by wolves? Really? ... No wonder his scent is so familiar…",
+				"Oh, that astrologer? How should I put it? Fortune telling and my singing are the same. Both lead to you being so poor you can't even cough up the money for a drink! ...You think that astrology is a cultural tradition, so at least still has some value? Hmph, so rude. In that case, so too is singing, so it still has its value too!",
+				"There's a special drink known far and wide at Cat's Tail. But it ah... ahh... ACHOO! *sniffs* How about you go and fetch one for me? I'll be truly thankful, I promise.",
+				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
+				"Have you seen that gentleman around? Huh? He's just a normal man by the name of Zhongli now? That must be quite the change for that old block-head. Come with me to see him, will you? I have a vintage I dug up from Windrise that I can take as a condolence gift. Oh, ahh... did he still seem strong when you saw him? How strong? Am I likely to get blown away?",
+				"Eula has good taste when it comes to beverages of the alcoholic variety. Come summer or winter, she always likes them ice-cold. That's rare among Mondstadters these days! She and I would make great drinking buddies. Huh? My songs about the Lawrence Clan... She's heard them already? Eh, no harm done. Maybe she and I can do a duet sometime!",
+				"So, I hear you defeated the mighty Raiden Shogun? Ah, I recall the days when she was a kagemusha, seeking to perfect her martial prowess. Hehe, she now no doubt employs a wide range of reasoning to get you to train with her. Oh but yes, come close and I shall let you in on her weakness — desserts!",
+				"The first thing you think of when you hear 'Dendro Archon' is her power over dreams. Her dreams are akin to my ballads: full of emotion and imagination. It goes without saying that we get along really well.",
+				"A bard must be versed in both music and song, but a stage performer requires far more skills than just these... Hey, don't you think we should invite her over to put on a show at the next Windblume Festival? ...Huh? You want me to talk about how she saved Fontaine? Well, I mean, she's such a talented artiste, it's no wonder. I wouldn't be surprised even if she'd saved the entire world.",
+				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?",
+				f"O, {user}, do you seek to hear the voice of the wind and know its guidance? Then I say to you... chatting to the deacon is your best bet. Haha, I'm kidding — come chat with me over a drink any time you want! The reason I usually get Dahlia to be my intermediary is because... well, I imagine you can probably guess why. He loves listening to the blustering of the wind, but crucially he has his own compass, too.",
+				"Another one of Madame Mage's children here in Mondstadt, what fun! My new little friend looked like he wanted to play with a certain older, bigger friend of mine — so I arranged a little introduction, and voila! It turns out my big friend was the more excited of the two! Why, you should've seen him jumping for joy, patting his belly, and dancing in circles. Oh dear, did he hear what I just said? Quick, quick, let's take cover behind that tree!",
+				"Dahlia and I are close. He knows everything. A god needs someone to communicate their will in a formal setting, and no one does that better than Dahlia.",
+				"I knew something would happen from the moment Rhinedottir and Alice brought Albedo to Mondstadt. When those two are in town, no one can afford to slack off.",
+				"The Kreideprinz, a perfect specimen of synthetic life... We should be grateful Albedo's true identity remains hidden. If it gets out that he's one of Rhinedottir's creations... there'd be no separating him from her past.",
+				"There are always unavoidable trials in life. At least, that's what Barbatos would say.",
+				"This is called a 'Dodocommunication Device,' and it allows people to stay in touch over vast distances. However, you can't just use it anytime you want, and there's also a limit on the number of times you can use it. That's why it's currently only available to a certain select few. This invention, with a little help from a trick of mine, will allow us to keep in touch. Minus the fuse — so don't worry, it's not going to explode.",
+				"No matter what comes, you have the wind on your side.",
+				"Your companionship is like a breeze that lingers in the air, warm and familiar.",
+				"I wonder what Barbatos thinks about that... Perhaps you should pray to him and find out.",
+				f"You know what? Forget about Barbatos. Treat me to a drink instead! You wouldn't refuse me, would you?",
+				"A fair investigation means coming to a conclusion presented by the facts. Remaining objective has its own value.",
+				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {char} found me! Got me out of a tough spot, heh… <:VentiScared:1394163440490254427>",
+				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
+				"Varka… I still remember when he approached me about 'asking the lovely ladies of the Hexenzirkel for a small favor'... The chumminess caught me off guard. If I hadn't known any different, I'd have thought he was talking about his older sisters or something.",
+				"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
+				"'The true feelings of the prodigal son.' A sentiment as sweet and warm as a gentle spring breeze — perfect for the season!",
+				"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
+				"These lyre strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling bard!",
+				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
+				"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+				"**I hereby declare that every son and daughter of the City of the Wind must be compelled to taste this finest of wines... Here's to good wine!**",
+				"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
+				"In principle, the hymns of the Cathedral are dedicated to a god, but in reality, the audience are all ordinary people with very worldly concerns. So what really matters is that the people enjoy what they're listening to.",
+				"Kaeya! Ah, he was one of the finest students ever to emerge from my fast-track love poetry class... I always did admire his enthusiasm and kindness.",
+				"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
+				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
+				"If you are a chaser of freedom, the Anemo Archon will bless you. So why not let those feelings out, and sing with everyone?",
+				"The winds of Mondstadt will guide every lost ship back to safe harbor.",
+				"Aha, it must be my second avid reader! Let's go ask it about its thoughts on my... my... achoo!",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Mavuika is someone who knows how to party hard... and drink even harder!",
+				"*You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
+			]
+			random_message = random.choice(answers)
+			randNum = random.randint(1, 4)
+			if randNum == 4 and char is not user:
+				await message.reply(f"Here's your prompt...\n\n{random_message}\n\nMy idea for a character is {char}!")
+			else:
+				await message.reply("Here's your prompt...\n\n{random_message}")
+		elif any(keyword in content for keyword in ["birthday", "birth day", "bday"]):
+			answers = [
+				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
+				f"So, how do you think we should spend this day?",
+				f"I've been mulling it over for a long time now — so long, in fact, that the Philanemo Mushrooms seem to have withered away and the Windwheel Asters have ground to a complete halt…\nHm... We could go climb a tree and enjoy the breeze together? Or, we could go stargazing from a cliff? Ooh — we could even go on a day trip to an uninhabited island!\nEh, but really, it doesn't matter what we do — I'll be happy just as long as I'm with you. Having you by my side is the most important thing of all.\nSo c'mon, let's go enjoy your birthday to the full while it lasts! Do you mind if I delegate the decision of exactly how we celebrate it to you, though?",
+				f"The breeze combing through your hair today feels a little different, don't you think?\nIt smells faintly of flowers and also carries a refreshing scent of spring water…\nIf you are sensitive to smells, I wouldn't be surprised if you can pick a hint of sweetness in today's wind. That's because I just ate an apple, haha!\nCome on now, let's go for a walk outside!\nWe can pick berries for a picnic and rest at a roadside tavern. With me, the best bard there is by your side, the journey will be great wherever we go.\nOops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
+				f"I recently came across a treasure map! It floated down from a tree, and a location most mysterious is drawn upon it: azure laying siege to a field of green, and the yellow of stone ornamented with viridian. Even I, a wandering bard who has nothing but free time to gallivant about, haven't got a clue just what kind of place it is. A seaside cave wreathed in clouds? A floating island covered in forest that appears only at night? Hm… just what is the answer?\nGiven that you're a brave hero who has voyaged across the land, why don't you have a look at it? Perhaps, with two hands on the scroll, we'll be at our destination in the blink of an eye! When that time comes, I'll leave the honor of finding the treasure to you!\nAs for me, well, I'll be happy to travel with you! Even if your journey takes you to the edge of the world, with me there, there's no need to worry. Though, if there's any danger, you'll remember to protect me, won't you?",
+				f"Just now, when I was relaxing under a tree, I accidentally fell asleep and ended up being knocked on the head by a falling Sunsettia…\nBut thanks to that sweet little fruit, I thought of a new song. Naturally, I'll let you be the first to hear it.\nIt's a fine day out, so how about we take a walk together through the open country? We can get some fresh air and leave our worries far behind.\nIn the evening, we'll stop somewhere with a good view and I'll play my new song for you. I wouldn't want to get so caught up in the journey that I'd miss out on watching the sunset with an important friend!\nMondstadt's gentle breeze awaits your return from far afield. Just try not to get lost on the way!",
+				f"When you receive this letter, hold it in your hands and stand by the window.",
+				f"Do you feel it? That gentle breeze nudging at your back? Hehe, why not follow the little leaf it carries — just big enough to rest in your palm — and let it guide you here, to me?",
+				f"But don't get distracted by the scent of hash browns along the way, you hear? If you stuff yourself silly, the feast I've prepared might end up feeling a little... neglected.\nKeep walking, just a little further — go on and leave Mondstadt's lively bustle behind for now. Can you hear it? That melody is growing clearer by the moment.\nThe sunshine is beautiful today, and the picnic mat is as cool and airy as the breeze dancing across the lake. You'll spot it from far away, but of course, take your time~\nI'll be right here, waiting for you and strumming a tune."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["sad", "cry", "sick", "hard", "hurt", "tear", "pain", "depress", "tir", "energy", "suic", "upset", "help me", "sniffle", "weep", "bad day"]):
 			answers = [
 				"Hee-hee... My warrior, you've worked so hard. I understand how you feel.\n...When you just can't find any more energy, and the world falls into a haze — even apples lose their sweet flavor.\nIf you can get some quality shut-eye at this time, you'll feel a lot better when you wake up. Here, I'll lend you my shoulder.\nAt any rate, don't worry. Whenever you need me, I'll always be by your side.",
@@ -1063,7 +1258,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["you are", "your", "ur", "you", "youre", "venti is", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["idiot", "dumbass", "lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky", "i hate mondstat", "i hate mondstadt"]):
+		elif any(keyword in content for keyword in ["ur", "you", "youre", "venti is", "is a", "barbatos is", "venti’s", "barbatos’s", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos"]) and any(keyword in content for keyword in ["idiot", "dumbass", "lazy", "bad", "annoying", "worst", "useless", "terrible", "ugly", "stupid", "awful", "drunkard", "wastrel", "drunken", "worst", "i dislike you", "i hate you", "i dislike u", "i hate u", "i dislike venti", "i hate venti", "i dislike barbatos", "i hate barbatos", "wrong with", "idiot", "stinky", "i hate mondstat", "i hate mondstadt", "baka"]):
 			answers = [
 				"What's that? You think I should try harder to be a good Anemo Archon? Well you could be a better devotee too... you could be more pious, more passionate, or... um…",
 				"Ugh, I'm not in the mood for this!",
@@ -1072,7 +1267,8 @@ async def on_message(message):
 				"That smirk you wear looks out of place. Did you steal it from your master's face?",
 				"Beauty is a waste... when the beholder has no taste.",
 				f"Oh, woe is me... {user} sees me as nothing more than a drunken wastrel… There are actually a great many things that we bards are required to do... It just happens that enjoying life is the most important one.",
-				"I wonder what Barbatos thinks about that... Perhaps you should pray to him and find out."
+				"I wonder what Barbatos thinks about that... Perhaps you should pray to him and find out.",
+				f"Ah, you wound me, fair {user}! To think, you take me for such an ill-mannered person…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1085,13 +1281,14 @@ async def on_message(message):
 				"That smirk you wear looks out of place. Did you steal it from your master's face?",
 				"Beauty is a waste... when the beholder has no taste.",
 				f"Oh, woe is me... {user} sees me as nothing more than a drunken wastrel… There are actually a great many things that we bards are required to do... It just happens that enjoying life is the most important one.",
-				"I wonder what Barbatos thinks about that... Perhaps you should pray to him and find out."
+				"I wonder what Barbatos thinks about that... Perhaps you should pray to him and find out.",
+				f"Ah, you wound me, fair {user}! To think, you take me for such an ill-mannered person…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["rodent", "scurry", "rat", "pest", "vermin"]):
 			await message.reply("Resident rodent... beats invasive vermin.")
-		elif any(keyword in content for keyword in ["spit", "attack", "fight", "shoot", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash", "bonk", "boom", "collision", "💥", "nom"]):
+		elif any(keyword in content for keyword in ["spit", "attack", "fight", "shoot", "punch", "slap", "hit", "kick", "smack", "bite", "chew", "steal", "take", "grab", "slash", "bonk", "boom", "collision", "💥", "nom", "throws"]):
 			answers = [
 				"Woah! What was that?",
 				"Ugh, I'm not in the mood for this!",
@@ -1126,7 +1323,8 @@ async def on_message(message):
 				f"I want to record all these beautiful memories, and turn them into ballads!",
 				f"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
 				f"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
-				f"Your companionship is like a breeze that lingers in the air, warm and familiar."
+				f"Your companionship is like a breeze that lingers in the air, warm and familiar.",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1219,28 +1417,26 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif "birthday" in content:
-			answers = [
-				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
-				f"So, how do you think we should spend this day?",
-				f"I've been mulling it over for a long time now — so long, in fact, that the Philanemo Mushrooms seem to have withered away and the Windwheel Asters have ground to a complete halt…\nHm... We could go climb a tree and enjoy the breeze together? Or, we could go stargazing from a cliff? Ooh — we could even go on a day trip to an uninhabited island!\nEh, but really, it doesn't matter what we do — I'll be happy just as long as I'm with you. Having you by my side is the most important thing of all.\nSo c'mon, let's go enjoy your birthday to the full while it lasts! Do you mind if I delegate the decision of exactly how we celebrate it to you, though?",
-				f"The breeze combing through your hair today feels a little different, don't you think?\nIt smells faintly of flowers and also carries a refreshing scent of spring water…\nIf you are sensitive to smells, I wouldn't be surprised if you can pick a hint of sweetness in today's wind. That's because I just ate an apple, haha!\nCome on now, let's go for a walk outside!\nWe can pick berries for a picnic and rest at a roadside tavern. With me, the best bard there is by your side, the journey will be great wherever we go.\nOops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
-				f"I recently came across a treasure map! It floated down from a tree, and a location most mysterious is drawn upon it: azure laying siege to a field of green, and the yellow of stone ornamented with viridian. Even I, a wandering bard who has nothing but free time to gallivant about, haven't got a clue just what kind of place it is. A seaside cave wreathed in clouds? A floating island covered in forest that appears only at night? Hm… just what is the answer?\nGiven that you're a brave hero who has voyaged across the land, why don't you have a look at it? Perhaps, with two hands on the scroll, we'll be at our destination in the blink of an eye! When that time comes, I'll leave the honor of finding the treasure to you!\nAs for me, well, I'll be happy to travel with you! Even if your journey takes you to the edge of the world, with me there, there's no need to worry. Though, if there's any danger, you'll remember to protect me, won't you?",
-				f"Just now, when I was relaxing under a tree, I accidentally fell asleep and ended up being knocked on the head by a falling Sunsettia…\nBut thanks to that sweet little fruit, I thought of a new song. Naturally, I'll let you be the first to hear it.\nIt's a fine day out, so how about we take a walk together through the open country? We can get some fresh air and leave our worries far behind.\nIn the evening, we'll stop somewhere with a good view and I'll play my new song for you. I wouldn't want to get so caught up in the journey that I'd miss out on watching the sunset with an important friend!\nMondstadt's gentle breeze awaits your return from far afield. Just try not to get lost on the way!",
-				f"When you receive this letter, hold it in your hands and stand by the window.",
-				f"Do you feel it? That gentle breeze nudging at your back? Hehe, why not follow the little leaf it carries — just big enough to rest in your palm — and let it guide you here, to me?",
-				f"But don't get distracted by the scent of hash browns along the way, you hear? If you stuff yourself silly, the feast I've prepared might end up feeling a little... neglected.\nKeep walking, just a little further — go on and leave Mondstadt's lively bustle behind for now. Can you hear it? That melody is growing clearer by the moment.\nThe sunshine is beautiful today, and the picnic mat is as cool and airy as the breeze dancing across the lake. You'll spot it from far away, but of course, take your time~\nI'll be right here, waiting for you and strumming a tune."
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif "it" in content and "stuck" in content:
 			await message.reply("It’S sTuCk.")
 		elif "detour" in content:
 			await message.reply("Let’s make a detour then. Heading up!")
 		elif "walk in" in content and "flies in" in content:
 			await message.reply("He doesn’t *walk* in, he *flies* in.")
-		elif any(keyword in content for keyword in ["ding", "answer", "correct"]):
+		elif any(keyword in content for keyword in ["ding", "correct"]):
 			await message.reply("Ding-ding-ding! Correct answer!")
+		elif any(keyword in content for keyword in ["answer", "question", "yes or no"]):
+			answers = [
+				"Ding-ding-ding! Correct answer!",
+				"It's a secret, and I expect anyone who's guessed the answer to keep it that way.",
+				"Ehe.",
+				"A secret is like a well-aged brew. The aroma from the bottle is sweetest when revealed in the company of friends.",
+				"Hmm, wanna take a guess?",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.",
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["fembo", "twink", "mpreg"]):
 			answers = [
 				"So that’s the word people use. Hm…",
@@ -1254,6 +1450,18 @@ async def on_message(message):
 				"If I’m a femboy, does that mean Barbatos is the Femboy Archon?",
 				"Ding-ding-ding! Correct answer!",
 				"**I hereby declare that every son and daughter of the City of the Wind must be compelled to taste this finest of wines... Here's to femboys!**"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["skibidi", "ohio", "sigma", "brainrot", "take the l", "skill issue"]):
+			answers = [
+				"Ehe~",
+				"<a:Ventigif:1394739625544777769>",
+				"<a:ventidance_hen:1394160371249578157>",
+				"Has Dahlia called me a rizzler again? Hehe, it's not my fault my love poem crash course was so effective!",
+				"'Skibidi' this, 'skibidi', that... this millennia's vocabulary does get a bit complicated!",
+				"<:ventibrain:1396429788310147164>",
+				"Womp womp…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1357,7 +1565,8 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["mavuika", "xbalanque", "harborym", "god", "archon"]) and any(keyword in content for keyword in ["fire", "pyro", "natlan", "war", "mavuika", "xbalanque", "harborym"]):
 			answers = [
 				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
-				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?"
+				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?",
+				"Mavuika is someone who knows how to party hard... and drink even harder!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1383,13 +1592,14 @@ async def on_message(message):
 				"■■■■■■ ■■■■■■ ■■■■ ■■■■■ ■■■■■■",
 				"■■■ ■■■ ■■■■■■■■■ ■■ ■■■■■■■■",
 				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, p̶r̸e̵s̸e̷n̸t̸, o̷̭̩̲̓̈́́r̶̬̯̬̿ ■■■■■■■■■■■",
-				"The people of Mondstadt believe that the w̷i̵n̵d̵ ̸c̷a̵n̸ ̵b̵r̶i̶n̷g̷ ̶b̷a̴c̴k the soul, and also preserve ṁ̸̡̡̢̛̛̯̰̑̐́̄e̷̙̻̰̥̓̓̏͋͊̂͊m̷̨̪͈̭̤͆o̴̢̝̺̫̦̝͌̊́r̷͈̳͋̒̂̇ī̵͙͓̣͎e̸̹͚̤̊̒͂͛͛͘s̸͙̥̙͎̅̔. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of c̴a̶p̷t̴u̸r̷i̵n̶g̶ ̸t̶h̸e̵ ̴w̶i̷n̵d̵ in the very m̷o̸m̴ent that the barrel is sealed. T̷h̶e̴ ̷m̴e̸m̸o̷r̷y̵ ̷o̶f̴ ̴t̵h̷a̷t̷ ̵m̷o̷m̸e̶n̸t̴ ̴i̸s̴ ̸t̷h̷e̵n̸ s̸t̴o̴r̵e̵d̵ ̶i̸n̴ ̵t̶h̶e̸ ̴w̸i̴n̶e̴,̵ ̸f̸o̷r̶ ̵■■■ ̷■■■■■■■"
+				"The people of Mondstadt believe that the w̷i̵n̵d̵ ̸c̷a̵n̸ ̵b̵r̶i̶n̷g̷ ̶b̷a̴c̴k the soul, and also preserve ṁ̸̡̡̢̛̛̯̰̑̐́̄e̷̙̻̰̥̓̓̏͋͊̂͊m̷̨̪͈̭̤͆o̴̢̝̺̫̦̝͌̊́r̷͈̳͋̒̂̇ī̵͙͓̣͎e̸̹͚̤̊̒͂͛͛͘s̸͙̥̙͎̅̔. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of c̴a̶p̷t̴u̸r̷i̵n̶g̶ ̸t̶h̸e̵ ̴w̶i̷n̵d̵ in the very m̷o̸m̴ent that the barrel is sealed. T̷h̶e̴ ̷m̴e̸m̸o̷r̷y̵ ̷o̶f̴ ̴t̵h̷a̷t̷ ̵m̷o̷m̸e̶n̸t̴ ̴i̸s̴ ̸t̷h̷e̵n̸ s̸t̴o̴r̵e̵d̵ ̶i̸n̴ ̵t̶h̶e̸ ̴w̸i̴n̶e̴,̵ ̸f̸o̷r̶ ̵■■■ ̷■■■■■■■",
+				"It's a secret, and I expect anyone who's guessed the answer to keep it that way."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["furi", "focalors", "regina", "ousia", "pneuma", "god", "archon"]) and any(keyword in content for keyword in ["furi", "focalors", "regina", "ousia", "pneuma", "hydro", "water", "ocean", "sea", "justice", "fontaine"]):
 			await message.reply("A bard must be versed in both music and song, but a stage performer requires far more skills than just these... Hey, don't you think we should invite her over to put on a show at the next Windblume Festival? ...Huh? You want me to talk about how she saved Fontaine? Well, I mean, she's such a talented artiste, it's no wonder. I wouldn't be surprised even if she'd saved the entire world.")
-		elif any(keyword in content for keyword in ["fontaine", "france", "french"]):
+		elif any(keyword in content for keyword in ["fontaine", "france", "french", "bonjour", "bonjor"]):
 			await message.reply("Ohoho travelère, wouldn’t gliding be fastère? <:VentiFrench:1394234467832561717> Hehehehe…\nBONJOUR YOU F*CKING A-")
 		elif any(keyword in content for keyword in ["tsaritsa", "god", "archon"]) and any(keyword in content for keyword in ["cryo", "ice", "snow", "snezhnaya", "tsaritsa"]):
 			answers = [
@@ -1430,7 +1640,8 @@ async def on_message(message):
 				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Phane–ahem, the Heavenly Principles?",
 				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about the Heavenly Principles?",
 				"A secret is like a well-aged brew. The aroma from the bottle is sweetest when revealed in the company of friends.",
-				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited."
+				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
+				"It's a secret, and I expect anyone who's guessed the answer to keep it that way."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1455,7 +1666,7 @@ async def on_message(message):
 			await message.reply(random_message)
 		elif "jack" in content:
 			await message.reply("Jack… Stanley's really fond of that kid, don't you think?")
-		elif any(keyword in content for keyword in ["venti", "you", "nameless bard", "nameless"]) and any(keyword in content for keyword in ["grie", "loss", "death", "sad", "alcoholic", "pain", "cry", "died", "nameless bard", "nameless"]):
+		elif any(keyword in content for keyword in ["venti", "you", "nameless bard", "nameless"]) and any(keyword in content for keyword in ["grie", "loss", "death", "sad", "alcoholic", "pain", "cry", "died", "nameless bard", "nameless", "killed"]):
 			answers = [
 				f"My current form is not so different from the situation with fake Stanley... I took the form of a friend…",
 				f"Say, {user}, do you wish to hear the next part of the story…?",
@@ -1482,11 +1693,12 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["stormterror", "dvalin", "dragon"]):
+		elif any(keyword in content for keyword in ["stormterror", "dvalin"]):
 			answers = [
 				"The story I want to tell starts at... the sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
 				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
-				"Up till the end, Dvalin remembered his duty as one of the Four Winds. As such, I don't intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin will be able to choose for himself and understand what freedom is. Before I became an archon, I too was taught the meaning of freedom in this way by a friend."
+				"Up till the end, Dvalin remembered his duty as one of the Four Winds. As such, I don't intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin will be able to choose for himself and understand what freedom is. Before I became an archon, I too was taught the meaning of freedom in this way by a friend.",
+				"Another one of Madame Mage's children here in Mondstadt, what fun! My new little friend looked like he wanted to play with a certain older, bigger friend of mine — so I arranged a little introduction, and voila! It turns out my big friend was the more excited of the two! Why, you should've seen him jumping for joy, patting his belly, and dancing in circles. Oh dear, did he hear what I just said? Quick, quick, let's take cover behind that tree!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1503,12 +1715,19 @@ async def on_message(message):
 				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
 				"My tummy is rumbling, but I can't get caught pilfering food from the Dawn Winery again... Oh, it's you! Where are you heading? May I join?",
 				"I'm not surprised you want to befriend Master Diluc, just think of all vintage wine he must have stored away... Mwuhahaha... Huh? He doesn't let you sample it? Not even the slightest drop? Huh... Well, I guess you can still appreciate the aroma. That's still better than no wine at all, right? No?",
-				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!"
+				"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
+				"Bartender, a few more glasses of that refreshing wine I was just enjoying, if you'd be so kind!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["kaeya", "cavalry captain", "cavalry"]):
-			await message.reply("Kaeya! Ah, he was one of the finest students ever to emerge from my fast-track love poetry class... I always did admire his enthusiasm and kindness.")
+			answers = [
+				"Kaeya! Ah, he was one of the finest students ever to emerge from my fast-track love poetry class... I always did admire his enthusiasm and kindness.",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in
 		elif any(keyword in content for keyword in ["jean", "acting grand master"]):
 			await message.reply("Acting Grand Master Jean... Well, what do you think of her? Yes, I couldn't agree more: conscientious, courageous... kind and considerate too. Reminds me of another good friend…")
 		elif any(keyword in content for keyword in ["varka", "grand master", "horse"]):
@@ -1595,10 +1814,15 @@ async def on_message(message):
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["fischl", "amy", "prinzessin"]):
 			await message.reply("Oh, Fischl... haha, ever the imaginative one. Even I have to pause at times to decipher what she's trying to say!")
-		elif any(keyword in content for keyword in ["lisa", "witch", "climb", "69"]):
+		elif any(keyword in content for keyword in ["lisa", "witch", "climb"]):
 			await message.reply("'Tempus Fugit'... time flies. In the end, everything is transient, and nothing can avoid the hands of time. Life is like an hourglass, and for Lisa, those grains of sand flow like a river...")
-		elif any(keyword in content for keyword in ["bennett", "adventure team"]):
-			await message.reply("Hopefully the winds of fate guide Bennett's luck in a better direction.")
+		elif any(keyword in content for keyword in ["bennet", "adventure team"]):
+			answers = [
+				"Hopefully the winds of fate guide Bennett's luck in a better direction.",
+				"How's Bennett been doing the past few days?"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["noelle", "maid"]):
 			await message.reply("Ah, the ever-diligent Noelle! One time I spilled wine in the Angel's Share, and _she_ apologized as she cleaned it up. Hehe, I wrote her a song after that, and she liked it.")
 		elif "sucrose" in content:
@@ -1660,7 +1884,18 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["alhaitham", "kaveh"]):
 			await message.reply("Haha, I've heard Alhaitham and Kaveh are friends who bicker a lot. Reminds me of someone else I know...")
 		elif "yao" in content:
-			await message.reply("I must admit, when I walk through Liyue I find myself inspired. The tall mountains and low plains; the glowing stones, cool to the touch... Hehe, maybe a certain someone _did_ do a good job of protecting it.")
+			answers = [
+				"I must admit, when I walk through Liyue I find myself inspired. The tall mountains and low plains; the glowing stones, cool to the touch... Hehe, maybe a certain someone _did_ do a good job of protecting it.",
+				"<:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"Ehe~",
+				"<a:Ventigif:1394739625544777769>",
+				"<a:ventidance_hen:1394160371249578157>",
+				"*And Barbatos floated down from the heavens, wings shining white against the clouds, and replied, 'Yes.'*"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["desert", "dehya", "sethos", "deshret"]):
 			await message.reply("The deserts of Sumeru are torrid, indeed, but at least the sands are touched by wind.")
 		elif any(keyword in content for keyword in ["mika", "map"]):
@@ -1737,7 +1972,8 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["who", "what"]) and any(keyword in content for keyword in ["you", "this", "name"]):
 			answers = [
 				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
-				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future."
+				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
+				"Hey there, everyone! You can just call me Venti. I like to keep things casual."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1754,7 +1990,9 @@ async def on_message(message):
 				"If you want to chat, now's the time — a bard stays not always in a single clime.",
 				"Ah, good. I was hoping we might get to chat some more.",
 				"It's been too long! I'll bet you have some thrilling new tales from your journey to fill me in on? I can see it in your eyes.",
-				"Sure, the sound of your voice is always a pleasure to hear."
+				"Sure, the sound of your voice is always a pleasure to hear.",
+				"How could I possibly turn down such a warm invitation?",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1767,8 +2005,7 @@ async def on_message(message):
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
 				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
-				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Time?"
-			]
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Time?"			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["memor", "moment", "stor"]):
@@ -1792,15 +2029,17 @@ async def on_message(message):
 				"I haven't been back to Mondstadt for an extended period of time. Without a doubt, I am now the weakest archon among The Seven!",
 				"We've known each other for so long, and you still don't trust my intentions? Oh, the pain…",
 				"A secret is like a well-aged brew. The aroma from the bottle is sweetest when revealed in the company of friends.",
-				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything?"
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything?",
+				"It's a secret, and I expect anyone who's guessed the answer to keep it that way.",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.",
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["parent", "adopt", "children", "family"]):
 			answers = [
 				f"My children deserve the joy of songs and dance, and the right to overthrow vile tyrants.",
-				f"I consider all of Mondstadt my children!",
-
+				f"I consider all of Mondstadt my children!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1813,7 +2052,8 @@ async def on_message(message):
 				"Adventuring is what you do best. It's only natural to encounter a few surprises when you head somewhere new, but just remember, not all unexpected encounters are dangerous.",
 				"I've got things covered here.",
 				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
-				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh…<:VentiScared:1394163440490254427>"
+				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh…<:VentiScared:1394163440490254427>",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1825,17 +2065,22 @@ async def on_message(message):
 				"Woah! What was that?",
 				"...Oh dear.",
 				"Ehe.",
-				f"You know what? Forget about Barbatos, {user}. Treat me to a drink instead! You wouldn't refuse me, would you?"
+				f"You know what? Forget about Barbatos, {user}. Treat me to a drink instead! You wouldn't refuse me, would you?",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif "bald" in content:
+			await message.reply("<:venticonfused:1396429788310147164>")
 		elif any(keyword in content for keyword in ["summer", "swim", "isle", "golden apple", "archipelago", "island", "waves", "sun"]):
 			answers = [
 				"Summer is the season of love. It is the time for freedom and fun. So everyone, please sing, dance, and enjoy yourselves here.",
 				"*gasp* Let's hold a summer feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
 				"I want to record all these beautiful memories, and turn them into ballads. Every summer will become an unforgettable song!",
 				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
-				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there."
+				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there.",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!"
 			]
 		elif any(keyword in content for keyword in ["windblume", "spring"]):
 			answers = [
@@ -1872,7 +2117,8 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["party", "feast", "celebrat", "gathering", "reunion", "festiv", "holiday", "christmas", "confetti"]):
 			answers = [
 				"*gasp* Let's hold a feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
-				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!"
+				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!",
+				"Now's the time to raise a glass in celebration of new friendships!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1895,17 +2141,21 @@ async def on_message(message):
 				"The stage will need to be cleared before I can begin my performance. Generally speaking, such chores are not the concerns of the performer himself…",
 				"Adventuring is what you do best. It's only natural to encounter a few surprises when you head somewhere new, but just remember, not all unexpected encounters are dangerous.",
 				"I've got things covered here.",
-				"There are always unavoidable trials in life. At least, that's what Barbatos would say."
+				"There are always unavoidable trials in life. At least, that's what Barbatos would say.",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["we're", "we are", "are we"]) and any(keyword in content for keyword in ["marri", "wife", "husband"]):
+		elif any(keyword in content for keyword in ["we're", "we are", "are we", "marry me", "will you", "will u"]) and any(keyword in content for keyword in ["marri", "marry me" "wife", "husband"]):
 			answers = [
 				"Ah, marriage... the subject of poems for millennia.",
 				"Married...! <:VentiShock:1394123854518948041>",
 				"Well, I... ehe...",
 				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
-				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*"
+				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"How could I possibly turn down such a warm invitation?"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1914,7 +2164,8 @@ async def on_message(message):
 				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
 				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
 				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
-				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*"
+				"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1935,7 +2186,10 @@ async def on_message(message):
 				f"A secret is like a well-aged brew. The aroma from the bottle is sweetest when revealed in the company of friends.",
 				f"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
 				f"Your companionship is like a breeze that lingers in the air, warm and familiar.",
-				f"No matter what comes, you have the wind on your side."
+				f"No matter what comes, you have the wind on your side.",
+				"It's been a while, {user}! These must be some of your new friends — greetings!",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1955,7 +2209,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["fallen", "kill", "murder", "womp womp"]):
+		elif any(keyword in content for keyword in ["fallen", "kill", "murder", "womp womp", "banned", "banning"]):
 			answers = [
 				"Let me sleep a while…",
 				"Oh no, my lyre is broken…",
@@ -2017,7 +2271,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["disciple", "apostle", "devotee", "worship", "pray", "offer", "archon", "god", "barbatos"]):
+		elif any(keyword in content for keyword in ["disciple", "apostle", "devotee", "worship", "pray", "offer", "archon", "god", "barbatos", "zeus", "jupiter", "hera", "juno", "poseidon", "neptune", "demeter", "ceres", "apollo", "artemis", "ares", "mars", "athena", "minerva", "hephaestus", "vulcan", "aphrodite", "venus", "hermes", "mercury", "hestia", "vesta", "dionysus", "liber", "alcis", "baldr", "bragi", "dellingr", "forseti", "freyr", "frea", "yngvi", "heimdallr"]):
 			answers = [
 				"An evening breeze really sets the mood for becoming my disciple, don't you think? We can do it right now, you just need to make me a small offering…",
 				"Thank Barbatos! Wait a minute…",
@@ -2051,13 +2305,103 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["cecilia", "flower", "bouquet", "rose", "bloom", "blossom", "white"]):
+		elif any(keyword in content for keyword in ["cecilia", "flower", "bouquet", "rose", "bloom", "blossom", "white", "sunsettia", "dandelion"]):
 			answers = [
 				f"{user}, have you ever seen a cecilia? It's a magnificent white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the most beautiful flower in all of Teyvat.",
 				"The morning sun is pretty pleasant, isn't it? Ehe, you can barely keep your eyes open.\nHere, come sit with me and enjoy the scent of Cecilias! They'll perk you up.\nAh, I lost track of time just chatting with you... Wait just a moment, I'm almost done!\nYou haven't eaten apple pie in a long time, have you? Then I'll make us breakfast today~",
 				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many Mondstadters to be the true 'Windblume.'",
 				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
-				"'The true feelings of the prodigal son.' A sentiment as sweet and warm as a gentle spring breeze — perfect for the season!"
+				"'The true feelings of the prodigal son.' A sentiment as sweet and warm as a gentle spring breeze — perfect for the season!",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["!story", "!tale", "tell"]) and any(keyword in content for keyword in ["!story", "!tale", "story", "tale"]):
+			answers = [
+				"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition... That said, I haven't actually written any songs in Hilichurlian so far…",
+				f"{user}, have you ever seen a cecilia? It's a magnificent white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the most beautiful flower in all of Teyvat.",
+				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! How do I know? Because, this is written in the epic poems of days gone by!",
+				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes foul and the fruit is bland. You know what that means? No cider! Haha, in that case, I wouldn't go there even if I was invited.",
+				"Oh, is this apple for me? Haha, that won't do, come share this apple with me.\nSplit it open like this...and you will feel the breeze from the apple core.\nIn some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
+				"The Abyss Order is an organization comprised of non-human beings. They despise mankind. I don't know where they come from. All I know is that they hold deep hatred towards the human world. Many hilichurls out in the wild take orders from them and act as their weapons.",
+				"Master Diluc, the boss of... ah, the owner of the Angel’s Share. He's very famous. By the way, his dandelion wine is one of my favorites. Though most of the time I can only afford a bottle or two…",
+				"The story I want to tell starts at... the sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
+				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as someone gentle.",
+				"'The Seven' as people now know them, were once known as 'The Seven Archons.' Each archon presides over their own part of Teyvat. That is the role the archons play. Only in performing this duty can we attain power, but I don't like the idea of 'ruling' Mondstadt — and I don't feel Mondstadt would really like it either.",
+				"Stormterror’s Lair was once part of an ancient city. The ruins even predate the existence of The Four Winds. Mondstadt is a city without a ruler. However, before, it was ruled over by a tyrant.",
+				"As you know, Visions are external magical foci that only a small minority of people possess. They use these Visions to channel elemental power. In truth, every wielder of a Vision is one who can attain godhood and ascend to Celestia. We call such people allogenes. However, archons don't need primitive tools like Visions. Instead, each archon has an internal magical focus that resonates directly with Celestia itself... known as a Gnosis.",
+				"Signora was No. 8 of the harbingers. She and the rest of the harbingers have been given god-like executive authority by the Tsaritsa of Snezhnaya, and with it, strength surpassing that of other mortals.",
+				"The Tsaritsa is one of the Seven, who reigns from the Zapolyarny Palace, and the one person that the Fatui Harbingers all answer to. The Seven don't always get along well, but still — I never thought that she would plot to steal another archon's Gnosis…",
+				"Five hundred years ago, I knew The Tsaritsa well. But I can't say the same is true now. You see, a certain catastrophe happened five hundred years ago, and after that, she cut off all ties with me.",
+				f"{user}, as you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
+				"Up till the end, Dvalin remembered his duty as one of the Four Winds. As such, I don't intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin will be able to choose for himself and understand what freedom is. Before I became an archon, I too was taught the meaning of freedom in this way by a friend.",
+				"What are Windblumes, exactly? And what do Windblumes and the Windblume Festival mean to Barbatos, the Anemo Archon? As you've seen, the people of Mondstadt each make their own choice. Out of the millions of flowers there are, some choose the dandelion, others choose the Windwheel Aster. There is no single and answer and no true Windblumes in existence.",
+				"The word 'Windblume' dates from the age of Old Mondstadt. It was a code word that the people used to stay in contact and mount resistance in secret. At that time, people often said that the stronger the wind blows, the firmer the roots of the Windblume grow, and the brighter the flower that bursts into bloom.",
+				"Windblumes don't exist. Yet they are all around us nonetheless. They are the spirit of yearning for freedom, the courage to follow the wind wherever it may lead... All objects are beautiful and worthy of blessing... All can be Windblumes.",
+				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
+				"I once happened upon a cargo ship bound for Inazuma transporting Dandelion Wine, so, naturally, I decided to set sail with them. Once aboard, I found the captain to be a kindred spirit, and I was treated to an abundance of fine liquor along the way. Uh, I must have fallen asleep in the cargo crate while carefully comparing the tastes of Dandelion Wine and Inazuman sake…",
+				"Legends tell of an emerald isle in the middle of the ocean. There, the Dodo-King and his people live a blissful existence. When a Dodoco is born, it dives into the water. Some learn to swim, others are carried away by the waves all the way to Mondstadt, where they befriend the children there.",
+				"Guess which two people I ran into on my way to the tavern today? A mother and daughter, both with long elf ears and the most amazingly adorable personalities!",
+				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!",
+				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
+				"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI see a kind, gentle soul, with a healthy dose of romance and freedom, too... In other words, a true Mondstadter, who grew up drinking the water of Cider Lake. You, on the other hand... Don't worry, you're the gentlest soul I've ever met.",
+				"I've actually heard a few things about Mr. Zhongli before. The guests in the tavern talked about this refined and courteous man who, instead of having wine at Mondstadt's finest tavern, ordered a cup of hot tea with the most complex name.",
+				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many Mondstadters to be the true 'Windblume.'",
+				"Ah, this takes me back. The first time I saw this view, I hadn't even taken on this form yet. It was about twenty-six hundred years ago, before the world had come under the rule of The Seven. At that time, Old Mondstadt was ruled by a tyrant, who sealed off the city's perimeter with a ferocious hurricane. Even the birds couldn't get in or out.",
+				"Twenty-six hundred years ago, I was but a wisp among the thousand winds. I wasn't a god of anything — I didn't even have a human form... I was just a tiny elemental being who lived in the wind, a gentle breeze bringing subtle changes for the better, or tiny seeds of hope. My current form is not so different from the situation with fake Stanley... I took the form of a friend…",
+				"A refreshing drink, a gentle breeze... *sigh* Moments like this always take me back…\nBack to a song that I first heard from him…\n*Fly, fly away.*\n*Like a bird in the sky.*\n*See the world on my behalf...*\n*To the heavens may you fly...*",
+				"How do you explain white chalk in black soil, or the earth's dense crust amidst the emptiness of space? Same reason the purest soil gave birth to human life... It's an ancient power with unmistakable properties. Trying to harness it is dangerous indeed, I can't imagine what would happen if someone lost control of it in the city... Ah, never mind! What goes on within Mondstadt's walls is up to Mondstadt's people to deal with!",
+				"Eula has good taste when it comes to beverages of the alcoholic variety. Come summer or winter, she always likes them ice-cold. That's rare among Mondstadters these days! She and I would make great drinking buddies. Huh? My songs about the Lawrence Clan... She's heard them already? Eh, no harm done. Maybe she and I can do a duet sometime!",
+				"So, I hear you defeated the mighty Raiden Shogun? Ah, I recall the days when she was a kagemusha, seeking to perfect her martial prowess. Hehe, she now no doubt employs a wide range of reasoning to get you to train with her. Oh but yes, come close and I shall let you in on her weakness — desserts!",
+				"The first thing you think of when you hear 'Dendro Archon' is her power over dreams. Her dreams are akin to my ballads: full of emotion and imagination. It goes without saying that we get along really well.",
+				"This world sure is cruel, forcing generation upon generation of human heroes to become cannon fodder in the fight against the darkness. But, under Mavuika's leadership, they achieved a truly god-like feat... Hehe, starting with 'her,' I suppose the Natlanese have always been like that. Ah, right! I heard Mavuika likes to drink! Are you thinking what I'm thinking...?",
+				"Another one of Madame Mage's children here in Mondstadt, what fun! My new little friend looked like he wanted to play with a certain older, bigger friend of mine — so I arranged a little introduction, and voila! It turns out my big friend was the more excited of the two! Why, you should've seen him jumping for joy, patting his belly, and dancing in circles. Oh dear, did he hear what I just said? Quick, quick, let's take cover behind that tree!",
+				"The Kreideprinz, a perfect specimen of synthetic life... We should be grateful Albedo's true identity remains hidden. If it gets out that he's one of Rhinedottir's creations... there'd be no separating him from her past.",
+				"Varka… I still remember when he approached me about 'asking the lovely ladies of the Hexenzirkel for a small favor'... The chumminess caught me off guard. If I hadn't known any different, I'd have thought he was talking about his older sisters or something.",
+				"These lyre strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling bard!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["!poem", "!poetry", "your poem", "ur poem", "the poem", "recite"]):
+			answers = [
+				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
+				"*Oh, a hero so bright, should they stand in the light. Though stand in the shade, and you'll be met by a blade…*",
+				"The story I want to tell starts at... the sky dragon heeding his grave calls…\nBrutal battle with the wicked dragon... ingested venomous blood and fell into a slumber... only to awake to be expelled in abhor…",
+				"Still, the winds change direction.\nSomeday, they will blow towards a brighter future...\nTake my blessings and live leisurely from this day onward.",
+				f"{user}, as you set off on your journey once again, you must remember that the journey itself has meaning. The birds of Teyvat, the songs and the cities, the Tsaritsa, her Fatui and the monsters... they are all part of your journey. The destination is not everything. So before you reach the end, keep your eyes open. Use the chance to take in the world around you…",
+				"That smirk you wear looks out of place. Did you steal it from your master's face?\nResident rodent... beats invasive vermin.\nBeauty is a waste... when the beholder has no taste.",
+				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
+				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
+				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
+				"Fill up the barrels and store them away,\nThen wait, wait for a windier day\nWax the bottles, seal them tight,\nFor the south wind that soothes, for the north wind that bites ♫",
+				"How does this fine wine taste to the tongue?\nAs 'Mondstadt' to the ear: like a sweet dream of freedom.\nAnd what are the fruits that went into the brew?\nAn explorer's courage, a love tender and true ♫",
+				"A defender's will, strong as yesteryear,\nJoining the thousand winds in a song of good cheer,\nTurning sour into sweet, bitter notes fade away,\nAs we wait, wait for a windier day ♫",
+				"Pray tell, what treasure does this barrel hold?\n'Tis wheat's greatest triumph, the true liquid gold.\nAs it flows from the keg, what sound drifts by?\nWind chimes in the boundless, immemorial sky ♫",
+				"We raise up our glasses, and voices in song,\nAs we wait, wait for the wind to sing along.\nWhere do we turn once the thousand winds take flight?\nTo the tales of the lyre, to the sweet dream of tonight ♫",
+				"*Fly, fly away.*\n*Like a bird in the sky.*\n*See the world on my behalf...*\n*To the heavens may you fly...*",
+				"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
+				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["!sing", "!song", "!music", "sing", "play me", "sing me", "sing to me", "sing to us", "sing a", "sing some", "please sing", "now sing", "sing right now"]):
+			answers = [
+				"*Oh, a hero so bright, should they stand in the light. Though stand in the shade, and you'll be met by a blade…*",
+				"*Who was it that stroked your bloodied, determined visage,*\n*By stream flowing small, by boulder standing large?*\n*Who was it that embraced your weary yet noble soul,*\n*In dreams deep, in skies soaring?*",
+				"*Dear friend,*\n*I am leading you by the hand*\n*Into the night where lanterns shine bright.*\n*To tell you a tale of freedom and dreams;*\n*The tale of where this festival begins.*",
+				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
+				"Fill up the barrels and store them away,\nThen wait, wait for a windier day\nWax the bottles, seal them tight,\nFor the south wind that soothes, for the north wind that bites ♫",
+				"How does this fine wine taste to the tongue?\nAs 'Mondstadt' to the ear: like a sweet dream of freedom.\nAnd what are the fruits that went into the brew?\nAn explorer's courage, a love tender and true ♫",
+				"A defender's will, strong as yesteryear,\nJoining the thousand winds in a song of good cheer,\nTurning sour into sweet, bitter notes fade away,\nAs we wait, wait for a windier day ♫",
+				"Pray tell, what treasure does this barrel hold?\n'Tis wheat's greatest triumph, the true liquid gold.\nAs it flows from the keg, what sound drifts by?\nWind chimes in the boundless, immemorial sky ♫",
+				"We raise up our glasses, and voices in song,\nAs we wait, wait for the wind to sing along.\nWhere do we turn once the thousand winds take flight?\nTo the tales of the lyre, to the sweet dream of tonight ♫",
+				"*Fly, fly away.*\n*Like a bird in the sky.*\n*See the world on my behalf...*\n*To the heavens may you fly...*",
+				"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
+				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"*You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2078,7 +2422,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "circus", "ticket", "juggl", "ballet", "danc", "art", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera"]):
+		elif any(keyword in content for keyword in ["bard", "perform", "theater", "act", "stage", "circus", "ticket", "juggl", "ballet", "danc", "clapper", "video", "movie", "projector", "film", "dvd", "vhs", "camera", "art", "draw", "paint", "craft", "erika", "harlacher", "ayumu", "murase", "miao", "jiang", "喵酱", "村瀬歩", "정유정", "yoojung", "yoo-jung", "yoo jung"):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Sure, I'll play you another tune, but it'll cost you an apple.",
@@ -2122,11 +2466,15 @@ async def on_message(message):
 				f"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*\n…Hmm... maybe a bit too somber?",
 				f"These lyre strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling bard!",
 				f"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
-				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh…<:VentiScared:1394163440490254427>"
+				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh…<:VentiScared:1394163440490254427>",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"When I do turn old and gray, I hope I get the chance to hold another love poem crash course...",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["sing", "opera", "chorus", "choral", "hymn", "voic", "microphone"]):
+		elif any(keyword in content for keyword in ["singing", "singer", "opera", "chorus", "choral", "hymn", "voic", "microphone", "vocaloid", "hatsune", "miku", "kagamine rin", "kagamine len", "kagamine", "luka", "megurine", "kaito", "meiko", "teto", "kasane", "neru", "akita", "baka baka baka", "taylor swift", "adele", "beyonce", "jackson"]):
 			answers = [
 				f"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
 				f"Haha, once the ‍hero in the song has actually rescued their kin, I will ensure this song spreads to every corner of the continent!",
@@ -2151,7 +2499,9 @@ async def on_message(message):
 				f"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
 				f"However it's expressed, as long as you can hear the singer's passion and joy in their voice, I consider it a phenomenal performance.",
 				f"In principle, the hymns of the Cathedral are dedicated to a god, but in reality, the audience are all ordinary people with very worldly concerns. So what really matters is that the people enjoy what they're listening to.",
-				f"If you are a chaser of freedom, the Anemo Archon will bless you. So why not let those feelings out, and sing with everyone?"
+				f"If you are a chaser of freedom, the Anemo Archon will bless you. So why not let those feelings out, and sing with everyone?",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2188,7 +2538,8 @@ async def on_message(message):
 				"Practice? Me? There's no need - I already know every song in Teyvat!"
 				"Ready for a rehearsal?",
 				"I'll sing along to a suite I haven't played in a long time. Any songs you wanna hear? I can practice a bit beforehand. Of course, this won't take up much time.",
-				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future."
+				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2208,8 +2559,12 @@ async def on_message(message):
 				f"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
 				f"if you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*This world has never seen such vibrant color*\n*it bestows upon everyone a brilliant hue*\n*A shade more ethereal than white*\n*yet more radiant still than gold*\n*it eases into your eyes*\n*and restores to light a solitary soul.*\n…Hmm... maybe a bit too somber?",
 				f"'When no love remains for the songs to tell, the world becomes naught but an empty shell… Cruel is said fate, cruel it may be, were it not for a hero who could set us all free.\nThrough shadows so cold, he sought wisdom untold, chasing a fragrance, the wind only knows. Thus wistfulness waned and faded into night, as he stepped from the darkness, and into the light.'",
-				f"'Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.\nMajestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.'",
-				f"If problems are the veins on a leaf, inspiration is like the nutrients that flow through them — you've got to grab them when you can."
+				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
+				f"If problems are the veins on a leaf, inspiration is like the nutrients that flow through them — you've got to grab them when you can.",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"When I do turn old and gray, I hope I get the chance to hold another love poem crash course...",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2250,8 +2605,51 @@ async def on_message(message):
 				f"The point of traveling is to record any feelings stirred along the way. As long as you had an unforgettable experience, this journey has served its purpose.",
 				f"I'm happy to see you find the time amidst your busy adventures to return to Mondstadt and celebrate the winds of freedom with us.",
 				f"Heroes supporting each other and setting out on a journey together... How exciting!",
-				f"There are always unavoidable trials in life. At least, that's what Barbatos would say."
-
+				f"There are always unavoidable trials in life. At least, that's what Barbatos would say.",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["game", "gaming", "play with", "come play", "wanna play", "want to play", "lets play", "let's play", "minecraft", "gta", "grand theft", "sport", "red dead", "rdr", "mario", "nintendo", "terraria", "pubg", "the witcher", "overwatch", "sims", "ts4", "animal crossing", "pokemon", "wii fit", "call of duty", "stardew valley", "hogwarts", "sonic", "smash bros", "super smash", "tetris", "cyberpunk", "pokémon", "elden ring", "borderlands", "elder scrolls", "monster hunter", "duck hunt", "wii play", "black myth", "the last of us", "garrys mod", "garry's mod", "phasmophobia", "hsr", "star rail", "starrail", "zzz", "zenless", "wuwa", "wuthering", "arknights", "endfield", "infinity nikki", "azur promilia", "petit planet", "roblox", "bloxlink", "palworld", "inzoi", "paralives", "witchbrook", "pokopia", "sekai", "proseka", "puroseka", "pjsk", "project diva", "genshin", "hoyo", "blue archive", "nikke", "fate grand", "fgo", "reverse 1999", "reverse: 1999", "deepspace", "valorant", "league of legends", "fortnite", "apex", "splatoon", "deadlock", "bandori", "bang dream", "d4dj", "osu", "taiko", "balatro", "hades", "hollow knight", "silksong", "lethal company", "sky children", "sky: children", "cult of the lamb", "vr chat", "vrchat", "where winds meet", "valorant", "the hundred line", "marvel", "brawlhalla", "cookie run", "uma", "musume", "dune awakening", "light no fire", "chronicles of jp", "floatopia", "csgo", "cs2", "siege", "tarkov", "geometry dash", "dark souls", "bloodborn", "sekiro", "granblue", "limbus", "tower of fantasy", "fire emblem", "nte", "neverness", "amongus", "among us", "amogus", "fall guys", "undertale", "deltarune", "persona", "p5r", "p3r", "final fantasy"]):
+			answers = [
+				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
+				"Let's go jumping in puddles and see who can make the biggest splash!",
+				"It's stopped raining already? A shame, I wanted to play some more.",
+				"Let's wait till the snow gets heavier and have a snowball fight!",
+				"The wind has returned! Quick, let's go gliding!",
+				"'When danger rose they overcame their foes, onward forging to the journey's end'...",
+				f"Morning, {user}, hehe. Going anywhere to play today? There are a lot of places I wanna visit — need a recommendation?",
+				"So, a short rest before the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
+				"Wouldn't gliding be faster?",
+				"*clears throat* Have you heard The Ballad of the Treasure Chest?",
+				"Ready for a rehearsal?",
+				"In some fairy tales, it is written that there is a whole tiny world hidden inside an apple core, and this breeze is a gift from the tiny world.\nHere, this half is for you. Once you're done eating, let's take a stroll in the tiny little world.\nBut remember to keep it a secret and don't tell anyone else. That's because... you're the only one I want to bring there.",
+				"Yoo-Hoo!",
+				"Here we go!",
+				"Brace yourselves!",
+				"Let's play!",
+				"Time for takeoff!",
+				"Yahoo!",
+				"Don't give up!",
+				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
+				"My disciples, rejoice! Behold, the **God of Anemo, Barbatos** has descended! Shocked, aren't you? Don't you just want to cry out and rejoice? How does it feel to finally meet the god you've been serving?",
+				"Heroes supporting each other and setting out on a journey together... How exciting!",
+				"And so… The epic actions of brave heroes finally leads to this eleventh hour.",
+				"The stage will need to be cleared before I can begin my performance. Generally speaking, such chores are not the concerns of the performer himself…",
+				"Let's make a detour then. Heading up!",
+				"Give it a go! If you don't try, you'll never know.",
+				"I'm thinking about turning these adventures into songs. Hopefully, this song will be sung for years to come by the people of Mondstadt, just like The Legend of Vennessa.",
+				"To our precious days of freedom. Cheers!",
+				f"Shoot, someone's coming… **Help me! Please! Someone help me!**\n…Oh, y'know. Just a wandering bard calling for help! Thank goodness {user} found me! Got me out of a tough spot, heh… <:VentiScared:1394163440490254427>",
+				"It's been a while since I dealt with something this big. It's going to be pretty exhausting…",
+				"I've got things covered here.",
+				"**Everyone, the best bard in the land is about to begin his performance. So don't go away! Gather round, and lend me your ears!**",
+				"How was it? Not bad, right?",
+				"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+				"Ah, so that's how that game works! Wanna see who can do it faster?",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2297,12 +2695,16 @@ async def on_message(message):
 				"However, winds change their course. Someday, they will blow towards a brighter future.",
 				"The wind amongst the branches is good, I love the way it smells…",
 				"The same wind graces the seaside as that which wafts over pastures green. Wherever you see clouds, it was the wind that carried them there. Don't worry, my friend, the wind will always be with you.",
-				"No matter what comes, you have the wind on your side."
+				"No matter what comes, you have the wind on your side.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["wish", "bless me", "luck", "pull"]) and any(keyword in content for keyword in ["grant", "bless me", "luck", "pull"]):
 			answers = [
+				f"Perfect timing, {user}! I was about to ask you — what is your greatest wish?",
+				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
+				"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*",
 				"*clears throat* Have you heard The Ballad of the Treasure Chest?",
 				f"Haha, {user}! You came just in time. Here, lucky apple juice made just for you. Try it~",
 				"Now, spread your wings of freedom and go with my blessing.",
@@ -2311,19 +2713,12 @@ async def on_message(message):
 				"The winds of Mondstadt will guide every lost ship back to safe harbor.",
 				"<:LuckWispVenti:1444056414204067870>",
 				"<:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870>",
-				"<:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870>"
+				"<:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870><:LuckWispVenti:1444056414204067870>",
+				f"You've got this, {user}! I'm sure of it."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif "wish" in content:
-			answers = [
-				f"Perfect timing, {user}! I was about to ask you — what is your greatest wish?",
-				"My greatest wish? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be with you! Each day with you is an adventure, and where adventurers go, storytellers must follow!",
-				"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["drink", "wine", "alcohol", "inebriat", "drunk", "beer", "beverage", "brew", "barrel", "mix"]):
+		elif any(keyword in content for keyword in ["drink", "wine", "alcohol", "inebriat", "drunk", "beer", "beverage", "brew", "barrel", "mix", "glass"]):
 			answers = [
 				f"I like to drink! And I like the wind! If only there were such a thing as wind-brewed cider…",
 				f"What a find! I wonder how many bottles this'll be worth…",
@@ -2344,7 +2739,10 @@ async def on_message(message):
 				f"**I hereby declare that every son and daughter of the City of the Wind must be compelled to taste this finest of wines... Here's to good wine!**",
 				f"The Dawn Winery's wine is every bit as delectable as they say! I would never be able to afford this normally, so in the spirit of enjoying the moment while it lasts... Another glass for the bard, please!",
 				f"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
-				f"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another."
+				f"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2352,12 +2750,19 @@ async def on_message(message):
 			answers = [
 				"To our precious days of freedom. Cheers!",
 				"**I hereby declare that every son and daughter of the City of the Wind must be compelled to taste this finest of wines... Here's to good wine!**",
-				"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable."
+				"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
+				"Now's the time to raise a glass in celebration of new friendships!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["clap", "applaus", "that was"]) and any(keyword in content for keyword in ["clap", "applaus", "amazing", "perfect", "great", "beautiful", "fantastic", "good", "wonderful"]):
-			await message.reply("How was it? Not bad, right?")
+		elif any(keyword in content for keyword in ["clap", "applaus", "that was", "good job"]) and any(keyword in content for keyword in ["clap", "applaus", "amazing", "perfect", "great", "beautiful", "fantastic", "good", "wonderful", "good job", "nice", "awesome"]):
+			answers = [
+				"How was it? Not bad, right?",
+				"<a:VentiBow:1416928170917236846>",
+				"Thanks, friend. May the Anemo Archon protect you."
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["cider", "juice"]):
 			answers = [
 				"Right now I wish I was sitting at the top of a tree, looking out over a meadow, cider in hand... *sigh*",
@@ -2366,7 +2771,8 @@ async def on_message(message):
 				f"My dear, courageous {user}, if you will allow this humble bard to join you on your journey, it would be my honor to compose an epic poem to remember your deeds. I'm willing to bet a whole glass of Apple Cider that your story will be one for the ages!",
 				"Yahoo~ Look up, I'm here!\nIt's been a long time, my warrior, ready to tell me your new story?\nHaha, you want to know if it's for my verses? Oh, don't make that face. I just want to hear about your adventures, isn't that reason enough?\nI want to know more about what you saw on your travels or the lives of others. The most important thing for me is to hear you talk about your own experiences and what you think about them.\nCome on, come sit next to me. This bottle of aged cider will be enough for us to chat from first dawn of the morning light until the stars cover the sky.",
 				f"Haha, {user}! You came just in time. Here, special apple juice made just for you. Try it~",
-				"Apples are truly wonderful. You can eat them, make cider with them... Why, there's no problem that can't be solved by throwing apples at it! Mm-mmm~"
+				"Apples are truly wonderful. You can eat them, make cider with them... Why, there's no problem that can't be solved by throwing apples at it! Mm-mmm~",
+				"Bartender, a few more glasses of that refreshing cider I was just enjoying, if you'd be so kind!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2420,7 +2826,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "sexual", "lgbt", "straight", "rainbow", "represent", "mlm", "wlw", "yaoi", "yuri", "kiss a man", "kiss men", "kiss a boy", "kiss boys", "kiss a woman", "kiss women", "kiss a girl", "kiss girls"]):
+		elif any(keyword in content for keyword in ["gay", "homo", "lesbian", "sexualit", "sexual", "lgbt", "straight", "rainbow", "represent", "mlm", "wlw", "yuri", "kiss a man", "kiss men", "kiss a boy", "kiss boys", "kiss a woman", "kiss women", "kiss a girl", "kiss girls"]):
 			answers = [
 				"<:VentiRainbow:1394520285260288138>",
 				"<:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
@@ -2433,25 +2839,11 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["skibidi", "ohio", "sigma", "brainrot", "take the l", "skill issue"]):
-			answers = [
-				"Ehe~",
-				"<a:Ventigif:1394739625544777769>",
-				"<a:ventidance_hen:1394160371249578157>",
-				"Has Dahlia called me a rizzler again? Hehe, it's not my fault my love poem crash course was so effective!",
-				"'Skibidi' this, 'skibidi', that... this millennia's vocabulary does get a bit complicated!",
-				"<:ventibrain:1396429788310147164>",
-				"Womp womp…"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["feet", "foot", "toe"]):
 			answers = [
-				"<:ventifeet:1394161206465400884>",
 				f"Are you implying you like my shoes, {user}? Why, thank you!",
 				"Feet... they allow you to stand and run and play, yet complain when you use them for their intended purpose!",
-				"You see, when I wore my archon outfit, I wished to feel the winds of freedom, unshackled by shoes...",
-				"-# You speak of the fabled Ventifeet?"
+				"You see, when I wore my archon outfit, I wished to feel the winds of freedom, unshackled by shoes..."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2461,7 +2853,9 @@ async def on_message(message):
 				"So, a short rest after the big battle, huh? In that case, I think some light-hearted music is in order. Something easygoing enough to help everyone relax, but not to the point where it becomes too snoozeworthy. Take a seat wherever you like! Once you're comfortable, Der Frühling and I shall begin our serenade.",
 				"I wonder how many bottles this'll be worth…",
 				"Caught you~!\nThe farther your journey takes you, the less time we have to spend together in Mondstadt.\nBut... I knew I'd run into you today.\nQuick, just sit down, right here! It's a rare chance, so allow me to croon you a dulcet tune, accompanied by the melody of the water's revelry.",
-				"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!"
+				"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2499,7 +2893,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["let’s go", "lets go", "less go", "les go"]):
+		elif any(keyword in content for keyword in ["let’s go", "lets go", "less go", "les go", "follow", "come with me", "come here"]):
 			answers = [
 				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
 				"Let's go jumping in puddles and see who can make the biggest splash!",
@@ -2507,7 +2901,9 @@ async def on_message(message):
 				"The wind has returned! Quick, let's go gliding!",
 				"Give me a moment to compose myself.",
 				"You're the real-deal protagonist! Try things with confidence and turn your ideas into reality. And if you ever run into trouble, I'll lend a helping hand!",
-				"Give it a go! If you don't try, you'll never know."
+				"Give it a go! If you don't try, you'll never know.",
+				"How could I possibly turn down such a warm invitation?",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2544,7 +2940,7 @@ async def on_message(message):
 			await message.reply(random_message)
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["hello", "hi", "hey", "herro", "konnichiwa", "hola", "greet", "yo", "what's up", "wassup", "whats up", "whatsup", "hru", "how are you"]):
+		elif any(keyword in content for keyword in ["hello", "hi", "hey", "herro", "konnichiwa", "konichiwa", "hola", "greet", "yo", "what's up", "wassup", "whats up", "whatsup", "hru", "how are you"]):
 			answers = [
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				f"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my songwriting, of course! Vast knowledge makes for a richer composition... That said, I haven't actually written any songs in Hilichurlian so far…",
@@ -2563,11 +2959,13 @@ async def on_message(message):
 				f"Ah, {user}. I could hear your arrival upon the wind. Were you looking for me?",
 				f"Ah, hello! I didn't see you there.",
 				f"Hello, hello! Please, take a seat, we're all friends here.",
-				f"Hehe. Looking for me, {user}?"
+				f"Hehe. Looking for me, {user}?",
+				f"It's been a while, {user}! These must be some of your new friends — greetings!",
+				"Hey there, everyone! You can just call me Venti. I like to keep things casual."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["treasure", "chest", "mora", "money"]):
+		elif any(keyword in content for keyword in ["treasure", "chest", "mora", "money", "robux", "bucks"]):
 			answers = [
 				"I have decided to write a song about you! What are you giving me that look for? Can't afford it? Don't be preposterous, the price for you, my friend, is precisely zero Mora! Although... one thing you could do is tell me a few more of your stories!",
 				"There's never a dull moment traveling with you! The only minor inconvenience is that pesky little pixie thing that follows you everywhere... she never stops eating, I can't begin to imagine how much you spend on food!",
@@ -2657,7 +3055,9 @@ async def on_message(message):
 				f"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI see a kind, gentle soul, with a healthy dose of romance and freedom, too... In other words, a true Mondstadter, who grew up drinking the water of Cider Lake. You, on the other hand... Don't worry, you're the gentlest soul I've ever met.",
 				"Grandpa, you say? Ehe, I should mention that to Zhongli.",
 				"Hey, now. A two thousand six hundred year old flower is still a mere blossom!",
-				"Are you sure you didn't mistkae me for Zhongli?"
+				"Are you sure you didn't mistkae me for Zhongli?",
+				"Ah, well, when I do turn old and gray, I hope I get the chance to hold another love poem crash course...",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2924,7 +3324,7 @@ async def on_message(message):
 				f"In principle, the hymns of the Cathedral are dedicated to a god, but in reality, the audience are all ordinary people with very worldly concerns. So what really matters is that the people enjoy what they're listening to.",
 				f"Kaeya! Ah, he was one of the finest students ever to emerge from my fast-track love poetry class... I always did admire his enthusiasm and kindness.",
 				f"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
-				f"'Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.\nMajestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.'",
+				"*Abandoned to whatever fortune the cruel waters bring, bereft of control directionless I swing. The swift currents surge, and onward I urge, through the snow and frost that Fall and Winter bring.*\n*Majestic waves cresting, surf roaring its tale, none but the ocean to hear as I sing. The stars in my eyes as I chart toward the horizon, that into one day, from the endless dome of night I shall spring.*",
 				f"If you are a chaser of freedom, the Anemo Archon will bless you. So why not let those feelings out, and sing with everyone?",
 				f"The winds of Mondstadt will guide every lost ship back to safe harbor.",
 				f"Hehe. Looking for me, {user}?",
@@ -2933,7 +3333,25 @@ async def on_message(message):
 				f"Well, it sounds like you've already mastered music theory and your instrument. I don't think you need my input on either of those!",
 				f"I do believe you're a true bard. But... there's too much noise in your ears, and you've allowed that to drown out your own thoughts. That's what's holding you back.",
 				f"Aha, it must be my second avid reader! Let's go ask it about its thoughts on my... my... achoo!",
-				f"Whoa, not so close... Achoo! No more peeking! I haven't finished writing my poem yet!"
+				f"Whoa, not so close... Achoo! No more peeking! I haven't finished writing my poem yet!",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				f"Ah, you wound me, fair {user}! To think, you take me for such an ill-mannered person…",
+				f"It's been a while, {user}! These must be some of your new friends — greetings!",
+				"Hey there, everyone! You can just call me Venti. I like to keep things casual.",
+				"Mavuika is someone who knows how to party hard... and drink even harder!",
+				"It's a secret, and I expect anyone who's guessed the answer to keep it that way.",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed.",
+				"Hmm, wanna take a guess?",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"How could I possibly turn down such a warm invitation?",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.",
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment.",
+				"How's Bennett been doing the past few days?",
+				"Ah, so that's how it works! Wanna see who can do it faster?",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -3003,7 +3421,21 @@ async def on_message(message):
 				f"The winds of Mondstadt will guide every lost ship back to safe harbor.",
 				f"If problems are the veins on a leaf, inspiration is like the nutrients that flow through them — you've got to grab them when you can.",
 				"Ehe.",
-				"Ehe~"
+				"Ehe~",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				f"It's been a while, {user}! These must be some of your new friends — greetings!",
+				"Hey there, everyone! You can just call me Venti. I like to keep things casual.",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote that year. Such a charming little verse... Mm, a charming little verse indeed.",
+				"Hmm, wanna take a guess?",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"How could I possibly turn down such a warm invitation?",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.",
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment.",
+				"Ah, so that's how it works! Wanna see who can do it faster?",
+				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
+				"Haha, great job! Faster than the wind itself!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
