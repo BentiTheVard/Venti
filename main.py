@@ -1029,7 +1029,7 @@ async def on_message(message):
 #PRIORITY ⭐
 		elif any(keyword in content for keyword in ["prompt", "idea"]):
 			randNum = random.randint(1, 3)
-			if randNum == 3:
+			if randNum == 3 or "character" in content:
 				char = random.choice(characters)
 			else:
 				char = user
@@ -1945,6 +1945,23 @@ async def on_message(message):
 			await message.reply("I taught Skirk the art of music once as she explored Mondstadt. I'm sure you're well aware, but... I don't believe she's from Teyvat. And her alcohol tolerance only supports that theory, hehe.")
 		elif any(keyword in content for keyword in ["inef", "robot", "automat"]):
 			await message.reply("There's a robot in Nod Krai? Oh, and she works as a maid? Hm, how fascinating... I wonder if she and Noelle would get along. Then again, Noelle gets along with almost anybody.")
+		elif any(keyword in content for keyword in ["laum", "deer"]):
+			await message.reply("I admire Lauma's dedication to protecting what she holds dear. Nature is precious, after all. If it weren't for her, the Frostmoon Scions might have faced many a tribulation.")
+		elif any(keyword in content for keyword in ["aino", "ducksie"]):
+			await message.reply("Aino? In Nod Krai? Hehe, she seems to cherish sweets even more than I cherish wine!")
+		elif any(keyword in content for keyword in ["flins", "lightkeeper"]):
+			await message.reply("An ancient fae, bringing light to a world increasingly shrouded in darkness. Flins understands the endless struggle against the Abyss, doesn't he? I'd like to meet him and hear his thoughts on my poems!")
+		elif any(keyword in content for keyword in ["illuga", "ratnik"]):
+			await message.reply("Another Lightkeeper in Nod Krai! It's a noble cause, protecting your home from the relentless Abyss. Hopefully Illuga finds inspiration in the cool winds of Snezhnaya.")
+		elif any(keyword in content for keyword in ["zibai", "sister"]):
+			answers = [
+				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Time?",
+				"Zibai... many centuries have passed since we last met. Is she being her elusive self again?",
+				"Born from the branches of time... Zibai's story has many chapters to come.\nHow do I know? The wind told me!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 #OTHER MENTIONS🔥
 		elif "holy lyre" in content:
 			await message.reply("The pattern of flowing wind carved on the rosewood... and the strings still feel cool to the touch too. Oh, the memories...")
@@ -1994,7 +2011,8 @@ async def on_message(message):
 				f"*Yawn* That was a refreshing sleep. Ah, {user}, we meet again! What? You don't remember me? Ahaha, well, allow me to join you on your quest once again. I must see to it that the bards of the world tell {user}'s tales!",
 				"I'm the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
 				"The people of Mondstadt believe that the wind can bring back the soul, and also preserve memories. Dandelion Seeds are like living gemstones, formed from the first wisps of wind in the year. People add them to the mix at the last second as a way of capturing the wind in the very moment that the barrel is sealed. The memory of that moment is then stored in the wine, for all time.",
-				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Time?"			]
+				"Alas, I am but a humble bard who sings for his Mora in the tavern. Why would I know anything about Time?"
+			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["memor", "moment", "stor"]):
@@ -2215,7 +2233,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya"]):
+		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya", "jahoda", "nefer"]):
 			answers = [
 				"I'm actually highly allergic to cats, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about cats without sneezing. Do you think there is a cure for this monstrous affliction?",
 				"Together with you, even apples taste sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
@@ -2641,7 +2659,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["who", "what"]) and any(keyword in content for keyword in ["you", "this", "name"]):
+		elif any(keyword in content for keyword in ["who", "what", "you're venti", "ur venti", "your venti", "youre venti", "you are venti", "u r venti", "u are venti"]) and any(keyword in content for keyword in ["you", "this", "name", "you're venti", "ur venti", "your venti", "youre venti", "you are venti", "u r venti", "u are venti"]):
 			answers = [
 				"I'm Venti the Bard. Three-time winner of the 'Most Popular Bard of Mondstadt,' to be precise.",
 				"I'm Venti, the best bard in the world. There's not a single song I do not know, no matter if it's from the past, present, or future.",
