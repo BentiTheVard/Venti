@@ -780,7 +780,12 @@ async def on_message(message):
 				random_message = random.choice(answers)
 				await message.reply(random_message)
 			elif any(keyword in content for keyword in ["phone", "calling", "computer", "desktop", "pager", "fax", "tv", "television", "x_ray", "robot", "📱", "📲", "☎️", "📞", "📵", "📴", "🤙", "🖥️", "🖱️", "💽", "💻", "⌨️", "🖥️", "📟", "📠", "📺", "🩻", "🤖"]):
-				await message.reply("What an interesting device! Is it from Fontaine? <:VentiIdea:1394242659870179428>")
+				answers = [
+					"What an interesting device! Is it from Fontaine? <:VentiIdea:1394242659870179428>",
+					"Hmm, maybe pressing this button might do something…"
+				]
+				random_message = random.choice(answers)
+				await message.reply(random_message)
 			elif any(keyword in content for keyword in ["crystal_ball", "amulet", "hamsa", "frame", "red_envelope", "scroll", "book", "ghost", "alien"]):
 				answers = [
 					"How fascinating!",
@@ -1007,7 +1012,8 @@ async def on_message(message):
 					"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
 					"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
 					"Now's the time to raise a glass in celebration of new friendships!",
-					"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!"
+					"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!",
+					"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The mead was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
@@ -1229,13 +1235,17 @@ async def on_message(message):
 				"*You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
 				"Now's the time to raise a glass in celebration of new friendships!",
 				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
-				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment."
+				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment.",
+				"Maybe participation in the brewing process was always meant to be a part of the Tete Isle experience? Why else would their stock of mead be so meager? It must be their intention for visitors to help replenish it!",
+				"Oho, Me & Dew, just Me & Dew... Such an aptly poetic name for what I'm sure is a veritable temple of inspiration!",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The mead was just so irresistible, I felt like lowering my glass would have been an insult to your craft!",
+				"Hmm, maybe whacking this lever might do something…"
 			]
 			random_message = random.choice(answers)
 			if randNum == 3 or "character" in content:
-				await message.reply(f"Here's your prompt...\n\n{random_message}\n\nMy idea for a character is {char}!")
+				await message.reply(f"Here's your prompt:\n\n{random_message}\n\nMy idea for a character is {char}!")
 			else:
-				await message.reply(f"Here's your prompt...\n\n{random_message}")
+				await message.reply(f"Here's your prompt:\n\n{random_message}")
 		elif any(keyword in content for keyword in ["birthday", "birth day", "bday"]):
 			answers = [
 				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
@@ -2080,6 +2090,37 @@ async def on_message(message):
 				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
 				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!"
 			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["easybree", "resort", "tenocht", "sunspray", "dew", "tete isl"]):
+			answers = [
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Maybe participation in the brewing process was always meant to be a part of the Tete Isle experience? Why else would their stock of mead be so meager? It must be their intention for visitors to help replenish it!",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"Oho, Me & Dew, just Me & Dew... Such an aptly poetic name for what I'm sure is a veritable temple of inspiration!",
+				"Ahem! *You and the Mare Jivari*\n*So close and yet so far*\n*One at the edge of the world, the other in the center of my heart.*",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.\n‘Why are you here? What brings you to Natlan? And why are you suddenly bringing up your poetry class?’",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The mead was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["aphid", "aphime", "mead"]):
+			answers = [
+				f"To our precious days of freedom. Cheers!",
+				f"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
+				f"Here's to the time spent drinking with friends, which is more unforgettable than the drinks are delectable.",
+				f"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
+				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"Bartender, a few more glasses of that refreshing Aphimead I was just enjoying, if you'd be so kind!",
+				"Maybe participation in the brewing process was always meant to be a part of the Tete Isle experience? Why else would their stock of mead be so meager? It must be their intention for visitors to help replenish it!",
+				"Oho, Me & Dew, just Me & Dew... Such an aptly poetic name for what I'm sure is a veritable temple of inspiration!",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The mead was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["windblume", "spring"]):
 			answers = [
 				"What are Windblumes, exactly? And what do Windblumes and the Windblume Festival mean to Barbatos, the Anemo Archon? As you've seen, the people of Mondstadt each make their own choice. Out of the millions of flowers there are, some choose the dandelion, others choose the Windwheel Aster. There is no single and answer and no true Windblumes in existence.",
@@ -2087,7 +2128,8 @@ async def on_message(message):
 				"If you want my perspective, Windblumes don't exist. Yet they are all around us nonetheless. They are the spirit of yearning for freedom, the courage to follow the wind wherever it may lead... All objects are beautiful and worthy of blessing... All can be Windblumes.",
 				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
 				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many Mondstadters to be the true 'Windblume.'",
-				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular."
+				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
+				"No matter how old I get, I don't think I'll ever forget the poems my students wrote during the Windblume Festival. Such a charming little verse... Mm, a charming little verse indeed."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2116,7 +2158,8 @@ async def on_message(message):
 			answers = [
 				"*gasp* Let's hold a feast! Call up your good friends and I'll contribute a bottle of the finest wine from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
 				"I am fond of each and every one of Mondstadt's festivals, but if I'm honest, Weinlesefest has an extra-special place in my heart. You know, the Anemo Archon goes into a slumber after the west wind dies down, leaving the north wind to blow during the winter. Which means, this festival is the big feast before the winter slumber!",
-				"Now's the time to raise a glass in celebration of new friendships!"
+				"Now's the time to raise a glass in celebration of new friendships!",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The wine was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2157,7 +2200,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["love", "romance", "romanti", "wife", "wive", "husband", "married", "marriage", "marry", "spouse"]):
+		elif any(keyword in content for keyword in ["love", "romance", "romanti", "wife", "wive", "husband", "married", "marriage", "marry", "spouse", "valentine"]):
 			answers = [
 				"Be it for the gods or that special someone, flowers should be offered in utmost sincerity. It's the most important ceremony of the Windblume Festival. Flowers of love and blessing, sent on such a special occasion... No effort should be wasted to make it spectacular.",
 				"What are Windblumes? Something that the Anemo Archon Barbatos will not define. Flowers of blessings, flowers of respect, flowers of love. Every individual has their own Windblumes and every individual has the right to define them.",
@@ -2502,7 +2545,7 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["game", "gaming", "play with", "come play", "wanna play", "want to play", "lets play", "let's play", "minecraft", "gta", "grand theft", "sport", "red dead", "rdr", "mario", "nintendo", "terraria", "pubg", "the witcher", "overwatch", "sims", "ts4", "animal crossing", "pokemon", "wii fit", "call of duty", "stardew valley", "hogwarts", "sonic", "smash bros", "super smash", "tetris", "cyberpunk", "pokémon", "elden ring", "borderlands", "elder scrolls", "monster hunter", "duck hunt", "wii play", "black myth", "the last of us", "garrys mod", "garry's mod", "phasmophobia", "hsr", "star rail", "starrail", "zzz", "zenless", "wuwa", "wuthering", "arknights", "endfield", "infinity nikki", "azur promilia", "petit planet", "roblox", "bloxlink", "palworld", "inzoi", "paralives", "witchbrook", "pokopia", "sekai", "proseka", "puroseka", "pjsk", "project diva", "genshin", "hoyo", "blue archive", "nikke", "fate grand", "fgo", "reverse 1999", "reverse: 1999", "deepspace", "valorant", "league of legends", "fortnite", "apex", "splatoon", "deadlock", "bandori", "bang dream", "d4dj", "osu", "taiko", "balatro", "hades", "hollow knight", "silksong", "lethal company", "sky children", "sky: children", "cult of the lamb", "vr chat", "vrchat", "where winds meet", "valorant", "the hundred line", "marvel", "brawlhalla", "cookie run", "uma", "musume", "dune awakening", "light no fire", "chronicles of jp", "floatopia", "csgo", "cs2", "siege", "tarkov", "geometry dash", "dark souls", "bloodborn", "sekiro", "granblue", "limbus", "tower of fantasy", "fire emblem", "nte", "neverness", "amongus", "among us", "amogus", "fall guys", "undertale", "deltarune", "persona", "p5r", "p3r", "final fantasy"]):
+		elif any(keyword in content for keyword in ["game", "gaming", "play with", "come play", "wanna play", "want to play", "lets play", "let's play", "minecraft", "gta", "grand theft", "sport", "red dead", "rdr", "mario", "nintendo", "terraria", "pubg", "the witcher", "overwatch", "sims", "ts4", "animal crossing", "pokemon", "wii fit", "call of duty", "stardew valley", "hogwarts", "sonic", "smash bros", "super smash", "tetris", "cyberpunk", "pokémon", "elden ring", "borderlands", "elder scrolls", "monster hunter", "duck hunt", "wii play", "black myth", "the last of us", "garrys mod", "garry's mod", "phasmophobia", "hsr", "star rail", "starrail", "zzz", "zenless", "wuwa", "wuthering", "arknights", "endfield", "infinity nikki", "azur promilia", "petit planet", "roblox", "bloxlink", "palworld", "inzoi", "paralives", "witchbrook", "pokopia", "sekai", "proseka", "puroseka", "pjsk", "project diva", "genshin", "hoyo", "blue archive", "nikke", "fate grand", "fgo", "reverse 1999", "reverse: 1999", "deepspace", "valorant", "league of legends", "fortnite", "apex", "splatoon", "deadlock", "bandori", "bang dream", "d4dj", "osu", "taiko", "balatro", "hades", "hollow knight", "silksong", "lethal company", "sky children", "sky: children", "cult of the lamb", "vr chat", "vrchat", "where winds meet", "valorant", "the hundred line", "marvel", "brawlhalla", "cookie run", "uma", "musume", "dune awakening", "light no fire", "chronicles of jp", "floatopia", "csgo", "cs2", "siege", "tarkov", "geometry dash", "dark souls", "bloodborn", "sekiro", "granblue", "limbus", "tower of fantasy", "fire emblem", "nte", "neverness", "amongus", "among us", "amogus", "fall guys", "undertale", "deltarune", "persona", "p5r", "p3r", "final fantasy", "lever"]):
 			answers = [
 				f"Come on {user}, let's go! The world is full of lost ballads just waiting to be rediscovered.",
 				"Let's go jumping in puddles and see who can make the biggest splash!",
@@ -2540,7 +2583,8 @@ async def on_message(message):
 				"What is this floating sensation I feel? Have I discovered the true meaning of Anemo power?",
 				"Ah, so that's how that game works! Wanna see who can do it faster?",
 				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
-				"Haha, great job! Faster than the wind itself!"
+				"Haha, great job! Faster than the wind itself!",
+				"Hmm, maybe whacking this lever might do something…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2646,7 +2690,8 @@ async def on_message(message):
 				f"Heroes supporting each other and setting out on a journey together... How exciting!",
 				f"There are always unavoidable trials in life. At least, that's what Barbatos would say.",
 				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
-				"Haha, great job! Faster than the wind itself!"
+				"Haha, great job! Faster than the wind itself!",
+				"Hmm, maybe whacking this lever might do something…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2747,7 +2792,8 @@ async def on_message(message):
 				f"With the aid of this bottle, a humble bard's woes are whisked away on the wind... And so it falls to this humble bard to pass the blessing on to another.",
 				"*On the breeze drifts a fragrance I've sorely missed; Sunsettia's kiss, so tender, so sweet.*\n*But ah — what's this? A fiery twist! A Flaming Flower's fury, a flare of searing heat…*",
 				"Now's the time to raise a glass in celebration of new friendships!",
-				"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!"
+				"Bartender, a few more glasses of that refreshing drink I was just enjoying, if you'd be so kind!",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The wine was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2777,7 +2823,8 @@ async def on_message(message):
 				"Yahoo~ Look up, I'm here!\nIt's been a long time, my warrior, ready to tell me your new story?\nHaha, you want to know if it's for my verses? Oh, don't make that face. I just want to hear about your adventures, isn't that reason enough?\nI want to know more about what you saw on your travels or the lives of others. The most important thing for me is to hear you talk about your own experiences and what you think about them.\nCome on, come sit next to me. This bottle of aged cider will be enough for us to chat from first dawn of the morning light until the stars cover the sky.",
 				f"Haha, {user}! You came just in time. Here, special apple juice made just for you. Try it~",
 				"Apples are truly wonderful. You can eat them, make cider with them... Why, there's no problem that can't be solved by throwing apples at it! Mm-mmm~",
-				"Bartender, a few more glasses of that refreshing cider I was just enjoying, if you'd be so kind!"
+				"Bartender, a few more glasses of that refreshing cider I was just enjoying, if you'd be so kind!",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The cider was just so irresistible, I felt like lowering my glass would have been an insult to your craft!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -3389,7 +3436,12 @@ async def on_message(message):
 				"How's Bennett been doing the past few days?",
 				"Ah, so that's how it works! Wanna see who can do it faster?",
 				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
-				"Haha, great job! Faster than the wind itself!"
+				"Haha, great job! Faster than the wind itself!",
+				"Maybe participation in the brewing process was always meant to be a part of the Tete Isle experience? Why else would their stock of mead be so meager? It must be their intention for visitors to help replenish it!",
+				"Oho, Me & Dew, just Me & Dew... Such an aptly poetic name for what I'm sure is a veritable temple of inspiration!",
+				"Judging from the look on your face, I'm guessing you have quite a few questions for me.\n‘Why are you here? What brings you to Natlan? And why are you suddenly bringing up your poetry class?’",
+				"My sincerest apologies. Drinking it all wasn't intentional, I assure you. The mead was just so irresistible, I felt like lowering my glass would have been an insult to your craft!",
+				"Hmm, maybe whacking this lever might do something…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -3473,7 +3525,9 @@ async def on_message(message):
 				"Questions, dear friends, are like bottles of fine wine — cracking them open is all about waiting for the right moment.",
 				"Ah, so that's how it works! Wanna see who can do it faster?",
 				f"You've got this, {user}! You'll get the hang of it soon, I'm sure of it.",
-				"Haha, great job! Faster than the wind itself!"
+				"Haha, great job! Faster than the wind itself!",
+				"Maybe participation in the brewing process was always meant to be a part of the Tete Isle experience? Why else would their stock of mead be so meager? It must be their intention for visitors to help replenish it!",
+				"Hmm, maybe whacking this lever might do something…"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
