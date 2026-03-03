@@ -1246,6 +1246,39 @@ async def on_message(message):
 				await message.reply(f"Here's your prompt:\n\n{random_message}\n\nMy idea for a character is {char}!")
 			else:
 				await message.reply(f"Here's your prompt:\n\n{random_message}")
+		elif any(keyword in content for keyword in ["number", "numeral", "integer", "one or", "two or", "three or", "four or", "five or", "six or", "seven or", "eight or", "nine or", "ten or", "1 or", "2 or", "3 or", "4 or", "5 or", "6 or", "7 or", "8 or", "9 or", "0 or"]):
+			answers1 = [
+				"You're asking for a random number?",
+				"Hehe, making a difficult choice?",
+				"Ah, I see, you want my input!",
+				"A random number, you say?",
+				"Trying to make a decision using numbers, hm?"
+			]
+			answers2 = [
+				"Well, I'll use my archon intuition...",
+				"I'll listen in the wind...",
+				"Alright, let's see...",
+				"I'll choose it based on how many birds are in the sky!",
+				"To make things easier, I'll come up with two numbers.",
+				"Well, lucky for you, I'm a connisseur of chaos!"
+			]
+			answers3 = [
+				"Here are your numbers:",
+				"Alright, here you go!",
+				"Ready? Here you go:",
+				"Here, take these for your travels!",
+				"May the wind be your guide!",
+				"Ehe, here you go!",
+				"These are the numbers...",
+				"Here's what I chose!",
+				"Here are two numbers from one to ten!"
+			]
+			answer1 = random.choice(answers1)
+			answer2 = random.choice(answers2)
+			answer3 = random.choice(answers3)
+			int1 = random.randint(0, 10)
+			int2 = random.randint(0, 10)
+			await message.reply(f"{answer1} {answer2} {answer3}\n{int1} and {int2} ♪")
 		elif any(keyword in content for keyword in ["birthday", "birth day", "bday"]):
 			answers = [
 				f"Someone once told me you're supposed to eat a cake on your birthday... Tada! Here's your birthday cake — it's apple flavored! And here's a spoon. The cake didn't rise properly in the oven, that's why it looks more akin to an apple pie... Ugh, baking is really quite complicated!",
@@ -3113,39 +3146,6 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["number", "numeral", "integer", "one or", "two or", "three or", "four or", "five or", "six or", "seven or", "eight or", "nine or", "ten or", "1 or", "2 or", "3 or", "4 or", "5 or", "6 or", "7 or", "8 or", "9 or", "0 or"]):
-			answers1 = [
-				"You're asking for a random number?",
-				"Hehe, making a difficult choice?",
-				"Ah, I see, you want my input!",
-				"A random number, you say?",
-				"Trying to make a decision using numbers, hm?"
-			]
-			answers2 = [
-				"Well, I'll use my archon intuition...",
-				"I'll listen in the wind...",
-				"Alright, let's see...",
-				"I'll choose it based on how many birds are in the sky!",
-				"To make things easier, I'll come up with two numbers.",
-				"Well, lucky for you, I'm a connisseur of chaos!"
-			]
-			answers3 = [
-				"Here are your numbers:",
-				"Alright, here you go!",
-				"Ready? Here you go:",
-				"Here, take these for your travels!",
-				"May the wind be your guide!",
-				"Ehe, here you go!",
-				"These are the numbers...",
-				"Here's what I chose!",
-				"Here are two numbers from one to ten!"
-			]
-			answer1 = random.choice(answers1)
-			answer2 = random.choice(answers2)
-			answer3 = random.choice(answers3)
-			int1 = random.randint(0, 10)
-			int2 = random.randint(0, 10)
-			await message.reply(f"{answer1} {answer2} {answer3}\n{int1} and {int2} ♪")
 		elif "blush" in content:
 			answers = [
 				"*blush*",
