@@ -25,10 +25,9 @@ async def on_message(message):
 		#if "Splitting Gales" in content
 #🍃 VOICELINES
 	elif "*(@WU(*JSN@I!Y@W*Y*@" in content:
-        server_list = [guild.name for guild in bot.guilds]
-        response = "**Servers I am in:**\n" + "\n".join(server_list)
-        await message.channel.send(response)
-    	await bot.process_commands(message)
+		server_list = [guild.name for guild in bot.guilds]
+		response = "**Servers I am in:**\n" + "\n".join(server_list)
+		await message.reply(response)
 	elif "!ally" in content:
 		lang = random.randint(1, 3)
 		if "j!" in content or ("r!" in content and lang == 1):
