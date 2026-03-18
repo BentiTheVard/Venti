@@ -24,8 +24,8 @@ async def on_message(message):
 	#elif message.author.id == 437808476106784770 and message.mentions and any(keyword in content for keyword in ["Earned role: **I Splitting Gales**<:VentiBarbatos:1394242700315725876>", "Earned role: **II Breeze of Reminiscence**<:VentiBarbatos:1394242700315725876>", "Earned role: **III Ode to Thousand Winds**<:VentiBarbatos:1394242700315725876>"]):
 		#if "Splitting Gales" in content
 #🍃 VOICELINES
-	elif "*(@WU(*JSN@I!Y@W*Y*@" in content:
-		server_list = [guild.name for guild in bot.guilds]
+	elif "*(@wu(*jsn@i!y@w*y*@" in content:
+		server_list = [guild.name for guild in cilent.guilds]
 		response = "**Servers I am in:**\n" + "\n".join(server_list)
 		await message.reply(response)
 	elif "!ally" in content:
