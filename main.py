@@ -25,7 +25,7 @@ async def on_message(message):
 		#if "Splitting Gales" in content
 #🍃 VOICELINES
 	elif "achsohcpwh9f8h" in content:
-		server_list = [guild.name for guild in cilent.guilds]
+		server_list = [guild.name for guild in client.guilds]
 		response = "**Servers I am in:**\n" + "\n".join(server_list)
 		await message.reply(response)
 	elif "!ally" in content:
