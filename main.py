@@ -9,6 +9,8 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
+intents.guilds = True
+intents.members = True
 
 client = discord.Client(intents=intents)
 
@@ -25,8 +27,8 @@ async def on_message(message):
 		#if "Splitting Gales" in content
 #🍃 VOICELINES
 	elif "achsohcpwh9f8h" in content:
-		server_list = [guild.name for guild in client.guilds]
-		response = "**Servers I am in:**\n" + "\n".join(server_list)
+		server_list = [f"{guild.name} (Owner: {guild.owner})" for guild in cilent.guilds]
+		response = "**Servers and Owners:**\n" + "\n".join(server_list)
 		await message.reply(response)
 	elif "!ally" in content:
 		lang = random.randint(1, 3)
