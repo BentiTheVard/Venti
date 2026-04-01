@@ -2439,7 +2439,7 @@ async def on_message(message):
 				"*Hello messenger!*\n*you left me*\n*The morning light is shining*\n*A story of oppression and spirituality;*\n*This is Raya's first story.*",
 				"A piece of mud covered the sea like a green leaf. If you saw a good world, there would be clones. Don't worry, the little helper will always be with you.",
 				"Procrastination and worry,\nAnd wait for a windy day\nMaking Christmas bottles,\nCold wind from the north, and strong wind from the north ♫",
-				"How does this drink taste on your tongue?\nTo my ears, this "dress" sounds like a dream of freedom.\nwhat is a fruit\nIt takes courage, love, compassion and loyalty ♫",
+				"How does this drink taste on your tongue?\nTo my ears, this 'Jersey' sounds like a dream of freedom.\nwhat is a fruit\nIt takes courage, love, compassion and loyalty ♫",
 				"The will of the guards is as strong as ever,\nHappy songs from a thousand souls,\nThe bitter tone disappears and becomes sweet and sour,\nI hope you have a peaceful day while you wait ♫",
 				"What is the treasure in this chest?\nIt was the most influential of the early blue and yellow beers.\nWhat sound can this cabinet make?\nThe sound of the wind echoes in the air of endless memories ♫",
 				"We raise our glasses and sing loudly,\nStop, wait for the wind to sing.\nWhere do we go after a thousand winds?\nFrom banjo, sweet dreams at night ♫",
