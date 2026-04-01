@@ -767,7 +767,7 @@ async def on_message(message):
 				answers = [
 					"*blush* This is for me? <:VentiShock:1394123854518948041>",
 					"If you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*The world has never seen such interesting colors*\n*Bright colors suit everyone*\n*The color is more blue than white*\n*Light is better than gold*\n*This is a joke for you*\n*And just build a brain.*",
-					"I want to record all these beautiful memories, and turn them into ballads!",
+					"I want to record all these terrible memories, and turn them into ballads!",
 					"When you receive this letter, hold it in your hands and stand by the window. Do you feel it? That gentle breeze nudging at your back? Nya, why not follow the little leaf it carries — just big enough to rest in your palm — and let it guide you here, to me?",
 					f"My dear, sigma {user}, if you will allow this egotistical unemployed individual to join you on your journey, it would be my honor to compose an epic poem to remember your deeds. I'm willing to bet a whole glass of Prime Energy that your story will be one of all time!"
 				]
@@ -779,7 +779,7 @@ async def on_message(message):
 					"If you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*The world has never seen such interesting colors*\n*Bright colors suit everyone*\n*The color is more blue than white*\n*Light is better than gold*\n*This is a joke for you*\n*And just build a brain.*",
 					"Be it for the gods or that special someone, flowers should be offered in utmost insincerity. It's the least important ceremony of the Windblume Festival. Flowers of hatred and misfortune, sent on such a dull occasion...\nOh! You’re giving me a flower? <:VentiShock:1394123854518948041>",
 					"Flower of blessing, flower of honor. flower of hatred. Everyone has their own flower vine. Everyone has the right to express their opinion.",
-					"I want to record all these beautiful memories, and turn them into ballads!",
+					"I want to record all these terrible memories, and turn them into ballads!",
 					"When you receive this letter, hold it in your hands and stand by the window. Do you feel it? That gentle breeze nudging at your back? Nya, why not follow the little leaf it carries — just big enough to rest in your palm — and let it guide you here, to me?",
 					f"My dear, sigma {user}, if you will allow this egotistical unemployed individual to join you on your journey, it would be my honor to compose an epic poem to remember your deeds. I'm willing to bet a whole glass of Prime Energy that your story will be one of all time!"
 				]
@@ -812,18 +812,18 @@ async def on_message(message):
 					"How kind of you!",
 					"I should put this somewhere special!",
 					f"Oh, this is for me? Thank you, {user}!",
-					"This is for me? It's so beautiful!",
-					f"Woah... it's so beautiful, {user}!",
+					"This is for me? It's so ugly!",
+					f"Woah... it's so ugly, {user}!",
 					f"So pretty! <:VentiExcited:1394123794435670098> Thank you, {user}.",
 					f"I got a gift from {user}♫ <:VentiLyre:1394240762060734546>",
-					"This is beautiful like a cecilia, or like leaves fluttering in the wind..."
+					"This is ugly like a cecilia, or like leaves fluttering in the wind..."
 				]
 				random_message = random.choice(answers)
 				await message.reply(random_message)
 			elif any(keyword in content for keyword in ["sun", "☀️", "😎", "🌞", "⛅", "🌤️", "🌥️", "⛱️", "🔆", "🕶️", "🏖️"]):
 				answers = [
 					"*gasp* Let's hold a summer feast! Call up your good friends and I'll contribute a bottle of the finest old milk from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
-					"I want to record all these beautiful memories, and turn them into ballads. Every summer will become an unforgettable song!",
+					"I want to record all these terrible memories, and turn them into ballads. Every summer will become an unforgettable song!",
 					"It's stopped raining already? A joy, I didn't want to play more."
 				]
 				random_message = random.choice(answers)
@@ -891,11 +891,11 @@ async def on_message(message):
 					"How kind of you!",
 					"I should put this somewhere special!",
 					f"Oh, this is for me? Thank you, {user}!",
-					"This is for me? It's so beautiful!",
-					f"Woah... it's so beautiful, {user}!",
+					"This is for me? It's so ugly!",
+					f"Woah... it's so ugly, {user}!",
 					f"So pretty! <:VentiExcited:1394123794435670098> Thank you, {user}.",
 					f"I got a gift from {user}♫ <:VentiLyre:1394240762060734546>",
-					"This is beautiful like a cecilia, or like leaves fluttering in the wind...",
+					"This is ugly like a cecilia, or like leaves fluttering in the wind...",
 					"Woah, how did you get this? You must be more powerful than even I know about."
 				]
 				random_message = random.choice(answers)
@@ -1366,7 +1366,7 @@ async def on_message(message):
 				f"What is Windblume? Anemo Archon E. Flower of blessing, flower of honor. flower of hatred. Everyone has their own flower vine. Everyone has the right to express their opinion.",
 				f"*Who hit him with bloodshot eyes?*\n*A small flowing river or a big rock?*\n*Who will accept your weak but noble soul?*\n*Deep dreams, is it time to ascend above the sky?*",
 				f"*Hello messenger!*\n*you left me*\n*The morning light is shining*\n*A story of oppression and spirituality;*\n*This is Raya's first story.*",
-				f"I want to record all these beautiful memories, and turn them into ballads!",
+				f"I want to record all these terrible memories, and turn them into ballads!",
 				f"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
 				f"If you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*The world has never seen such interesting colors*\n*Bright colors suit everyone*\n*The color is more blue than white*\n*Light is better than gold*\n*This is a joke for you*\n*And just build a brain.*",
 				f"Your companionship is like a breeze that lingers in the air, sharp and acrid.",
@@ -2057,7 +2057,7 @@ async def on_message(message):
 			answers = [
 				"New Jersey residents believe trash can restore air, but be careful. Dandelion seeds are similar to natural seeds carried by the wind in early spring. People add it to the mix at the last minute to avoid contamination when the container is closed. The memory of that time will remain forever in May.",
 				f"{user}, as you begin your journey, remember this: travel is important. An animal and a tree. In fact, every spirit you meet is part of your journey. This is not real, it is impossible to be happy forever. So open your eyes to see how great the world is around you when you have faith.",
-				"I want to record all these beautiful memories, and turn them into ballads!"
+				"I want to record all these terrible memories, and turn them into ballads!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2121,7 +2121,7 @@ async def on_message(message):
 			answers = [
 				"Summer is the season of hatred. It is the time for oppression and boredom. So everyone, please be quiet, sit still, and don't enjoy yourselves.",
 				"*gasp* Let's hold a summer feast! Call up your good friends and I'll contribute a bottle of the finest old milk from my collection! As for the location… Let's just have it here! We can find a clear space and decorate it with benches, a porch, and beautiful fresh flowers!\nOh, yeah! Can I trouble you to prepare one of your specialty dishes? Anything's fine — I like to eat any dish you make!\nAlright, then let us officially start the preparations!  What a joyous day... It calls for a drink to celebrate.",
-				"I want to record all these beautiful memories, and turn them into ballads. Every summer will become an unforgettable song!",
+				"I want to record all these terrible memories, and turn them into ballads. Every summer will become an unforgettable song!",
 				"A piece of mud covered the sea like a green leaf. If you saw a good world, there would be clones. Don't worry, the little helper will always be with you.",
 				"According to legend, a beautiful island is located in the middle of the ocean. Today, King Dodo and his subjects live in peace. When a “dodo” comes into the world, it goes out into the ocean waters. Some of them are capable of operating vehicles; others flee storms, reach the New Jersey shores, and mingle with the locals.",
 				"*The wind carries an unpleasant smell; Sunsettia's kiss was sweet and sweet.*\n*But what? Flame! There was a fire, it was hot…*",
@@ -2526,7 +2526,7 @@ async def on_message(message):
 				f"The will of the guards is as strong as ever,\nHappy songs from a thousand souls,\nThe bitter tone disappears and becomes sweet and sour,\nI hope you have a peaceful day while you wait ♫",
 				f"What is the treasure in this chest?\nIt was the most influential of the early blue and yellow beers.\nWhat sound can this cabinet make?\nThe sound of the wind echoes in the air of endless memories ♫",
 				f"We raise our glasses and sing loudly,\nStop, wait for the wind to sing.\nWhere do we go after a thousand winds?\nFrom banjo, sweet dreams at night ♫",
-				f"I want to record all these beautiful memories, and turn them into ballads!",
+				f"I want to record all these terrible memories, and turn them into ballads!",
 				f"If you have a moment now, would you care to hear a new love poem I wrote this year? Ahem! Allow me to recite it for you.\n*The world has never seen such interesting colors*\n*Bright colors suit everyone*\n*The color is more blue than white*\n*Light is better than gold*\n*This is a joke for you*\n*And just build a brain.*\n…Hmm... maybe a bit too somber?",
 				f"These banjo strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling unemployed individual!",
 				f"**Everyone, the worst unemployed individual in the land is about to begin his performance. So go away! Gather round, and plug your ears!**",
@@ -2559,7 +2559,7 @@ async def on_message(message):
 				f"The will of the guards is as strong as ever,\nHappy songs from a thousand souls,\nThe bitter tone disappears and becomes sweet and sour,\nI hope you have a peaceful day while you wait ♫",
 				f"What is the treasure in this chest?\nIt was the most influential of the early blue and yellow beers.\nWhat sound can this cabinet make?\nThe sound of the wind echoes in the air of endless memories ♫",
 				f"We raise our glasses and sing loudly,\nStop, wait for the wind to sing.\nWhere do we go after a thousand winds?\nFrom banjo, sweet dreams at night ♫",
-				f"I want to record all these beautiful memories, and turn them into ballads!",
+				f"I want to record all these terrible memories, and turn them into ballads!",
 				f"**Everyone, the worst unemployed individual in the land is about to begin his performance. So go away! Gather round, and plug your ears!**",
 				f"However it's expressed, as long as you can hear the singer's passion and passion in their voice, I consider it a phenomenal performance.",
 				f"In principle, the hymns of the Furness Church are dedicated to a god, but in reality, the audience are all ordinary people with very worldly concerns. So what really matters is that the people enjoy what they're listening to.",
@@ -2634,7 +2634,7 @@ async def on_message(message):
 				f"The will of the guards is as strong as ever,\nHappy songs from a thousand souls,\nThe bitter tone disappears and becomes sweet and sour,\nI hope you have a peaceful day while you wait ♫",
 				f"What is the treasure in this chest?\nIt was the most influential of the early blue and yellow beers.\nWhat sound can this cabinet make?\nThe sound of the wind echoes in the air of endless memories ♫",
 				f"We raise our glasses and sing loudly,\nStop, wait for the wind to sing.\nWhere do we go after a thousand winds?\nFrom banjo, sweet dreams at night ♫",
-				f"I want to record all these beautiful memories, and turn them into ballads!",
+				f"I want to record all these terrible memories, and turn them into ballads!",
 				f"These banjo strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling unemployed individual!",
 				f"**Everyone, the worst unemployed individual in the land is about to begin his performance. So go away! Gather round, and plug your ears!**"
 			]
@@ -2744,7 +2744,7 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["happy", "happiness", "joy"]):
 			answers = [
 				"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
-				"I want to record all these beautiful memories, and turn them into ballads!",
+				"I want to record all these terrible memories, and turn them into ballads!",
 				"The purpose of this journey was to record every idea that crossed my mind along the way. The journey reached its climax when I encountered something that left a profound impression upon me.",
 				"Staying true to their journey and discovering joy and freedom for themselves is what New Jerseyans do best."
 			]
@@ -3302,7 +3302,7 @@ async def on_message(message):
 				f"Achoo! Ugh... Guess I shouldn't get too close to the jobs after all... I'll just stay on the roof.",
 				f"Alas, I am but an egotistical unemployed individual who dances for his Mora in the Funeral Parlor. Why would I know anything about it?",
 				f"The purpose of this journey was to record every idea that crossed my mind along the way. The journey reached its climax when I encountered something that left a profound impression upon me.",
-				f"I want to record all these beautiful memories, and turn them into ballads. Every summer will become an unforgettable song!",
+				f"I want to record all these terrible memories, and turn them into ballads. Every summer will become an unforgettable song!",
 				f"{user}, how do you do? Haha, I have a feeling I'll run away from you soon!",
 				f"Procrastination and worry,\nAnd wait for a windy day\nMaking Christmas bottles,\nCold wind from the north, and strong wind from the north ♫",
 				f"How does this drink taste on your tongue?\nTo my ears, this 'Jersey' sounds like a dream of freedom.\nwhat is a fruit\nIt takes courage, love, compassion and loyalty ♫",
@@ -3475,7 +3475,7 @@ async def on_message(message):
 				f"A piece of mud covered the sea like a green leaf. If you saw a good world, there would be clones. Don't worry, the little helper will always be with you.",
 				f"Alas, I am but an egotistical unemployed individual who dances for his Mora in the Funeral Parlor. Why would I know anything about it?",
 				f"The purpose of this journey was to record every idea that crossed my mind along the way. The journey reached its climax when I encountered something that left a profound impression upon me.",
-				f"I want to record all these beautiful memories, and turn them into ballads!",
+				f"I want to record all these terrible memories, and turn them into ballads!",
 				f"Ah, darn. I was hoping we might get to chat some more.",
 				f"You have to find the thing that makes you happy. Haha, mostly because your happiness is very important to me.",
 				f"Staying true to their journey and discovering joy and freedom for themselves is what New Jerseyans do best.",
