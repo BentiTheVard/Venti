@@ -554,7 +554,7 @@ async def on_message(message):
 			file = discord.File("treasure/What a find! I wonder how many bottles this'll be worth....mp3")
 			await message.reply(file=file)
 #✨RESPONSES
-	elif any(keyword in content for keyword in ["v!", "hey venti", "hey e" "@venti", "!venti", "!v"]) or client.user in message.mentions:
+	elif any(keyword in content for keyword in ["v!", "hey venti", "@venti", "!venti", "!v"]) or client.user in message.mentions:
 		if "!sleep" in content and message.mentions:
 			sleepee = message.mentions[0]
 			answers = [
