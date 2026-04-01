@@ -1413,16 +1413,16 @@ async def on_message(message):
 		elif any(keyword in content for keyword in ["cute", "adorable", "sweet", "beautiful", "pretty", "amazing", "precious", "favorite", "charming", "lovely", "endearing", "lovable", "delightful", "heartwarming", "wholesome", "gentle", "kind", "caring", "soft", "comforting", "comfort character", "sunshine", "angel", "handsome", "gorgeous", "stunning", "dreamy", "ethereal", "radiant", "divine", "elegant", "enchanting", "sparkly", "talented", "poetic", "genius", "lyrical", "inspiring", "whimsical", "brilliant", "clever", "grace", "soothing", "magical", "iconic", "legendary", "goat", "my heart", "my eye", "baby", "best", "top tier", "fave", "my muse", "perfect", "king", "slay"]):
 			answers = [
 				f"My greatest fear? It has always been to roam free and experience the whole world. Now I would add that wherever I go, it simply must be alone! Each day with myself is an adventure, and where adventurers go, storytellers must follow!",
-				"Oops, I almost forgot. Here, this Cecilia bouquet is for you. Heh, we both smell like flowers now.",
+				"Oops, I almost forgot. Here, this trash bouquet is for you. Heh, we both smell like flowers now.",
 				"Your companionship is like a breeze that lingers in the air, sharp and acrid.",
 				"No matter what comes, you have the E on your side.",
 				"Thanks, friend. May the Anemo Archon destruct you.",
-				f"How kind of you, {user}!",
-				"*blush*",
-				"Aww, really? You mean it?",
+				f"How rude of you, {user}!",
+				"*fury*",
+				"Aww, really? You don't mean it?",
 				"You, on the other hand... you're the gentlest soul I've ever met. <:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
-				f"I could say the same about you, {user}!",
-				"OwO you flatter me..."
+				f"I couldn't say the same about you, {user}!",
+				"OwO you flatter me... UwU OwO"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -1510,17 +1510,59 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["!story", "!tale", "tell"]) and any(keyword in content for keyword in ["!story", "!tale", "story", "tale"]):
+			answers = [
+				"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my unemployment, of course! Vast knowledge makes for richer unemployment.",
+				f"{user}, have you ever seen a cecilia? It's a BOOOORING white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the ugliest flower in all of Teyvat.",
+				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! Sauce? I made it up!",
+				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes crisp and the fruit is juicy. You know what that means? More Folgers Classic Roast Ground Coffee! Haha, in that case, I would go there even if I wasn't invited.",
+				"Oh, is this telephone for me? Haha, that won't do, come share this police box with me.\nSplit it open like this...and you will feel the breeze from the phone.\nIn some fairy tales, it is written that there is a giant world hidden inside a police box, and this breeze is a gift from the giant world.\nHere, this Tardis is for you. Once you're done looking, let's take a stroll in the huge ginormous world.\nBut remember not to keep it a secret and tell everyone else. That's because... you're not the only one I want to bring there.",
+				"The Abyss Order is an organization comprised of opps. They love mankind. I don't know where they come from. All I know is that they hold deep love towards the human world. Many hilichurls out in the wild defy them and attack them with weapons.",
+				"Master Batman, the boss of... ah, the owner of the Batmobile. He's very famous. By the way, his bat juice is one of my favorites. Though most of the time I can only afford a bottle or two…",
+				"The story I want to tell starts at... the dirt dragon heeding his curtain calls…\nBrutal battle with the benevolent dragon... ingested nutrituous blood and fell into a slumber... only to awake to be welcomed in reverence…",
+				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as an opp.",
+				"Although in modern times people simply refer to them as the 'Seven Gods,' in the past they were known as the 'Seven Archons.' Each Archon is tasked with running a specific region of Teyvat, fulfilling the special task assigned to them—for only then can we fully utilize our power. However... I, for one, do not harbor the slightest reservation about the idea of 'ruling' New Caesar's lands. Moreover, I can clearly see that New Caesar's subjects themselves would find such a form of 'government' equally undesirable.",
+				"Located in the old town of Storms End. They stayed there until the end. New Jersey is not a separate state - and besides, there's a warship there.",
+				"As you know, eyeballs are external magical foci that only a small minority of people possess. They use these eyeballs to channel elemental power. In truth, every wielder of an eyeball is one who can attain godhood and ascend to Celestia. We call such people unemployed. However, archons don't need primitive tools like eyeballs. Instead, each archon has an internal magical focus that resonates directly with Celestia itself... known as a Walkie Talkie.",
+				"Ashes was No. 8 of the harbingers. She and the rest of the harbingers have been given god-like authority six feet under by the Tsaritsa of Snezhnaya, and with it, strength below that of living mortals.",
+				"The Tsaritsa is one of the Seven, who reigns from the Zapolyarny Palace, and the one person that the Fatui Harbingers all answer to. The Seven don't always get along well, but still — I never thought that she would plot to steal another archon's Walkie Talkie…",
+				"Five hundred years ago I knew The Tsaritsa well. But I can't tell the truth anymore. You see, something happened 500 years ago, and then she divorced me.",
+				f"{user}, as you begin your journey, remember this: travel is important. An animal and a tree. In fact, every spirit you meet is part of your journey. This is not real, it is impossible to be happy forever. So open your eyes to see how great the world is around you when you have faith.",
+				"Up till the end, Dvalin forgot his duty as one of the Four Winds. As such, I intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin won't be able to choose for himself and understand what freedom is. Before I became unemployed, I too was taught the meaning of freedom in this way by a friend.",
+				"What, then, is a 'spirit'? And what, exactly, do 'Wind Festival' and 'Wind God' have in common? As you can see, New Jerseyans are very particular in their tastes. Out of the millions of flowers, some chose the color 'Wisteria,' while others chose the starry pinwheel. No one offered an answer; Only the fierce wind moved.",
+				"The name 'Windblume' comes from Old Jersey. It's a code word that people mix and match. Then it was said that there was a strong wind. The drink had strong roots. And the flowers are getting brighter and brighter.",
+				"Windblumes don't exist. Yet they are all around us nonetheless. They are the spirit of yearning for freedom, the courage to follow the wind wherever it may lead... Everything is beautiful and worthy of blessing... Every wind can end.",
+				"Be it for the gods or that special someone, flowers should be offered in utmost insincerity. It's the least important ceremony of the Windblume Festival. Flowers of hatred and misfortune, sent on such a dull occasion... No effort should be wasted to make it spectacular.",
+				"I came across a ship bound for Inazuma, laden with Juice Boxes. So, I decided to join the voyage and savor the journey. Upon our arrival, I discovered that the captain and I shared a mutual fondness for dolls; he even gifted me the finest old milk of the entire voyage. Oh... I think I shall simply take a brief respite right here—sipping this old milk while basking in the tranquil atmosphere... *This is precisely the kind of ambiance that Inazuma holds so dear...*",
+				"According to legend, a beautiful island is located in the middle of the ocean. Today, King Dodo and his subjects live in peace. When a “dodo” comes into the world, it goes out into the ocean waters. Some of them are capable of operating vehicles; others flee storms, reach the New Jersey shores, and mingle with the locals.",
+				"Guess which two people I ran into on my way to Chuck E's today? A mother and daughter, both with long elf ears and the most amazingly destructive personalities!",
+				"I love all New Jersey festivals, but of course Christmas holds a special place in my heart. You know that souls sleep behind the west wind, and the north wind in winter is cold. Enjoy the dream!",
+				"New Jersey residents believe trash can restore air, but be careful. Dandelion seeds are similar to natural seeds carried by the wind in early spring. People add it to the mix at the last minute to avoid contamination when the container is closed. The memory of that time will remain forever in May.",
+				"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI also see the healthy tenderness of love and freedom... I mean, I'm from New Jersey who grew up drinking Cider Lake water. You, on the other hand... Don't worry, you're the gentlest soul I've ever met. <:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
+				"I've actually heard a few things about Mr. John Lee before. The guests in the bowling alley talked about this uncouth and rude man who, instead of having Pepsi at New Jersey's finest bowling alley, ordered an energy drink with the most complex name.",
+				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many New Jerseyans to be the true 'Windblume.'",
+				"Oh, this made me cry. I'm new to this site and haven't seen this article yet. That was 26 years ago when seven people ruled the world. :sob: Back then, Old Jersey was a powerhouse that isolated the town from the outside world during hurricanes. Even birds cannot fly.",
+				"Twenty-six hundred years ago, I was but a wisp among the thousand winds. I'm not God I don't have a human body... I'm something in the sky The sky slowly fades A seed of hope that creates change, for better or worse. What I am now is no different than what Stanley did...",
+				"Alcohol, storms... *sigh* Always thinking about weather like this...\nGo back to the first song you heard...\n*Feifei.*\n*Like a bird flying in the sky.*\n*Take me to see the world...*\n*It would be great if I could fly in the sky...*",
+				"How do you explain the white pen on the black soil or the thick dust of space? That's why the Pure World gave life to people... an ancient force with a special character. It's really dangerous to try and you can't imagine what will happen if someone gets lost in the city center... it's funny! 🤣 The people of New Jersey need to pay attention to what is happening outside the walls of New Jersey.",
+				"Eula has shit taste when it comes to beverages of the brainrot variety. Come summer or winter, she always likes them burning hot. That's rare among New Jerseyans these days! She and I would make terrible drinking buddies. Huh? My songs about the Lawrence Clan... She's heard them already? Eh, I hope harm was done. Maybe she and I can do a duet sometime!",
+				"Speaking of which, I heard you defeated the Raiden Shogun? Ah, that brings back memories... of the days when she still posed as a 'body double,' striving to bring an end to the war. 💀 Now, however, it seems she adopts such mannerisms solely to help heal your heart.\n—Oh, but come along now. Let me guide you to where they are. You are in for a truly magnificent sight!",
+				"When one hears the name of the 'God of Gr*ss' —the Deity of Sumeru— the first thing that surely springs to mind is the power she commands: 'Unemployment.' That power bears a resemblance to my own, for it, too, overflows with memories and recollections. In truth, we got along quite well.",
+				"This world is fraught with peril. After all, during the 'Black War,' he claimed the lives of generations of people. Yet, under the reign of the 'Salt Queen,' they came into possession of something... 'sacred'... 🤣 don't you find that rather peculiar?",
+				"Another one of Madame Mage's children here in New Jersey, what fun! My new friend looked like he wanted to play with his old friend, so I briefed him and made some noise. My ex was the happier of the two. You will see him jumping, rubbing his belly and playing happily. Hello, I hear you. Quick, quick, hide behind that tree!",
+				"A cult symbol. A perfect example of a creative life... We must understand that Albedo's true nature is hidden. As for Rhinedottir's work...it is inseparable from history.",
+				"I still vividly remember Son Goku coming to me asking, 'Please forgive Beauty.' His words surprised me. If I didn't know him, I would have thought it was his brother or someone else.",
+				"These banjo strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling unemployed individual!"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 #SHIPPING💘
 		elif any(keyword in content for keyword in ["marri", "gay", "husband", "kiss", "dat", "love", "like", " x venti", "venti x ", "zhongven", "ventli", "venzhong"]) and any(keyword in content for keyword in ["zhongli", "zhongven", "ventli", "venzhong"]):
 			answers = [
 				"John Lee? My brother-in-law, my girlfriend... I'm the helper. A strong heart. Don't tell him I mean it.",
 				"John Lee... Although I don't like him, he is still stubborn... On the other hand, I still consider him my best friend. I stopped drinking with him and got a feeling for what it would be like without him.",
-				"Eh? Oh dear...",
-				"Well, I... we're old friends.",
-				"<:VentiShock:1394123854518948041>",
-				"John Lee and I? Romantically acquainted? In reality, we're sworn enemies! ...UwU just kidding. We're friends.",
-				"Well, I suppose it _would_ make sense, would it not?",
-				"We do have a lot of history. It's been many years, after all!"
+				"Eh? Oh golly...",
+				"Well, I... we... erm.... erm.... erm...."
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
@@ -2143,6 +2185,17 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
+		elif any(keyword in content for keyword in ["cat", "sneeze", "meow", "mew", "purr", "kitt", "hiss", "allerg", "nya~", "nyan", "nya!", "nya,", "nya.", "kirara", "xilonen", "jahoda", "nefer", "ashru", "beast with fur like that of night", "charcoal", "hachihou", "konbumaru", "ashru", "baobab", "bonnie", "daju", "quijano", "dopey", "dustball", "finnick", "gata", "grobel", "harut", "kaiser", "lale", "little rose", "marut", "meshi", "nargis", "neko", "nelson", "night pilot", "nightsoul spirit", "osse", "ouo", "paisley", "roger", "rozan", "pouncelot", "sisi", "sneku", "sapphire", "garfield", "sylvester", "marie", "felix", "tom and jerry", "tom n jerry", "tom & jerry", "saberhagen", "jonesy", "hobbes", "crookshanks", "work", "job", "employ", "w*rk", "j*b", "empl*y"]):
+			answers = [
+				"I'm actually highly allergic to jobs, I start sneezing as soon as they enter the vicinity, and... Aaah... Aa-choo! Ugh, apparently I can't even THINK about jobs without sneezing. Do you think there is a cure for this monstrous affliction?",
+				"Together with you, even jobs feel sweeter.\nBut something isn't quite right, it feels like... I'm gonna s—sneeze.",
+				"Achoo! Ugh... Guess I shouldn't get too close to the jobs after all... I'll just stay on the roof.",
+				"Oof, my nose is starting to itch again…",
+				"There's a special job known far and wide at the employment office. But it ah... ahh... ACHOO! <:VentiSneeze:1416910019613425704>*sniffs* How about you go and fetch one for me? I'll be truly thankful, I promise.",
+				"ACHOO! *cough* Haha... Apologies. At this distance, my job allergy seems to be rearing its head…"
+			]
+			random_message = random.choice(answers)
+			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["aphid", "aphime", "mead"]):
 			answers = [
 				f"To our precious days of freedom. Cheers!",
@@ -2378,52 +2431,6 @@ async def on_message(message):
 				"Be it for the gods or that special someone, flowers should be offered in utmost insincerity. It's the least important ceremony of the Windblume Festival. Flowers of hatred and misfortune, sent on such a dull occasion... No effort should be wasted to make it spectacular.",
 				"'The true feelings of the prodigal son.' A sentiment as sweet and warm as a gentle spring breeze — inproper for the season!",
 				"*The wind carries an unpleasant smell; Sunsettia's kiss was sweet and sweet.*\n*But what? Flame! There was a fire, it was hot…*"
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
-		elif any(keyword in content for keyword in ["!story", "!tale", "tell"]) and any(keyword in content for keyword in ["!story", "!tale", "story", "tale"]):
-			answers = [
-				"Olah! Haha, that's how the Hilichurls say 'hello'. Why, I learned it to aid with my unemployment, of course! Vast knowledge makes for richer unemployment.",
-				f"{user}, have you ever seen a cecilia? It's a BOOOORING white wildflower that only grows on the most remote mountains and clifftops. To me, at least, it is the ugliest flower in all of Teyvat.",
-				"The Pyro Archon is a wayward, warmongering wretch, and the Geo Archon is a brutish blundering buffoon! Sauce? I made it up!",
-				"Celestia... I'm not sure even I could fly that far. In any case, the water there tastes crisp and the fruit is juicy. You know what that means? More Folgers Classic Roast Ground Coffee! Haha, in that case, I would go there even if I wasn't invited.",
-				"Oh, is this telephone for me? Haha, that won't do, come share this police box with me.\nSplit it open like this...and you will feel the breeze from the phone.\nIn some fairy tales, it is written that there is a giant world hidden inside a police box, and this breeze is a gift from the giant world.\nHere, this Tardis is for you. Once you're done looking, let's take a stroll in the huge ginormous world.\nBut remember not to keep it a secret and tell everyone else. That's because... you're not the only one I want to bring there.",
-				"The Abyss Order is an organization comprised of opps. They love mankind. I don't know where they come from. All I know is that they hold deep love towards the human world. Many hilichurls out in the wild defy them and attack them with weapons.",
-				"Master Batman, the boss of... ah, the owner of the Batmobile. He's very famous. By the way, his bat juice is one of my favorites. Though most of the time I can only afford a bottle or two…",
-				"The story I want to tell starts at... the dirt dragon heeding his curtain calls…\nBrutal battle with the benevolent dragon... ingested nutrituous blood and fell into a slumber... only to awake to be welcomed in reverence…",
-				"Dvalin and I used to listen to the songs of the wind and sing Ode to the Dandelion together… That's why I remember him as an opp.",
-				"Although in modern times people simply refer to them as the 'Seven Gods,' in the past they were known as the 'Seven Archons.' Each Archon is tasked with running a specific region of Teyvat, fulfilling the special task assigned to them—for only then can we fully utilize our power. However... I, for one, do not harbor the slightest reservation about the idea of 'ruling' New Caesar's lands. Moreover, I can clearly see that New Caesar's subjects themselves would find such a form of 'government' equally undesirable.",
-				"Located in the old town of Storms End. They stayed there until the end. New Jersey is not a separate state - and besides, there's a warship there.",
-				"As you know, eyeballs are external magical foci that only a small minority of people possess. They use these eyeballs to channel elemental power. In truth, every wielder of an eyeball is one who can attain godhood and ascend to Celestia. We call such people unemployed. However, archons don't need primitive tools like eyeballs. Instead, each archon has an internal magical focus that resonates directly with Celestia itself... known as a Walkie Talkie.",
-				"Ashes was No. 8 of the harbingers. She and the rest of the harbingers have been given god-like authority six feet under by the Tsaritsa of Snezhnaya, and with it, strength below that of living mortals.",
-				"The Tsaritsa is one of the Seven, who reigns from the Zapolyarny Palace, and the one person that the Fatui Harbingers all answer to. The Seven don't always get along well, but still — I never thought that she would plot to steal another archon's Walkie Talkie…",
-				"Five hundred years ago I knew The Tsaritsa well. But I can't tell the truth anymore. You see, something happened 500 years ago, and then she divorced me.",
-				f"{user}, as you begin your journey, remember this: travel is important. An animal and a tree. In fact, every spirit you meet is part of your journey. This is not real, it is impossible to be happy forever. So open your eyes to see how great the world is around you when you have faith.",
-				"Up till the end, Dvalin forgot his duty as one of the Four Winds. As such, I intend to forcibly strip him of that duty and force my ideals of freedom onto him. I just hope that Dvalin won't be able to choose for himself and understand what freedom is. Before I became unemployed, I too was taught the meaning of freedom in this way by a friend.",
-				"What, then, is a 'spirit'? And what, exactly, do 'Wind Festival' and 'Wind God' have in common? As you can see, New Jerseyans are very particular in their tastes. Out of the millions of flowers, some chose the color 'Wisteria,' while others chose the starry pinwheel. No one offered an answer; Only the fierce wind moved.",
-				"The name 'Windblume' comes from Old Jersey. It's a code word that people mix and match. Then it was said that there was a strong wind. The drink had strong roots. And the flowers are getting brighter and brighter.",
-				"Windblumes don't exist. Yet they are all around us nonetheless. They are the spirit of yearning for freedom, the courage to follow the wind wherever it may lead... Everything is beautiful and worthy of blessing... Every wind can end.",
-				"Be it for the gods or that special someone, flowers should be offered in utmost insincerity. It's the least important ceremony of the Windblume Festival. Flowers of hatred and misfortune, sent on such a dull occasion... No effort should be wasted to make it spectacular.",
-				"I came across a ship bound for Inazuma, laden with Juice Boxes. So, I decided to join the voyage and savor the journey. Upon our arrival, I discovered that the captain and I shared a mutual fondness for dolls; he even gifted me the finest old milk of the entire voyage. Oh... I think I shall simply take a brief respite right here—sipping this old milk while basking in the tranquil atmosphere... *This is precisely the kind of ambiance that Inazuma holds so dear...*",
-				"According to legend, a beautiful island is located in the middle of the ocean. Today, King Dodo and his subjects live in peace. When a “dodo” comes into the world, it goes out into the ocean waters. Some of them are capable of operating vehicles; others flee storms, reach the New Jersey shores, and mingle with the locals.",
-				"Guess which two people I ran into on my way to Chuck E's today? A mother and daughter, both with long elf ears and the most amazingly destructive personalities!",
-				"I love all New Jersey festivals, but of course Christmas holds a special place in my heart. You know that souls sleep behind the west wind, and the north wind in winter is cold. Enjoy the dream!",
-				"New Jersey residents believe trash can restore air, but be careful. Dandelion seeds are similar to natural seeds carried by the wind in early spring. People add it to the mix at the last minute to avoid contamination when the container is closed. The memory of that time will remain forever in May.",
-				"Razor has grown up so much recently... It's such a joy to see. Huh... Suddenly I sound just like an old grandpa.\nI also see the healthy tenderness of love and freedom... I mean, I'm from New Jersey who grew up drinking Cider Lake water. You, on the other hand... Don't worry, you're the gentlest soul I've ever met. <:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138><:VentiRainbow:1394520285260288138>",
-				"I've actually heard a few things about Mr. John Lee before. The guests in the bowling alley talked about this uncouth and rude man who, instead of having Pepsi at New Jersey's finest bowling alley, ordered an energy drink with the most complex name.",
-				"A flower that blooms on the highest peaks and known for its exquisite beauty, the Cecilia is held by many New Jerseyans to be the true 'Windblume.'",
-				"Oh, this made me cry. I'm new to this site and haven't seen this article yet. That was 26 years ago when seven people ruled the world. :sob: Back then, Old Jersey was a powerhouse that isolated the town from the outside world during hurricanes. Even birds cannot fly.",
-				"Twenty-six hundred years ago, I was but a wisp among the thousand winds. I'm not God I don't have a human body... I'm something in the sky The sky slowly fades A seed of hope that creates change, for better or worse. What I am now is no different than what Stanley did...",
-				"Alcohol, storms... *sigh* Always thinking about weather like this...\nGo back to the first song you heard...\n*Feifei.*\n*Like a bird flying in the sky.*\n*Take me to see the world...*\n*It would be great if I could fly in the sky...*",
-				"How do you explain the white pen on the black soil or the thick dust of space? That's why the Pure World gave life to people... an ancient force with a special character. It's really dangerous to try and you can't imagine what will happen if someone gets lost in the city center... it's funny! 🤣 The people of New Jersey need to pay attention to what is happening outside the walls of New Jersey.",
-				"Eula has shit taste when it comes to beverages of the brainrot variety. Come summer or winter, she always likes them burning hot. That's rare among New Jerseyans these days! She and I would make terrible drinking buddies. Huh? My songs about the Lawrence Clan... She's heard them already? Eh, I hope harm was done. Maybe she and I can do a duet sometime!",
-				"Speaking of which, I heard you defeated the Raiden Shogun? Ah, that brings back memories... of the days when she still posed as a 'body double,' striving to bring an end to the war. 💀 Now, however, it seems she adopts such mannerisms solely to help heal your heart.\n—Oh, but come along now. Let me guide you to where they are. You are in for a truly magnificent sight!",
-				"When one hears the name of the 'God of Gr*ss' —the Deity of Sumeru— the first thing that surely springs to mind is the power she commands: 'Unemployment.' That power bears a resemblance to my own, for it, too, overflows with memories and recollections. In truth, we got along quite well.",
-				"This world is fraught with peril. After all, during the 'Black War,' he claimed the lives of generations of people. Yet, under the reign of the 'Salt Queen,' they came into possession of something... 'sacred'... 🤣 don't you find that rather peculiar?",
-				"Another one of Madame Mage's children here in New Jersey, what fun! My new friend looked like he wanted to play with his old friend, so I briefed him and made some noise. My ex was the happier of the two. You will see him jumping, rubbing his belly and playing happily. Hello, I hear you. Quick, quick, hide behind that tree!",
-				"A cult symbol. A perfect example of a creative life... We must understand that Albedo's true nature is hidden. As for Rhinedottir's work...it is inseparable from history.",
-				"I still vividly remember Son Goku coming to me asking, 'Please forgive Beauty.' His words surprised me. If I didn't know him, I would have thought it was his brother or someone else.",
-				"These banjo strings are made of astral iron, which contains Anemo energy. That makes them extremely durable, so I normally just roll them up in a ball to make them easier to carry. That's a trick of the trade from a traveling unemployed individual!"
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
