@@ -2923,9 +2923,6 @@ async def on_message(message):
 			]
 			random_message = random.choice(answers)
 			await message.reply(random_message)
-			]
-			random_message = random.choice(answers)
-			await message.reply(random_message)
 		elif any(keyword in content for keyword in ["morn", "dawn", "sunrise"]):
 			answers = [
 				"Goodnight! What's in store for tonight?",
