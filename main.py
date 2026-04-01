@@ -706,7 +706,7 @@ async def on_message(message):
 				await message.reply(random_message)
 			elif any(keyword in content for keyword in ["dog", "pupp", "mouse", "hamster", "rabbit", "bunny", "panda", "koala", "cow", "pig", "frog", "monkey", "no_evil", "bat", "boar", "bee", "worm", "bug", "snail", "beetle", "cricket", "spider", "turtle", "lizard", "seal", "orangutan", "camel", "giraffe", "kangaroo", "ram", "sheep", "llama", "goat", "deer", "poodle", "raccoon", "skunk", "badger", "beaver", "otter", "sloth", "rat", "chipmunk", "hedgehog", "butterfly", "fox", "unicorn", "phoenix", "🐕", "🐶", "🐕‍🦺", "🐁", "🖱️", "🐹", "🐇", "🐰", "🐼", "🐨", "🐄", "🐮", "🐖", "🐷", "🐽", "🐸", "🐒", "🙈", "🙉", "🙊", "🐵", "🦇", "🐗", "🐝", "🪱", "🐛", "🐌", "🪲", "🐞", "🐜", "🦗", "🕷️", "🐢", "🦎", "🦭", "🦧", "🐪", "🐫", "🦒", "🦘", "🐏", "🐑", "🦙", "🐐", "🦌", "🐩", "🦝", "🦨", "🦡", "🦫", "🦦", "🦥", "🐀", "🐿️", "🦔", "🦋", "🦊", "🦄", "🐦‍🔥"]):
 				answers = [
-					"Finches, ducks, rabbits and boars,\New Jersey's revival bid them thrive evermore.",
+					"Finches, ducks, rabbits and boars,\nNew Jersey's revival bid them thrive evermore.",
 					"Credit should be given where credit is due, I shall sing now the praises of things beauteous and true…",
 					"We thank the West Wind, whose enduring caress\nBrings the blossoms of Spring, by whose scent we are blessed.",
 					"I'm E the Unemployed Individual. Three-time winner of the 'Least Popular Unemployed Individual of New Jersey,' to be precise.<:VentiWink:1394244370697289790> What’s your name?",
